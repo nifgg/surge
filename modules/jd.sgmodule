@@ -1,0 +1,31 @@
+# Surge adaptation; upstream authorship retained below.
+#!version=1.0.2
+# source-sha256=282d322d5939dc2c103846eefbbd98c535e783324a95655e74f1a841b78b42c6
+# source-date=2026-10-02 13:57:49
+# adapter-version=1.1.0
+#!name=京东去广告
+#!desc=移除京东开屏广告，精简我的页面产品推广。
+#!author=RuCu6[https://github.com/RuCu6], Maasea[https://github.com/Maasea]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JD.png
+#!openUrl=https://apps.apple.com/app/id414245413
+#!category=去广告
+#!loon_version=3.5.1(998)
+#!homepage=https://hub.kelee.one
+#!date=2026-10-02 13:57:49
+
+[Rule]
+URL-REGEX,"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?",REJECT
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig 'if ((getpath(["data","JDMessage","socketmonitor"]) // {}) | has("isSocketEstablishedAhead")) then (setpath(["data","JDMessage","socketmonitor","isSocketEstablishedAhead"]; 0)) else . end'
+http-response-jq (?i)^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig 'if ((getpath(["data","JDMessage","socketmonitor"]) // {}) | has("isSocketReport")) then (setpath(["data","JDMessage","socketmonitor","isSocketReport"]; 0)) else . end'
+http-response-jq (?i)^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig 'if ((getpath(["data","JDHttpToolKit","httpdns"]) // {}) | has("httpdns")) then (setpath(["data","JDHttpToolKit","httpdns","httpdns"]; 0)) else . end'
+
+[Map Local]
+(?i)^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% api.m.jd.com
+
+[Script]
+surge-282d322d59-01 = type=http-response, pattern=^(?!(?:(?i:^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]))|(?i:^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig)))(?i:^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome)), script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/0c11689b47b1ab3ceee1f19bcbcd558ddec7c39d34f822a378ba81295c65b4c6.js, requires-body=true, timeout=20
