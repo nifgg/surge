@@ -1,6 +1,6 @@
 # Surge
 
-Surge 远程模块集合，提供 HTTPDNS 拦截、广告平台拦截和应用去广告模块。模块名称与描述保留上游 `#!name`、`#!desc` 原文。
+Surge 远程模块集合，提供 HTTPDNS 拦截、广告平台拦截和应用去广告模块。
 
 ## 模块
 
@@ -32,4 +32,4 @@ Surge 远程模块集合，提供 HTTPDNS 拦截、广告平台拦截和应用�
 
 ## 来源
 
-上游插件来自 [可莉插件中心](https://hub.kelee.one/)。模块与依赖保留原作者署名，权利与使用条件由原作者规定。
+来自 [LoonKissSurge](https://github.com/QingRex/LoonKissSurge)。模块与依赖根据其引用的上游模块，权利与使用条件由上游原作者规定。
