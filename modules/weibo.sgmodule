@@ -1,10 +1,6 @@
-# Surge adaptation; upstream authorship retained below.
-#!version=1.0.2
-# source-sha256=2d48b4f03df6341dedf6a44c1ba71953c9140e533a50dd43005100b51d7cc425
-# source-date=2026-10-02 13:57:49
-# adapter-version=1.1.0
 #!name=微博去广告
 #!desc=过滤微博广告及去除各部分推广模块
+#!version=1.0.3
 #!author=RuCu6[https://github.com/RuCu6], zmqcherish[https://github.com/zmqcherish]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weibo.png
 #!openUrl=https://apps.apple.com/app/id350962117
@@ -12,6 +8,11 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://hub.kelee.one
 #!date=2026-10-02 13:57:49
+
+# Surge adaptation; upstream authorship retained above.
+# source-sha256=2d48b4f03df6341dedf6a44c1ba71953c9140e533a50dd43005100b51d7cc425
+# source-date=2026-10-02 13:57:49
+# adapter-version=1.1.0
 
 [Rule]
 DOMAIN-SUFFIX,uve.weibo.com,DIRECT

@@ -1,10 +1,6 @@
-# Surge adaptation; upstream authorship retained below.
-#!version=1.0.2
-# source-sha256=36b1d2156c6d36511e324ac328a865f89695e5d93e959c7bca2d547b25578ef3
-# source-date=2026-10-02 13:57:49
-# adapter-version=1.1.0
 #!name=高德地图去广告
 #!desc=过滤高德地图开屏广告、各页面推广，精简我的页面。
+#!version=1.0.3
 #!author=RuCu6[https://github.com/RuCu6], kelv1n1n[https://github.com/kelv1n1n], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Amap.png
 #!openUrl=https://apps.apple.com/app/id461703208
@@ -12,6 +8,11 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://hub.kelee.one
 #!date=2026-10-02 13:57:49
+
+# Surge adaptation; upstream authorship retained above.
+# source-sha256=36b1d2156c6d36511e324ac328a865f89695e5d93e959c7bca2d547b25578ef3
+# source-date=2026-10-02 13:57:49
+# adapter-version=1.1.0
 
 [Rule]
 DOMAIN,amap-aos-info-nogw.amap.com,REJECT

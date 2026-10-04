@@ -1,12 +1,8 @@
-# Surge adaptation; upstream authorship retained below.
-#!version=1.0.2
-# source-sha256=8db02264fa15b0271ccad40eaa5c14ea3f40864aa5af501c7a64941620e6b0e5
-# source-date=2026-10-02 13:57:49
-# adapter-version=1.1.0
-#!arguments=displayUpList:show,purifyComment:true,optimizeRequest:true,sponsorBlock:false,logLevel:off,proxy_policy:Proxy
-#!arguments-desc=插件参数保留上游默认值。proxy_policy 指定空降助手 bsbsb.top 请求使用的 Surge 策略组。
 #!name=哔哩哔哩去广告
 #!desc=过滤哔哩哔哩广告、移除青少年模式弹窗和交互式弹幕、移除无用功能和链接跟踪参数，增加空降助手以便跳过视频中插入的广告。此插件仅建议iOS 15以上设备使用，且必须启用MitM-over-HTTP/2功能。\n\n空降助手是第三方提供的功能，依赖于Android版空降助手的服务器数据运作，可能会存在不准确或者失效的问题，此功能与哔哩哔哩官方无关。
+#!version=1.0.3
+#!arguments=displayUpList:show,purifyComment:true,optimizeRequest:true,sponsorBlock:false,logLevel:off,proxy_policy:Proxy
+#!arguments-desc=插件参数保留上游默认值。proxy_policy 指定空降助手 bsbsb.top 请求使用的 Surge 策略组。
 #!author=kokoryh[https://github.com/kokoryh]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png
 #!openUrl=https://apps.apple.com/app/id736536022
@@ -16,6 +12,11 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://hub.kelee.one
 #!date=2026-10-02 13:57:49
+
+# Surge adaptation; upstream authorship retained above.
+# source-sha256=8db02264fa15b0271ccad40eaa5c14ea3f40864aa5af501c7a64941620e6b0e5
+# source-date=2026-10-02 13:57:49
+# adapter-version=1.1.0
 
 [Rule]
 DOMAIN,api.biliapi.com,REJECT

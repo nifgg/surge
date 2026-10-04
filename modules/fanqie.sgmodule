@@ -1,10 +1,6 @@
-# Surge adaptation; upstream authorship retained below.
-#!version=1.0.2
-# source-sha256=da052ba71baa527147c11c63b88b5391eff2ac52da6c64bb7d696979f7e8aaee
-# source-date=2026-10-02 13:57:49
-# adapter-version=1.1.0
 #!name=番茄小说去广告
 #!desc=移除番茄小说开屏广告、移除文章底部和章末广告、移除听书页面广告、移除悬浮部件和底栏多余的福利标签。
+#!version=1.0.3
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DragonRead.png
 #!openUrl=https://apps.apple.com/app/id1468454200
@@ -12,6 +8,11 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://hub.kelee.one
 #!date=2026-10-02 13:57:49
+
+# Surge adaptation; upstream authorship retained above.
+# source-sha256=da052ba71baa527147c11c63b88b5391eff2ac52da6c64bb7d696979f7e8aaee
+# source-date=2026-10-02 13:57:49
+# adapter-version=1.1.0
 
 [Rule]
 DOMAIN,zlink.ugsdk.cn,REJECT

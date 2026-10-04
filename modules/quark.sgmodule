@@ -1,10 +1,6 @@
-# Surge adaptation; upstream authorship retained below.
-#!version=1.0.2
-# source-sha256=b2f31d98c78c7075795a360c4b754feec61f83cf8fde1a6c1d03c7ec4fe76ba7
-# source-date=2026-10-02 13:57:49
-# adapter-version=1.1.0
 #!name=夸克去广告
 #!desc=移除阅读广告、各页面弹窗及横幅，精简我的页面。
+#!version=1.0.3
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QuarkBrowser.png
 #!openUrl=https://apps.apple.com/app/id1160172628
@@ -12,6 +8,11 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://hub.kelee.one
 #!date=2026-10-02 13:57:49
+
+# Surge adaptation; upstream authorship retained above.
+# source-sha256=b2f31d98c78c7075795a360c4b754feec61f83cf8fde1a6c1d03c7ec4fe76ba7
+# source-date=2026-10-02 13:57:49
+# adapter-version=1.1.0
 
 [Body Rewrite]
 http-response-jq (?i)^https:\/\/open-cms-api\.quark\.cn\/open-cms\? 'delpaths([["result","cms_homepage_push_banner_config"]])'

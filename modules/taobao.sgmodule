@@ -1,10 +1,6 @@
-# Surge adaptation; upstream authorship retained below.
-#!version=1.0.2
-# source-sha256=23f29f4b051c237b802a5b22a4fd9f7e7eb713a559e5f81ca94d8d6b6f4554cc
-# source-date=2026-10-02 13:57:49
-# adapter-version=1.1.0
 #!name=淘宝去广告
 #!desc=过滤淘宝开屏广告
+#!version=1.0.3
 #!author=RuCu6[https://github.com/RuCu6]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Taobao.png
 #!openUrl=https://apps.apple.com/app/id387682726
@@ -12,6 +8,11 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://hub.kelee.one
 #!date=2026-10-02 13:57:49
+
+# Surge adaptation; upstream authorship retained above.
+# source-sha256=23f29f4b051c237b802a5b22a4fd9f7e7eb713a559e5f81ca94d8d6b6f4554cc
+# source-date=2026-10-02 13:57:49
+# adapter-version=1.1.0
 
 [Rule]
 DOMAIN,adashx.m.taobao.com,REJECT

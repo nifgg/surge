@@ -1,10 +1,6 @@
-# Surge adaptation; upstream authorship retained below.
-#!version=1.0.2
-# source-sha256=b782ea4f811702a80f853eae8bd3a3f7a33c8a3af833f5c54fba3d75a524f646
-# source-date=2026-10-02 13:57:49
-# adapter-version=1.1.0
 #!name=小红书去广告
 #!desc=过滤信息流推广，移除图片及视频水印，如有异常，请先清除缓存再尝试。
+#!version=1.0.3
 #!author=RuCu6[https://github.com/RuCu6], fmz200[https://github.com/fmz200]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/RedPaper.png
 #!openUrl=https://apps.apple.com/app/id741292507
@@ -12,6 +8,11 @@
 #!loon_version=3.5.1(998)
 #!homepage=https://hub.kelee.one
 #!date=2026-10-02 13:57:49
+
+# Surge adaptation; upstream authorship retained above.
+# source-sha256=b782ea4f811702a80f853eae8bd3a3f7a33c8a3af833f5c54fba3d75a524f646
+# source-date=2026-10-02 13:57:49
+# adapter-version=1.1.0
 
 [Rule]
 AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com)),REJECT
