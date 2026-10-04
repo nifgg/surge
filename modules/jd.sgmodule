@@ -1,6 +1,6 @@
 #!name=京东去广告
 #!desc=移除京东开屏广告，精简我的页面产品推广。
-#!version=1.0.3
+#!version=1.0.4
 #!author=RuCu6[https://github.com/RuCu6], Maasea[https://github.com/Maasea]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/JD.png
 #!openUrl=https://apps.apple.com/app/id414245413
@@ -12,7 +12,7 @@
 # Surge adaptation; upstream authorship retained above.
 # source-sha256=282d322d5939dc2c103846eefbbd98c535e783324a95655e74f1a841b78b42c6
 # source-date=2026-10-02 13:57:49
-# adapter-version=1.1.0
+# adapter-version=1.2.0
 
 [Rule]
 URL-REGEX,"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?",REJECT
@@ -29,4 +29,4 @@ http-response-jq (?i)^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basi
 hostname = %APPEND% api.m.jd.com
 
 [Script]
-surge-282d322d59-01 = type=http-response, pattern=^(?!(?:(?i:^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]))|(?i:^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig)))(?i:^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome)), script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/0c11689b47b1ab3ceee1f19bcbcd558ddec7c39d34f822a378ba81295c65b4c6.js, requires-body=true, timeout=20
+京东去广告 - 移除京东广告 - 01 = type=http-response, pattern=^(?!(?:(?i:^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]))|(?i:^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig)))(?i:^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome)), script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/jd/7ac084633388ea2a/jd.js, requires-body=true, timeout=20

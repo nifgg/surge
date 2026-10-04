@@ -1,6 +1,6 @@
 #!name=HTTPDNS拦截器
 #!desc=此插件是所有去广告插件的依赖，拦截常见的HTTPDNS服务，以确保这些请求都能够在Loon的DNS框架下工作。
-#!version=1.0.5
+#!version=1.0.6
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], VirgilClyne[https://github.com/VirgilClyne]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/HTTPDNS.png
 #!category=去广告, 依赖
@@ -11,7 +11,7 @@
 # Surge adaptation; upstream authorship retained above.
 # source-sha256=1565be1f81faba0918f717a7ffe06340ac85db7e850a8059d636dec03c696a3a
 # source-date=2026-10-02 13:57:49
-# adapter-version=1.1.0
+# adapter-version=1.2.0
 
 [Rule]
 DOMAIN-KEYWORD,httpdns,REJECT

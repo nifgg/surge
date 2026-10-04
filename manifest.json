@@ -3,11 +3,13 @@
     "advertisers": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.1.0",
+        "adapterVersion": "1.2.0",
         "arguments": {},
         "convertedInputSha256": "2947d7df2ceb8addb9b06d7651465f8166d61ebd02ce1d889d562c62739266c4",
         "counts": {
           "bodyRewrite": 0,
+          "bodyRewriteBeforeOptimization": 0,
+          "bodyRewriteRulesSaved": 0,
           "headerRewrite": 0,
           "mapLocal": 4,
           "mitmHostnames": 3,
@@ -38,21 +40,21 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "5f205b236d2d89b3a351ed8e09ca8b7e3cca77af6ecd3b2fb463309138f71c42",
-        "adapter_version": "1.1.0",
+        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
+        "adapter_version": "1.2.0",
         "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
         "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.1.1",
-        "script_adapter_sha256": "e6d5c43f9b9634941ff044a8d7004e4d90476a34db7b810ac07d10c7a15f2b3c"
+        "publisher_version": "1.2.0",
+        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
       },
       "dependencies": [],
       "description": "此插件是所有去广告插件的依赖，只针对广告平台处理。你依然需要安装其他去广告插件来搭配使用，并确保此插件始终排序在顶部。\\n\\n支持拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里巴巴、阿里妈妈、阿里百川、超级汇川、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通、聚次方、美数、嗨量、维快网络、变现猫、章鱼、分秒、泰之菩、翼信、快易、数萤技术、方麟、益起、上量优选、新义互联、腾云天下、布里奇、塔酷、丽声、推啊、旺脉、新度博望、新多广告、快易科技、封狐信息、互裕科技、旺脉信息、佳量动力、享点科技、游昆信息、小川科技、旺脉科技、萃弈、泛为、米漫、易量跃动、秒针、贵士移动、星讯、倍业科技、创聚科技、硬核聚视、数因科技、芒拓网络、上海领页、神蓍科技、酷盈、凡提科技、亿帆、作业帮、畅行未来、华夏乐游、邑维、趣小猫、极准网络、元气智广、Google、SupersonicAds、APPSAD、Adjust、Sigmob、TradPlus、Fancy、MedPro、AppLovin、Unity3D、Tapjoy、Liftoff、Vungle、Moloco、Smadex、Tapad、Appier、InMobi、AppsFlyer、AppLovin、Moloco、RayJump、RixEngine、Amazon、Skarb、Amplitude、ToBid、UMS等广告平台的广告请求，更适合iOS平台的应用。",
       "file": "modules/advertisers.sgmodule",
       "id": "advertisers",
-      "module_sha256": "c58251015ff46ea8f492d8488f235c62ba699c9d6ec6f885863ff674d8076b7e",
-      "module_version": "1.0.5",
+      "module_sha256": "3ab5a3000e892adb2713d55c616bcf86cff247d16d246923747e16d18a553250",
+      "module_version": "1.0.6",
       "name": "广告平台拦截器",
-      "revision": 5,
+      "revision": 6,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -62,19 +64,24 @@
       "surge_name": "广告平台拦截器",
       "validation": {
         "scope": "Surge Mac parser; not iOS live traffic",
-        "status": "passed"
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
       }
     },
     "amap": {
       "artifacts": {
-        "scripts/1fd1a286312e4474611e58d09340eb5813e6af4ca5dfdb5bdf915a2ee525d453.js": "1fd1a286312e4474611e58d09340eb5813e6af4ca5dfdb5bdf915a2ee525d453"
+        "scripts/amap/c77e9ddcb234c32a/amap.js": "c77e9ddcb234c32a196ba32a9c2e3442c33850d74c130fb8e5cc255fc303099a"
       },
       "conversion_report": {
-        "adapterVersion": "1.1.0",
+        "adapterVersion": "1.2.0",
         "arguments": [],
         "convertedInputSha256": "a326c0b8011c5fa453f2bb5b879a3043b66f83a62de6bc80436bf28fd059d982",
         "counts": {
-          "bodyRewrite": 5,
+          "bodyRewrite": 3,
+          "bodyRewriteBeforeOptimization": 5,
+          "bodyRewriteRulesSaved": 2,
           "headerRewrite": 0,
           "mapLocal": 13,
           "mitmHostnames": 1,
@@ -96,9 +103,9 @@
             "guards": 16,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/1fd1a286312e4474611e58d09340eb5813e6af4ca5dfdb5bdf915a2ee525d453.js",
+            "path": "scripts/amap/c77e9ddcb234c32a/amap.js",
             "phase": "response",
-            "sha256": "1fd1a286312e4474611e58d09340eb5813e6af4ca5dfdb5bdf915a2ee525d453",
+            "sha256": "c77e9ddcb234c32a196ba32a9c2e3442c33850d74c130fb8e5cc255fc303099a",
             "sourceDate": "2026-03-09 08:15",
             "sourceSha256": "b351ddf6e353c85e58a7a98fc1fe66e07542d370154d486ed4efbc9660e6d7a2",
             "url": "https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js"
@@ -135,14 +142,14 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "5f205b236d2d89b3a351ed8e09ca8b7e3cca77af6ecd3b2fb463309138f71c42",
-        "adapter_version": "1.1.0",
-        "artifacts_sha256": "3ed7cf437903109e367909a850c506aa1426a08f9db5b2b7429db41722b2fac1",
-        "dependencies_sha256": "c8e34995bca25871712d81740a302803c97c0381ae155d54a668d2bd424d7d9c",
+        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
+        "adapter_version": "1.2.0",
+        "artifacts_sha256": "512e9c618b448263095d79620f884f2b57891c3efed7d07f21a77444883b0d58",
+        "dependencies_sha256": "8c18990038bf424acc340db9ef91d7acf03ce4ac48d1d6924d0bee3618ba6c55",
         "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
         "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.1.1",
-        "script_adapter_sha256": "e6d5c43f9b9634941ff044a8d7004e4d90476a34db7b810ac07d10c7a15f2b3c"
+        "publisher_version": "1.2.0",
+        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
       },
       "dependencies": [
         {
@@ -158,9 +165,9 @@
           "guards": 16,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/1fd1a286312e4474611e58d09340eb5813e6af4ca5dfdb5bdf915a2ee525d453.js",
+          "path": "scripts/amap/c77e9ddcb234c32a/amap.js",
           "phase": "response",
-          "sha256": "1fd1a286312e4474611e58d09340eb5813e6af4ca5dfdb5bdf915a2ee525d453",
+          "sha256": "c77e9ddcb234c32a196ba32a9c2e3442c33850d74c130fb8e5cc255fc303099a",
           "sourceDate": "2026-03-09 08:15",
           "sourceSha256": "b351ddf6e353c85e58a7a98fc1fe66e07542d370154d486ed4efbc9660e6d7a2",
           "url": "https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js"
@@ -169,10 +176,10 @@
       "description": "过滤高德地图开屏广告、各页面推广，精简我的页面。",
       "file": "modules/amap.sgmodule",
       "id": "amap",
-      "module_sha256": "16b39d5bb35c352c03cd44a4702db57f697fe57f79e49b8f933f9bd8c539ddf8",
-      "module_version": "1.0.3",
+      "module_sha256": "002a78ff1c25d3abf6d59d121cee48c4486fc3348eb966d4859d5cada21376bc",
+      "module_version": "1.0.4",
       "name": "高德地图去广告",
-      "revision": 3,
+      "revision": 4,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -182,19 +189,22 @@
       "surge_name": "高德地图去广告",
       "validation": {
         "scope": "Surge Mac parser; not iOS live traffic",
-        "status": "passed"
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
       }
     },
     "bilibili": {
       "artifacts": {
-        "dependencies/69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec.jq": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
-        "dependencies/e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f.jq": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
-        "scripts/9f2db56fa758cd35897d1482ad89fdc3531f099750a7d6f67bf39bcd7d9689db.js": "9f2db56fa758cd35897d1482ad89fdc3531f099750a7d6f67bf39bcd7d9689db",
-        "scripts/a4e77390d15bb8156dced228248dbe2ea9e365e7e6b5455d30dde17990e93d35.js": "a4e77390d15bb8156dced228248dbe2ea9e365e7e6b5455d30dde17990e93d35",
-        "scripts/d189cd2b1657d3bf518a3d737807b9f201db014c9a3998b709acbd64a98b6f0c.js": "d189cd2b1657d3bf518a3d737807b9f201db014c9a3998b709acbd64a98b6f0c"
+        "dependencies/bilibili/69b4b2129be425df/bilibili-tab.jq": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
+        "dependencies/bilibili/e99d5ea7038cb973/bilibili-mine.jq": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
+        "scripts/bilibili/009e1b1209138bc0/bilibili-response.js": "009e1b1209138bc04ec279a2b75038214942683204dd0f599aa3b8f1bbbae46e",
+        "scripts/bilibili/d303a6e1af01bead/bilibili-live.js": "d303a6e1af01bead91683b91d13495ee34f2b44ae0d75017cdfa7e9aa33135c4",
+        "scripts/bilibili/da0f723824dbb8ae/bilibili-request.js": "da0f723824dbb8aed26e555347baa80b6f7bd40d9b87eed6fcd8350acb817ea4"
       },
       "conversion_report": {
-        "adapterVersion": "1.1.0",
+        "adapterVersion": "1.2.0",
         "arguments": [
           {
             "choices": [
@@ -249,6 +259,8 @@
         "convertedInputSha256": "6b510b8331c94e1b9be379a4fe21da4cb8ec97a6693b5c48dd5bda5b604e4e59",
         "counts": {
           "bodyRewrite": 11,
+          "bodyRewriteBeforeOptimization": 11,
+          "bodyRewriteRulesSaved": 0,
           "headerRewrite": 1,
           "mapLocal": 8,
           "mitmHostnames": 5,
@@ -260,7 +272,7 @@
           {
             "kind": "jq",
             "origin": "local-loon-cache",
-            "path": "dependencies/69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec.jq",
+            "path": "dependencies/bilibili/69b4b2129be425df/bilibili-tab.jq",
             "sha256": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
             "sourceDate": null,
             "sourceSha256": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
@@ -269,7 +281,7 @@
           {
             "kind": "jq",
             "origin": "local-loon-cache",
-            "path": "dependencies/e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f.jq",
+            "path": "dependencies/bilibili/e99d5ea7038cb973/bilibili-mine.jq",
             "sha256": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
             "sourceDate": null,
             "sourceSha256": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
@@ -295,9 +307,9 @@
             "guards": 2,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/9f2db56fa758cd35897d1482ad89fdc3531f099750a7d6f67bf39bcd7d9689db.js",
+            "path": "scripts/bilibili/da0f723824dbb8ae/bilibili-request.js",
             "phase": "request",
-            "sha256": "9f2db56fa758cd35897d1482ad89fdc3531f099750a7d6f67bf39bcd7d9689db",
+            "sha256": "da0f723824dbb8aed26e555347baa80b6f7bd40d9b87eed6fcd8350acb817ea4",
             "sourceDate": "2026/9/6 18:56:07",
             "sourceSha256": "1b7e1d51efd960b10a22ea322630e72ecee646f2fdaad8a097c9e530fde1a857",
             "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_request_kokoryh.js"
@@ -323,9 +335,9 @@
             "guards": 19,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/a4e77390d15bb8156dced228248dbe2ea9e365e7e6b5455d30dde17990e93d35.js",
+            "path": "scripts/bilibili/009e1b1209138bc0/bilibili-response.js",
             "phase": "response",
-            "sha256": "a4e77390d15bb8156dced228248dbe2ea9e365e7e6b5455d30dde17990e93d35",
+            "sha256": "009e1b1209138bc04ec279a2b75038214942683204dd0f599aa3b8f1bbbae46e",
             "sourceDate": "2026/9/6 18:56:07",
             "sourceSha256": "e4a8426cffbfca85c78286126a10813051a2d1aeed018119bbabe3db5da85728",
             "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_response_kokoryh.js"
@@ -349,9 +361,9 @@
             "guards": 19,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/d189cd2b1657d3bf518a3d737807b9f201db014c9a3998b709acbd64a98b6f0c.js",
+            "path": "scripts/bilibili/d303a6e1af01bead/bilibili-live.js",
             "phase": "response",
-            "sha256": "d189cd2b1657d3bf518a3d737807b9f201db014c9a3998b709acbd64a98b6f0c",
+            "sha256": "d303a6e1af01bead91683b91d13495ee34f2b44ae0d75017cdfa7e9aa33135c4",
             "sourceDate": "2026/7/24 21:02:09",
             "sourceSha256": "521a3974d1a485daf5750bc7b986ee5b64325480ed80da2e7d90265f4ad57090",
             "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_json_kokoryh.js"
@@ -422,20 +434,20 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "5f205b236d2d89b3a351ed8e09ca8b7e3cca77af6ecd3b2fb463309138f71c42",
-        "adapter_version": "1.1.0",
-        "artifacts_sha256": "909fd6502fa862bb58b4e4be5c30f58e501a8a0598798c5de7ecf21e952e663c",
-        "dependencies_sha256": "ddb671ffc2eb6c5062ece34f45c5672c932ad9807dd9f2cbf83bf7354a547e92",
+        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
+        "adapter_version": "1.2.0",
+        "artifacts_sha256": "4fff236e6f6a5ce88fa68297c0f27d7fb934747551af9bb5e6f0cc622e77e070",
+        "dependencies_sha256": "17f24b5f1fd94677097a6f6f704a0d54849e4f54961266daa645ef34aceb9af4",
         "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
         "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.1.1",
-        "script_adapter_sha256": "e6d5c43f9b9634941ff044a8d7004e4d90476a34db7b810ac07d10c7a15f2b3c"
+        "publisher_version": "1.2.0",
+        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
       },
       "dependencies": [
         {
           "kind": "jq",
           "origin": "local-loon-cache",
-          "path": "dependencies/69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec.jq",
+          "path": "dependencies/bilibili/69b4b2129be425df/bilibili-tab.jq",
           "sha256": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
           "sourceDate": null,
           "sourceSha256": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
@@ -444,7 +456,7 @@
         {
           "kind": "jq",
           "origin": "local-loon-cache",
-          "path": "dependencies/e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f.jq",
+          "path": "dependencies/bilibili/e99d5ea7038cb973/bilibili-mine.jq",
           "sha256": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
           "sourceDate": null,
           "sourceSha256": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
@@ -470,9 +482,9 @@
           "guards": 2,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/9f2db56fa758cd35897d1482ad89fdc3531f099750a7d6f67bf39bcd7d9689db.js",
+          "path": "scripts/bilibili/da0f723824dbb8ae/bilibili-request.js",
           "phase": "request",
-          "sha256": "9f2db56fa758cd35897d1482ad89fdc3531f099750a7d6f67bf39bcd7d9689db",
+          "sha256": "da0f723824dbb8aed26e555347baa80b6f7bd40d9b87eed6fcd8350acb817ea4",
           "sourceDate": "2026/9/6 18:56:07",
           "sourceSha256": "1b7e1d51efd960b10a22ea322630e72ecee646f2fdaad8a097c9e530fde1a857",
           "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_request_kokoryh.js"
@@ -498,9 +510,9 @@
           "guards": 19,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/a4e77390d15bb8156dced228248dbe2ea9e365e7e6b5455d30dde17990e93d35.js",
+          "path": "scripts/bilibili/009e1b1209138bc0/bilibili-response.js",
           "phase": "response",
-          "sha256": "a4e77390d15bb8156dced228248dbe2ea9e365e7e6b5455d30dde17990e93d35",
+          "sha256": "009e1b1209138bc04ec279a2b75038214942683204dd0f599aa3b8f1bbbae46e",
           "sourceDate": "2026/9/6 18:56:07",
           "sourceSha256": "e4a8426cffbfca85c78286126a10813051a2d1aeed018119bbabe3db5da85728",
           "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_response_kokoryh.js"
@@ -524,9 +536,9 @@
           "guards": 19,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/d189cd2b1657d3bf518a3d737807b9f201db014c9a3998b709acbd64a98b6f0c.js",
+          "path": "scripts/bilibili/d303a6e1af01bead/bilibili-live.js",
           "phase": "response",
-          "sha256": "d189cd2b1657d3bf518a3d737807b9f201db014c9a3998b709acbd64a98b6f0c",
+          "sha256": "d303a6e1af01bead91683b91d13495ee34f2b44ae0d75017cdfa7e9aa33135c4",
           "sourceDate": "2026/7/24 21:02:09",
           "sourceSha256": "521a3974d1a485daf5750bc7b986ee5b64325480ed80da2e7d90265f4ad57090",
           "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_json_kokoryh.js"
@@ -535,10 +547,10 @@
       "description": "过滤哔哩哔哩广告、移除青少年模式弹窗和交互式弹幕、移除无用功能和链接跟踪参数，增加空降助手以便跳过视频中插入的广告。此插件仅建议iOS 15以上设备使用，且必须启用MitM-over-HTTP/2功能。\\n\\n空降助手是第三方提供的功能，依赖于Android版空降助手的服务器数据运作，可能会存在不准确或者失效的问题，此功能与哔哩哔哩官方无关。",
       "file": "modules/bilibili.sgmodule",
       "id": "bilibili",
-      "module_sha256": "139e9beee279732dd856500592d543c25ea766ea035ff07982518be8668453c9",
-      "module_version": "1.0.3",
+      "module_sha256": "58b97ea5b4485fb3832053ce1d7c0c0c8ece70e1aded07b56a7ad49c254e29ea",
+      "module_version": "1.0.4",
       "name": "哔哩哔哩去广告",
-      "revision": 3,
+      "revision": 4,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -548,17 +560,23 @@
       "surge_name": "哔哩哔哩去广告",
       "validation": {
         "scope": "Surge Mac parser; not iOS live traffic",
-        "status": "passed"
+        "status": "passed",
+        "variants": [
+          "defaults",
+          "all-conditional-items"
+        ]
       }
     },
     "fanqie": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.1.0",
+        "adapterVersion": "1.2.0",
         "arguments": {},
         "convertedInputSha256": "da052ba71baa527147c11c63b88b5391eff2ac52da6c64bb7d696979f7e8aaee",
         "counts": {
           "bodyRewrite": 0,
+          "bodyRewriteBeforeOptimization": 0,
+          "bodyRewriteRulesSaved": 0,
           "headerRewrite": 0,
           "mapLocal": 0,
           "mitmHostnames": 0,
@@ -589,21 +607,21 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "5f205b236d2d89b3a351ed8e09ca8b7e3cca77af6ecd3b2fb463309138f71c42",
-        "adapter_version": "1.1.0",
+        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
+        "adapter_version": "1.2.0",
         "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
         "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.1.1",
-        "script_adapter_sha256": "e6d5c43f9b9634941ff044a8d7004e4d90476a34db7b810ac07d10c7a15f2b3c"
+        "publisher_version": "1.2.0",
+        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
       },
       "dependencies": [],
       "description": "移除番茄小说开屏广告、移除文章底部和章末广告、移除听书页面广告、移除悬浮部件和底栏多余的福利标签。",
       "file": "modules/fanqie.sgmodule",
       "id": "fanqie",
-      "module_sha256": "7c2c731e5b2b0ff5369b1996fc281bfa35cac01d3c3b7d08ad58489acd1f45c0",
-      "module_version": "1.0.3",
+      "module_sha256": "bf8408b88c3206c975456f466cfe7167239976134909a01c3ab796c420c0147d",
+      "module_version": "1.0.4",
       "name": "番茄小说去广告",
-      "revision": 3,
+      "revision": 4,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -613,17 +631,22 @@
       "surge_name": "番茄小说去广告",
       "validation": {
         "scope": "Surge Mac parser; not iOS live traffic",
-        "status": "passed"
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
       }
     },
     "httpdns": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.1.0",
+        "adapterVersion": "1.2.0",
         "arguments": {},
         "convertedInputSha256": "1565be1f81faba0918f717a7ffe06340ac85db7e850a8059d636dec03c696a3a",
         "counts": {
           "bodyRewrite": 0,
+          "bodyRewriteBeforeOptimization": 0,
+          "bodyRewriteRulesSaved": 0,
           "headerRewrite": 0,
           "mapLocal": 6,
           "mitmHostnames": 4,
@@ -654,21 +677,21 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "5f205b236d2d89b3a351ed8e09ca8b7e3cca77af6ecd3b2fb463309138f71c42",
-        "adapter_version": "1.1.0",
+        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
+        "adapter_version": "1.2.0",
         "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
         "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.1.1",
-        "script_adapter_sha256": "e6d5c43f9b9634941ff044a8d7004e4d90476a34db7b810ac07d10c7a15f2b3c"
+        "publisher_version": "1.2.0",
+        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
       },
       "dependencies": [],
       "description": "此插件是所有去广告插件的依赖，拦截常见的HTTPDNS服务，以确保这些请求都能够在Loon的DNS框架下工作。",
       "file": "modules/httpdns.sgmodule",
       "id": "httpdns",
-      "module_sha256": "fa4573072f30fd5e2d91edc5ed5386fc73caf93cd11d1bf3e7edcf2177168de8",
-      "module_version": "1.0.5",
+      "module_sha256": "a2b4a46dddf7a9f10c4a1e113abcbf143c5307d56124e47f7906b49cd29daa62",
+      "module_version": "1.0.6",
       "name": "HTTPDNS拦截器",
-      "revision": 5,
+      "revision": 6,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -678,19 +701,24 @@
       "surge_name": "HTTPDNS拦截器",
       "validation": {
         "scope": "Surge Mac parser; not iOS live traffic",
-        "status": "passed"
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
       }
     },
     "jd": {
       "artifacts": {
-        "scripts/0c11689b47b1ab3ceee1f19bcbcd558ddec7c39d34f822a378ba81295c65b4c6.js": "0c11689b47b1ab3ceee1f19bcbcd558ddec7c39d34f822a378ba81295c65b4c6"
+        "scripts/jd/7ac084633388ea2a/jd.js": "7ac084633388ea2a72ff8abb7a526dafa7671e6410046ea4093e719baeefc3c5"
       },
       "conversion_report": {
-        "adapterVersion": "1.1.0",
+        "adapterVersion": "1.2.0",
         "arguments": [],
         "convertedInputSha256": "1c3493c1d35666ac3675b40c8e3b969eb23627c2467fedf4ee159ca41c757564",
         "counts": {
           "bodyRewrite": 3,
+          "bodyRewriteBeforeOptimization": 3,
+          "bodyRewriteRulesSaved": 0,
           "headerRewrite": 0,
           "mapLocal": 1,
           "mitmHostnames": 1,
@@ -712,9 +740,9 @@
             "guards": 2,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/0c11689b47b1ab3ceee1f19bcbcd558ddec7c39d34f822a378ba81295c65b4c6.js",
+            "path": "scripts/jd/7ac084633388ea2a/jd.js",
             "phase": "response",
-            "sha256": "0c11689b47b1ab3ceee1f19bcbcd558ddec7c39d34f822a378ba81295c65b4c6",
+            "sha256": "7ac084633388ea2a72ff8abb7a526dafa7671e6410046ea4093e719baeefc3c5",
             "sourceDate": "2024-01-23 09:50",
             "sourceSha256": "c029c4151fe73b3a6f660d0933393d1b6afd1969651f01a88d5a357abfdd7cb4",
             "url": "https://kelee.one/Resource/JavaScript/JD/JD_remove_ads.js"
@@ -751,14 +779,14 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "5f205b236d2d89b3a351ed8e09ca8b7e3cca77af6ecd3b2fb463309138f71c42",
-        "adapter_version": "1.1.0",
-        "artifacts_sha256": "0eb35f25613f2f4b9af1ed76ee2229dcc3c06ce578837d1bbbb19bd34dc403cc",
-        "dependencies_sha256": "7268363dc105d7c452206e83f2c67b9e7bc85fbf2e36e85ad3ad66f60d4f6977",
+        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
+        "adapter_version": "1.2.0",
+        "artifacts_sha256": "cafc685b091f0e827037ba9d5820b43c956b2742beaffea891be83152914e294",
+        "dependencies_sha256": "fdea08551884c159b3a64975dec1a34c6a569f88890e3c2faa03f7b075d675ef",
         "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
         "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.1.1",
-        "script_adapter_sha256": "e6d5c43f9b9634941ff044a8d7004e4d90476a34db7b810ac07d10c7a15f2b3c"
+        "publisher_version": "1.2.0",
+        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
       },
       "dependencies": [
         {
@@ -774,9 +802,9 @@
           "guards": 2,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/0c11689b47b1ab3ceee1f19bcbcd558ddec7c39d34f822a378ba81295c65b4c6.js",
+          "path": "scripts/jd/7ac084633388ea2a/jd.js",
           "phase": "response",
-          "sha256": "0c11689b47b1ab3ceee1f19bcbcd558ddec7c39d34f822a378ba81295c65b4c6",
+          "sha256": "7ac084633388ea2a72ff8abb7a526dafa7671e6410046ea4093e719baeefc3c5",
           "sourceDate": "2024-01-23 09:50",
           "sourceSha256": "c029c4151fe73b3a6f660d0933393d1b6afd1969651f01a88d5a357abfdd7cb4",
           "url": "https://kelee.one/Resource/JavaScript/JD/JD_remove_ads.js"
@@ -785,10 +813,10 @@
       "description": "移除京东开屏广告，精简我的页面产品推广。",
       "file": "modules/jd.sgmodule",
       "id": "jd",
-      "module_sha256": "2797e3c248a15980b7bdf1d7312c4b4dc2977b8f5f4ea9c20c837531e6a5ac50",
-      "module_version": "1.0.3",
+      "module_sha256": "75e07704d683f36a32d62c8ad9d3368875b18718b149dde591276f291dd13da7",
+      "module_version": "1.0.4",
       "name": "京东去广告",
-      "revision": 3,
+      "revision": 4,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -798,17 +826,22 @@
       "surge_name": "京东去广告",
       "validation": {
         "scope": "Surge Mac parser; not iOS live traffic",
-        "status": "passed"
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
       }
     },
     "qidian": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.1.0",
+        "adapterVersion": "1.2.0",
         "arguments": {},
         "convertedInputSha256": "73c6e2839aeb27619a9f4fe28302b5bf710d7e7ddb34643775074590339d3c57",
         "counts": {
-          "bodyRewrite": 8,
+          "bodyRewrite": 5,
+          "bodyRewriteBeforeOptimization": 8,
+          "bodyRewriteRulesSaved": 3,
           "headerRewrite": 0,
           "mapLocal": 13,
           "mitmHostnames": 2,
@@ -851,21 +884,21 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "5f205b236d2d89b3a351ed8e09ca8b7e3cca77af6ecd3b2fb463309138f71c42",
-        "adapter_version": "1.1.0",
+        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
+        "adapter_version": "1.2.0",
         "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
         "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.1.1",
-        "script_adapter_sha256": "e6d5c43f9b9634941ff044a8d7004e4d90476a34db7b810ac07d10c7a15f2b3c"
+        "publisher_version": "1.2.0",
+        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
       },
       "dependencies": [],
       "description": "移除起点读书开屏广告、每日导读、各类弹窗、文末广告、搜索填充词，精简我的页面。",
       "file": "modules/qidian.sgmodule",
       "id": "qidian",
-      "module_sha256": "09c23edcbffdd4a81f5edd0846ab71d74fb9a84bbc029f8b14c6d3021c8228a9",
-      "module_version": "1.0.5",
+      "module_sha256": "98e05487cc3bfa3bf11ec2362cad4fe34058be5d5adbb75511a4803fcacdf317",
+      "module_version": "1.0.6",
       "name": "起点读书去广告",
-      "revision": 5,
+      "revision": 6,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -875,17 +908,22 @@
       "surge_name": "起点读书去广告",
       "validation": {
         "scope": "Surge Mac parser; not iOS live traffic",
-        "status": "passed"
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
       }
     },
     "quark": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.1.0",
+        "adapterVersion": "1.2.0",
         "arguments": {},
         "convertedInputSha256": "b2f31d98c78c7075795a360c4b754feec61f83cf8fde1a6c1d03c7ec4fe76ba7",
         "counts": {
-          "bodyRewrite": 703,
+          "bodyRewrite": 1,
+          "bodyRewriteBeforeOptimization": 703,
+          "bodyRewriteRulesSaved": 702,
           "headerRewrite": 0,
           "mapLocal": 2,
           "mitmHostnames": 2,
@@ -920,21 +958,21 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "5f205b236d2d89b3a351ed8e09ca8b7e3cca77af6ecd3b2fb463309138f71c42",
-        "adapter_version": "1.1.0",
+        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
+        "adapter_version": "1.2.0",
         "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
         "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.1.1",
-        "script_adapter_sha256": "e6d5c43f9b9634941ff044a8d7004e4d90476a34db7b810ac07d10c7a15f2b3c"
+        "publisher_version": "1.2.0",
+        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
       },
       "dependencies": [],
       "description": "移除阅读广告、各页面弹窗及横幅，精简我的页面。",
       "file": "modules/quark.sgmodule",
       "id": "quark",
-      "module_sha256": "578133bbe167ceaf161cb4ba004486774929f3625fe0c1909116b59725f3ea44",
-      "module_version": "1.0.3",
+      "module_sha256": "731df60220f38f17fbd8177d98366e6564b6fbd82338cc7e8c6de2b13894827f",
+      "module_version": "1.0.4",
       "name": "夸克去广告",
-      "revision": 3,
+      "revision": 4,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -944,17 +982,22 @@
       "surge_name": "夸克去广告",
       "validation": {
         "scope": "Surge Mac parser; not iOS live traffic",
-        "status": "passed"
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
       }
     },
     "shengqian": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.1.0",
+        "adapterVersion": "1.2.0",
         "arguments": {},
         "convertedInputSha256": "973f112a629f30c90c6d8976ddd1613d3dbb79abceea843b1f83ba43f9e5c583",
         "counts": {
           "bodyRewrite": 1,
+          "bodyRewriteBeforeOptimization": 1,
+          "bodyRewriteRulesSaved": 0,
           "headerRewrite": 0,
           "mapLocal": 4,
           "mitmHostnames": 1,
@@ -989,21 +1032,21 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "5f205b236d2d89b3a351ed8e09ca8b7e3cca77af6ecd3b2fb463309138f71c42",
-        "adapter_version": "1.1.0",
+        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
+        "adapter_version": "1.2.0",
         "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
         "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.1.1",
-        "script_adapter_sha256": "e6d5c43f9b9634941ff044a8d7004e4d90476a34db7b810ac07d10c7a15f2b3c"
+        "publisher_version": "1.2.0",
+        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
       },
       "dependencies": [],
       "description": "移除开屏广告、横幅广告、商品推荐，精简我的页面。",
       "file": "modules/shengqian.sgmodule",
       "id": "shengqian",
-      "module_sha256": "d48259d5f8e9ae8cb2c1ece25e4cec5ad6aa20c38d9ccebbfccc0205480813cf",
-      "module_version": "1.0.3",
+      "module_sha256": "416c61262262943dd27712a8c16738cf8c837145f32e8dc1ba8c1c07fc479de4",
+      "module_version": "1.0.4",
       "name": "省钱快报去广告",
-      "revision": 3,
+      "revision": 4,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1013,19 +1056,24 @@
       "surge_name": "省钱快报去广告",
       "validation": {
         "scope": "Surge Mac parser; not iOS live traffic",
-        "status": "passed"
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
       }
     },
     "taobao": {
       "artifacts": {
-        "scripts/267cd813837537b8befdac6414785070c77fd1aa7ee687d8d1f6529aad04d4cf.js": "267cd813837537b8befdac6414785070c77fd1aa7ee687d8d1f6529aad04d4cf"
+        "scripts/taobao/4aac3cca8c1745aa/taobao.js": "4aac3cca8c1745aa17c80d9ff4c168ce5e59a0391441cfc6b03c9c5fbcada827"
       },
       "conversion_report": {
-        "adapterVersion": "1.1.0",
+        "adapterVersion": "1.2.0",
         "arguments": [],
         "convertedInputSha256": "d44d5aa06c958c556eeca90ea7eb6f4d94e73c307955d7cbed5bd68bc1ff7db2",
         "counts": {
           "bodyRewrite": 0,
+          "bodyRewriteBeforeOptimization": 0,
+          "bodyRewriteRulesSaved": 0,
           "headerRewrite": 0,
           "mapLocal": 11,
           "mitmHostnames": 4,
@@ -1047,9 +1095,9 @@
             "guards": 11,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/267cd813837537b8befdac6414785070c77fd1aa7ee687d8d1f6529aad04d4cf.js",
+            "path": "scripts/taobao/4aac3cca8c1745aa/taobao.js",
             "phase": "response",
-            "sha256": "267cd813837537b8befdac6414785070c77fd1aa7ee687d8d1f6529aad04d4cf",
+            "sha256": "4aac3cca8c1745aa17c80d9ff4c168ce5e59a0391441cfc6b03c9c5fbcada827",
             "sourceDate": "2024-01-12 09:10",
             "sourceSha256": "3ccb2093683d84a0085a24506fb04d3ac87713e8e1bade764711816e8908d903",
             "url": "https://kelee.one/Resource/JavaScript/Taobao/Taobao_remove_ads.js"
@@ -1082,14 +1130,14 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "5f205b236d2d89b3a351ed8e09ca8b7e3cca77af6ecd3b2fb463309138f71c42",
-        "adapter_version": "1.1.0",
-        "artifacts_sha256": "8abec059630b0e514d1928e84e7cab11448be155396f56cfbf06811a374ea1c7",
-        "dependencies_sha256": "3ea03c22c85f4ba1d624bcb40de172ce2d284f4ad13cec21d35d71a12b78f8bf",
+        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
+        "adapter_version": "1.2.0",
+        "artifacts_sha256": "e4dd4f5158989ae977299796e4fc0ee4209e7558a451112258cc78c25465cf13",
+        "dependencies_sha256": "ef3ec365dcce657b52da296a3282ebe5112f2086d2c7901402d8e7891cde2972",
         "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
         "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.1.1",
-        "script_adapter_sha256": "e6d5c43f9b9634941ff044a8d7004e4d90476a34db7b810ac07d10c7a15f2b3c"
+        "publisher_version": "1.2.0",
+        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
       },
       "dependencies": [
         {
@@ -1105,9 +1153,9 @@
           "guards": 11,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/267cd813837537b8befdac6414785070c77fd1aa7ee687d8d1f6529aad04d4cf.js",
+          "path": "scripts/taobao/4aac3cca8c1745aa/taobao.js",
           "phase": "response",
-          "sha256": "267cd813837537b8befdac6414785070c77fd1aa7ee687d8d1f6529aad04d4cf",
+          "sha256": "4aac3cca8c1745aa17c80d9ff4c168ce5e59a0391441cfc6b03c9c5fbcada827",
           "sourceDate": "2024-01-12 09:10",
           "sourceSha256": "3ccb2093683d84a0085a24506fb04d3ac87713e8e1bade764711816e8908d903",
           "url": "https://kelee.one/Resource/JavaScript/Taobao/Taobao_remove_ads.js"
@@ -1116,10 +1164,10 @@
       "description": "过滤淘宝开屏广告",
       "file": "modules/taobao.sgmodule",
       "id": "taobao",
-      "module_sha256": "8191879d8a8a6f7e5c00a5a860c153d63d6710f0f1b7c291189e5a965bdd226c",
-      "module_version": "1.0.3",
+      "module_sha256": "8f604059347b329ef302f915f79dff5846488ab422c8d31e747a4ba9add3e768",
+      "module_version": "1.0.4",
       "name": "淘宝去广告",
-      "revision": 3,
+      "revision": 4,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1129,19 +1177,24 @@
       "surge_name": "淘宝去广告",
       "validation": {
         "scope": "Surge Mac parser; not iOS live traffic",
-        "status": "passed"
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
       }
     },
     "weibo": {
       "artifacts": {
-        "scripts/1e22f501358e2a1b7660a1f5a0bb4ac3615b70be987e4d6177788e9195d96eaf.js": "1e22f501358e2a1b7660a1f5a0bb4ac3615b70be987e4d6177788e9195d96eaf"
+        "scripts/weibo/7c237f89cddf7d27/weibo.js": "7c237f89cddf7d274eab2f5b20833d11a847baa3f5138a0c7caeb52c847b0e72"
       },
       "conversion_report": {
-        "adapterVersion": "1.1.0",
+        "adapterVersion": "1.2.0",
         "arguments": [],
         "convertedInputSha256": "27b8f1e888c64f13148632647e36f2ce592909f25f70ab6359d52fa191a1880c",
         "counts": {
           "bodyRewrite": 0,
+          "bodyRewriteBeforeOptimization": 0,
+          "bodyRewriteRulesSaved": 0,
           "headerRewrite": 0,
           "mapLocal": 18,
           "mitmHostnames": 3,
@@ -1163,9 +1216,9 @@
             "guards": 18,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/1e22f501358e2a1b7660a1f5a0bb4ac3615b70be987e4d6177788e9195d96eaf.js",
+            "path": "scripts/weibo/7c237f89cddf7d27/weibo.js",
             "phase": "response",
-            "sha256": "1e22f501358e2a1b7660a1f5a0bb4ac3615b70be987e4d6177788e9195d96eaf",
+            "sha256": "7c237f89cddf7d274eab2f5b20833d11a847baa3f5138a0c7caeb52c847b0e72",
             "sourceDate": "2026-04-23 18:00",
             "sourceSha256": "026ccd766a53f744c2bf2aad93c4deb6f207defe4daf973178bb3e4193c997fb",
             "url": "https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js"
@@ -1198,14 +1251,14 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "5f205b236d2d89b3a351ed8e09ca8b7e3cca77af6ecd3b2fb463309138f71c42",
-        "adapter_version": "1.1.0",
-        "artifacts_sha256": "a937b4f6f3e098b2482761bde4724d6668a9960d41ba5ea68fef712ff12e7618",
-        "dependencies_sha256": "79eaf8396cb0b6259b845862e2780f0a892a91c7c086dd596e957a35b9185ef4",
+        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
+        "adapter_version": "1.2.0",
+        "artifacts_sha256": "0fb4e9f4e678e63cd910de1a0ea75c0248e96205fdae4bfc1cc6ca650c3db892",
+        "dependencies_sha256": "c3446913f4ca8cdc89cc85c7816dbaa88af37b84bc72381f9e21b48542f56263",
         "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
         "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.1.1",
-        "script_adapter_sha256": "e6d5c43f9b9634941ff044a8d7004e4d90476a34db7b810ac07d10c7a15f2b3c"
+        "publisher_version": "1.2.0",
+        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
       },
       "dependencies": [
         {
@@ -1221,9 +1274,9 @@
           "guards": 18,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/1e22f501358e2a1b7660a1f5a0bb4ac3615b70be987e4d6177788e9195d96eaf.js",
+          "path": "scripts/weibo/7c237f89cddf7d27/weibo.js",
           "phase": "response",
-          "sha256": "1e22f501358e2a1b7660a1f5a0bb4ac3615b70be987e4d6177788e9195d96eaf",
+          "sha256": "7c237f89cddf7d274eab2f5b20833d11a847baa3f5138a0c7caeb52c847b0e72",
           "sourceDate": "2026-04-23 18:00",
           "sourceSha256": "026ccd766a53f744c2bf2aad93c4deb6f207defe4daf973178bb3e4193c997fb",
           "url": "https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js"
@@ -1232,10 +1285,10 @@
       "description": "过滤微博广告及去除各部分推广模块",
       "file": "modules/weibo.sgmodule",
       "id": "weibo",
-      "module_sha256": "48aaff70fbce39c41200adbc6d33c65c2d2a92e9ab32d7c361690a0ff01548c0",
-      "module_version": "1.0.3",
+      "module_sha256": "842dd571643ac9ff2ffc6195b09f55825839823881dea01c10f8a1107520f632",
+      "module_version": "1.0.4",
       "name": "微博去广告",
-      "revision": 3,
+      "revision": 4,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1245,19 +1298,24 @@
       "surge_name": "微博去广告",
       "validation": {
         "scope": "Surge Mac parser; not iOS live traffic",
-        "status": "passed"
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
       }
     },
     "xiaohongshu": {
       "artifacts": {
-        "scripts/71c2f3f0989e3a1059f3109c8668186460dae6db5781a5ce1d8ce65af483f05d.js": "71c2f3f0989e3a1059f3109c8668186460dae6db5781a5ce1d8ce65af483f05d"
+        "scripts/xiaohongshu/128ea0330d6b7581/xiaohongshu.js": "128ea0330d6b758133bec32a00fcdd44cd1dcd25cf0056b34c7605e158878e3c"
       },
       "conversion_report": {
-        "adapterVersion": "1.1.0",
+        "adapterVersion": "1.2.0",
         "arguments": [],
         "convertedInputSha256": "2bfb4713912521e28ffd50a29954a8ef52b8d9674c546f8e42505034abe424f6",
         "counts": {
           "bodyRewrite": 5,
+          "bodyRewriteBeforeOptimization": 5,
+          "bodyRewriteRulesSaved": 0,
           "headerRewrite": 0,
           "mapLocal": 5,
           "mitmHostnames": 5,
@@ -1280,9 +1338,9 @@
             "guards": 9,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/71c2f3f0989e3a1059f3109c8668186460dae6db5781a5ce1d8ce65af483f05d.js",
+            "path": "scripts/xiaohongshu/128ea0330d6b7581/xiaohongshu.js",
             "phase": "response",
-            "sha256": "71c2f3f0989e3a1059f3109c8668186460dae6db5781a5ce1d8ce65af483f05d",
+            "sha256": "128ea0330d6b758133bec32a00fcdd44cd1dcd25cf0056b34c7605e158878e3c",
             "sourceDate": "2026-02-14 15:00",
             "sourceSha256": "f7b637c9c738b18f72dd61824e25b06dad7d55553de204daad0dddd675a74f0c",
             "url": "https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js"
@@ -1354,14 +1412,14 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "5f205b236d2d89b3a351ed8e09ca8b7e3cca77af6ecd3b2fb463309138f71c42",
-        "adapter_version": "1.1.0",
-        "artifacts_sha256": "b28ef4dbb01ef57b8a9bb3416cf06663ee6cf0d55e25feb48fa3b782de18a8d2",
-        "dependencies_sha256": "8c035cd75fbd3f04cbcd45e0b0356d1021e7c1a49fab36669f1798e19e9f53d0",
+        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
+        "adapter_version": "1.2.0",
+        "artifacts_sha256": "4635e49b3161b242071f820061f2469e7d495cbd884625813e15c732e83c48cb",
+        "dependencies_sha256": "efecc8b320a3d353278a04857549cb3fd569988174cd9e4445d76b7b440e2ba0",
         "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
         "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.1.1",
-        "script_adapter_sha256": "e6d5c43f9b9634941ff044a8d7004e4d90476a34db7b810ac07d10c7a15f2b3c"
+        "publisher_version": "1.2.0",
+        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
       },
       "dependencies": [
         {
@@ -1378,9 +1436,9 @@
           "guards": 9,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/71c2f3f0989e3a1059f3109c8668186460dae6db5781a5ce1d8ce65af483f05d.js",
+          "path": "scripts/xiaohongshu/128ea0330d6b7581/xiaohongshu.js",
           "phase": "response",
-          "sha256": "71c2f3f0989e3a1059f3109c8668186460dae6db5781a5ce1d8ce65af483f05d",
+          "sha256": "128ea0330d6b758133bec32a00fcdd44cd1dcd25cf0056b34c7605e158878e3c",
           "sourceDate": "2026-02-14 15:00",
           "sourceSha256": "f7b637c9c738b18f72dd61824e25b06dad7d55553de204daad0dddd675a74f0c",
           "url": "https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js"
@@ -1389,10 +1447,10 @@
       "description": "过滤信息流推广，移除图片及视频水印，如有异常，请先清除缓存再尝试。",
       "file": "modules/xiaohongshu.sgmodule",
       "id": "xiaohongshu",
-      "module_sha256": "8e8dc00dcc7890745595428507f00004682d9b6465a454a11bb7dddaf039b4e6",
-      "module_version": "1.0.3",
+      "module_sha256": "8b89d92869a49ae7d452bfb4efe01a94f7cb54496a53bdb74665cc56cafd52f5",
+      "module_version": "1.0.4",
       "name": "小红书去广告",
-      "revision": 3,
+      "revision": 4,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1402,7 +1460,10 @@
       "surge_name": "小红书去广告",
       "validation": {
         "scope": "Surge Mac parser; not iOS live traffic",
-        "status": "passed"
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
       }
     }
   },

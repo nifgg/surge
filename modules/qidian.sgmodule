@@ -1,6 +1,6 @@
 #!name=起点读书去广告
 #!desc=移除起点读书开屏广告、每日导读、各类弹窗、文末广告、搜索填充词，精简我的页面。
-#!version=1.0.5
+#!version=1.0.6
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QiDian.png
 #!openUrl=https://apps.apple.com/app/id534174796
@@ -12,15 +12,12 @@
 # Surge adaptation; upstream authorship retained above.
 # source-sha256=73c6e2839aeb27619a9f4fe28302b5bf710d7e7ddb34643775074590339d3c57
 # source-date=2026-10-02 13:57:49
-# adapter-version=1.1.0
+# adapter-version=1.2.0
 
 [Body Rewrite]
 http-response-jq (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'if ((getpath(["Data"]) // {}) | has("WolfEye")) then (setpath(["Data","WolfEye"]; 0)) else . end'
 http-response-jq (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'if ((getpath(["Data","CloudSetting"]) // {}) | has("TeenShowFreq")) then (setpath(["Data","CloudSetting","TeenShowFreq"]; 0)) else . end'
-http-response-jq (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'delpaths([["Data","ActivityPageBackPushNoticeFrequency"]])'
-http-response-jq (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'delpaths([["Data","ActivityIcon"]])'
-http-response-jq (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'delpaths([["Data","ActivityPopup"]])'
-http-response-jq (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'delpaths([["Data","LuckBag"]])'
+http-response-jq (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/getconf$ 'delpaths([["Data","ActivityPageBackPushNoticeFrequency"],["Data","ActivityIcon"],["Data","ActivityPopup"],["Data","LuckBag"]])'
 http-response-jq (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/dailyrecommend\/getdailyrecommend\? 'if ((getpath(["Data"]) // {}) | has("Items")) then (setpath(["Data","Items"]; "[]")) else . end'
 http-response-jq (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v3\/user\/getaccountpage\? 'delpaths([["Data","BenefitButtonList"]])'
 

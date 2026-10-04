@@ -25,11 +25,15 @@ Surge 远程模块集合，提供 HTTPDNS 拦截、广告平台拦截和应用�
 
 复制上表中的订阅链接，添加到 Surge 的远程模块即可。模块与脚本可直接下载，无需认证；Surge 会自动下载模块引用的脚本。后续更新沿用同一订阅地址。
 
+建议使用 Surge iOS 5.14+ 或 Mac 5.9+，以支持模块中的 JQ Body Rewrite。包含 `[MITM]` 的模块需要开启 MITM 并信任证书；哔哩哔哩的 gRPC 处理还需开启 HTTP/2 解密。模块通过 `%APPEND%` 添加上游指定域名。
+
+脚本按模块和功能命名，例如 `amap.js`、`bilibili-request.js`、`bilibili-response.js`。路径中的版本目录供 Surge 区分缓存，更新模块后会自动引用对应版本。JQ 程序已内联到模块，`.jq` 文件用于记录依赖来源。
+
 | 参数 | 适用模块 | 默认值 | 用途 |
 | --- | --- | --- | --- |
-| `proxy_policy` | 哔哩哔哩 | `Proxy` | 需与 Surge 中的实际策略组名称一致 |
+| `proxy_policy` | 哔哩哔哩 | `Proxy` | 启用空降助手时，需与 Surge 中的实际策略组名称一致 |
 | `sponsorBlock` | 哔哩哔哩 | `false` | 保留上游默认关闭设置 |
 
 ## 来源
 
-来自 [LoonKissSurge](https://github.com/QingRex/LoonKissSurge)。模块与依赖根据其引用的上游模块，权利与使用条件由上游原作者规定。
+上游插件来自 [可莉插件中心](https://hub.kelee.one/)，适配参考 [LoonKissSurge](https://github.com/QingRex/LoonKissSurge)。模块保留原作者署名，权利与使用条件由上游原作者规定。
