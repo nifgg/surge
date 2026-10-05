@@ -9,7 +9,7 @@
   try {
   let __args = {}; try { if (typeof $argument === 'string') __args = JSON.parse($argument); } catch { return $done({}); }
   if (__args.__enabled === false) return $done({});
-  if ([["^https:\\/\\/ap[ip]\\.bilibili\\.com\\/x\\/(resource\\/(top\\/activity|patch\\/tab(\\/v2)?)|v2\\/search\\/square|vip\\/ads\\/materials)\\?","i"]].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
+  if ([].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
 
 // 脚本引用 https://raw.githubusercontent.com/kokoryh/Sparkle/refs/heads/master/dist/bilibili.json.js
 // Built at: 2026/7/24 21:02:09

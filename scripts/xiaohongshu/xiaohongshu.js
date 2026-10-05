@@ -9,7 +9,7 @@
   try {
   let __args = {}; try { if (typeof $argument === 'string') __args = JSON.parse($argument); } catch { return $done({}); }
   if (__args.__enabled === false) return $done({});
-  if ([["^https:\\/\\/www\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v1\\/ads\\/resource|v2\\/hey\\/\\w+\\/hey_gallery)","i"]].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
+  if ([].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
 
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js

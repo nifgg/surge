@@ -22,6 +22,10 @@ Surge 远程模块集合，提供 HTTPDNS 拦截、广告平台拦截和应用�
 | 微信公众号去广告 | [wechat-official.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/wechat-official.sgmodule) |
 | 酷安去广告 | [coolapk.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/coolapk.sgmodule) |
 | 拼多多去广告 | [pinduoduo.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/pinduoduo.sgmodule) |
+| 百度网盘去广告 | [baidu.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/baidu.sgmodule) |
+| 可莉广告过滤器 | [kelee.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/kelee.sgmodule) |
+| 乐播投屏去广告 | [lebo.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/lebo.sgmodule) |
+| 闲鱼去广告 | [goofish.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/goofish.sgmodule) |
 
 模块版本、上游插件日期与版本、内容哈希见 [manifest.json](manifest.json)。
 
@@ -37,6 +41,8 @@ Surge 远程模块集合，提供 HTTPDNS 拦截、广告平台拦截和应用�
 | --- | --- | --- | --- |
 | `proxy_policy` | 哔哩哔哩 | `Proxy` | 启用空降助手时，需与 Surge 中的实际策略组名称一致 |
 | `sponsorBlock` | 哔哩哔哩 | `false` | 保留上游默认关闭设置 |
+
+可莉广告过滤器属于综合模块，与广告平台拦截器、淘宝去广告各有一条返回内容不同的重叠规则；同时启用时，重叠请求的响应取决于最终配置中的匹配顺序。更换同类去广告模块时，建议先停用旧模块，避免叠加处理。
 
 ## 来源
 

@@ -1,6 +1,6 @@
 #!name=夸克去广告
 #!desc=移除阅读广告、各页面弹窗及横幅，精简我的页面。
-#!version=1.0.7
+#!version=1.0.8
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QuarkBrowser.png
 #!category=去广告
@@ -9,7 +9,7 @@
 
 # Surge adaptation; upstream authorship retained above.
 # source-date=2026-10-02 13:57:49
-# adapter-version=1.3.1
+# adapter-version=1.4.0
 
 [Map Local]
 (?i)^https:\/\/stars\.shuqireader\.com\/kkios\/render\/load\/resource\/app$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"

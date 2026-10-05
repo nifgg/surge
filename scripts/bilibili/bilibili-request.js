@@ -9,7 +9,7 @@
   try {
   let __args = {}; try { if (typeof $argument === 'string') __args = JSON.parse($argument); } catch { return $done({}); }
   if (__args.__enabled === false) return $done({});
-  if ([["^https:\\/\\/ap[ip]\\.bilibili\\.com\\/x\\/(resource\\/(top\\/activity|patch\\/tab(\\/v2)?)|v2\\/search\\/square|vip\\/ads\\/materials)\\?","i"],["^https:\\/\\/grpc\\.biliapi\\.net\\/bilibili\\.app\\.(view\\.v1\\.View\\/TFInfo|viewunite\\.v1\\.View\\/(PlayPause|ViewEndPage))$","i"]].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
+  if ([["^https:\\/\\/grpc\\.biliapi\\.net\\/bilibili\\.app\\.(view\\.v1\\.View\\/TFInfo|viewunite\\.v1\\.View\\/(PlayPause|ViewEndPage))$","i"]].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
 
   const $httpClient = {};
   for (const method of ['get','post','put','delete','head','patch','options']) {

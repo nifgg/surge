@@ -1,6 +1,6 @@
 #!name=小红书去广告
 #!desc=过滤信息流推广，移除图片及视频水印，如有异常，请先清除缓存再尝试。
-#!version=1.0.7
+#!version=1.0.8
 #!author=RuCu6[https://github.com/RuCu6], fmz200[https://github.com/fmz200]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/RedPaper.png
 #!category=去广告
@@ -9,7 +9,7 @@
 
 # Surge adaptation; upstream authorship retained above.
 # source-date=2026-10-02 13:57:49
-# adapter-version=1.3.1
+# adapter-version=1.4.0
 
 [Rule]
 AND,((PROTOCOL,QUIC),(DOMAIN-SUFFIX,xiaohongshu.com)),REJECT
@@ -44,7 +44,7 @@ http-response-jq (?i)^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/t
 小红书·图片和视频水印 = type=http-response, pattern=(?i)^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/note\/feed|v3\/note\/videofeed), script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=20, engine=webview
 小红书·首页信息流 = type=http-response, pattern=(?i)^https:\/\/(?:edith|rec)\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\?, script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=20, engine=webview
 小红书·搜索页广告 = type=http-response, pattern=(?i)^https:\/\/(?:edith|so)\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\?, script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=20, engine=webview
-小红书·视频水印 = type=http-response, pattern=^(?!(?:(?i:^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(?:v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery))))(?i:^https:\/\/(?:edith|rec|www)\.xiaohongshu\.com\/api\/sns\/(?:v4\/note\/videofeed|v10\/note\/video\/save)), script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=20, engine=webview
+小红书·视频水印 = type=http-response, pattern=(?i)^https:\/\/(?:edith|rec|www)\.xiaohongshu\.com\/api\/sns\/(?:v4\/note\/videofeed|v10\/note\/video\/save), script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=20, engine=webview
 
 [MITM]
 hostname = %APPEND% ci.xiaohongshu.com, edith.xiaohongshu.com, rec.xiaohongshu.com, so.xiaohongshu.com, www.xiaohongshu.com

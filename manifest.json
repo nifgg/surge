@@ -3,7 +3,7 @@
     "advertisers": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": {},
         "convertedInputSha256": "2947d7df2ceb8addb9b06d7651465f8166d61ebd02ce1d889d562c62739266c4",
         "counts": {
@@ -28,6 +28,7 @@
         },
         "matchers": [
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 480,
@@ -35,6 +36,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 481,
@@ -42,6 +44,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 482,
@@ -49,6 +52,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 483,
@@ -72,6 +76,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"adstrategy\"},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"tnc\"},{\"type\":\"OR\",\"children\":[{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"capcutapi.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"zijieapi.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"isnssdk.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"toutiaoapi.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"bytedance.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"snssdk.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"sgsnssdk.com\"}]}]},\"policy\":\"DIRECT\",\"noResolve\":false}",
@@ -427,22 +432,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [],
       "description": "此插件是所有去广告插件的依赖，只针对广告平台处理。你依然需要安装其他去广告插件来搭配使用，并确保此插件始终排序在顶部。\\n\\n支持拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里巴巴、阿里妈妈、阿里百川、超级汇川、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通、聚次方、美数、嗨量、维快网络、变现猫、章鱼、分秒、泰之菩、翼信、快易、数萤技术、方麟、益起、上量优选、新义互联、腾云天下、布里奇、塔酷、丽声、推啊、旺脉、新度博望、新多广告、快易科技、封狐信息、互裕科技、旺脉信息、佳量动力、享点科技、游昆信息、小川科技、旺脉科技、萃弈、泛为、米漫、易量跃动、秒针、贵士移动、星讯、倍业科技、创聚科技、硬核聚视、数因科技、芒拓网络、上海领页、神蓍科技、酷盈、凡提科技、亿帆、作业帮、畅行未来、华夏乐游、邑维、趣小猫、极准网络、元气智广、Google、SupersonicAds、APPSAD、Adjust、Sigmob、TradPlus、Fancy、MedPro、AppLovin、Unity3D、Tapjoy、Liftoff、Vungle、Moloco、Smadex、Tapad、Appier、InMobi、AppsFlyer、AppLovin、Moloco、RayJump、RixEngine、Amazon、Skarb、Amplitude、ToBid、UMS等广告平台的广告请求，更适合iOS平台的应用。",
       "file": "modules/advertisers.sgmodule",
       "id": "advertisers",
-      "module_sha256": "3890be1db69bfc19f0eaeb479ac58f77243bc8b5a0314e89d5c4f899da070a67",
-      "module_version": "1.0.9",
+      "module_sha256": "bb0f8e32a8dc01d551c25544a28d947b2a54943591218c476ca489e13c64cfa5",
+      "module_version": "1.0.10",
       "name": "广告平台拦截器",
-      "revision": 9,
+      "revision": 10,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -463,7 +468,7 @@
         "scripts/amap/amap.js": "99ff3aa0e0b24fdafba0b60a28e2dc0a5a5391a9cb65f6a58b8692210e1d5558"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": [],
         "convertedInputSha256": "a326c0b8011c5fa453f2bb5b879a3043b66f83a62de6bc80436bf28fd059d982",
         "counts": {
@@ -509,6 +514,7 @@
         },
         "matchers": [
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 20,
@@ -516,6 +522,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 21,
@@ -537,6 +544,7 @@
             "phase": "response"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 24,
@@ -544,6 +552,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 25,
@@ -551,6 +560,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 27,
@@ -558,6 +568,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 28,
@@ -565,6 +576,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 29,
@@ -572,6 +584,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 30,
@@ -579,6 +592,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 31,
@@ -586,6 +600,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 32,
@@ -593,6 +608,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 33,
@@ -600,6 +616,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 35,
@@ -607,6 +624,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 36,
@@ -739,6 +757,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"amap-aos-info-nogw.amap.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"free-aos-cdn-image.amap.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -756,15 +775,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
         "artifacts_sha256": "c7280b747fb461f17f180695464f2b7df12d7d84ddee6c64c6fa6a14c1dcc229",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "dependencies_sha256": "2432010a1fd88022d6489c1ff6533307d29a14241078964fe45c7c4d661f1d7a",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [
         {
@@ -791,10 +810,10 @@
       "description": "过滤高德地图开屏广告、各页面推广，精简我的页面。",
       "file": "modules/amap.sgmodule",
       "id": "amap",
-      "module_sha256": "dade2985ab733006e4e1f8cbcf5c0eadef91060f01290c3663d44c2c56612d19",
-      "module_version": "1.0.7",
+      "module_sha256": "a84cebd15a01def814da0d3948099b67828479d8514f70d8559338583e3c3d40",
+      "module_version": "1.0.8",
       "name": "高德地图去广告",
-      "revision": 7,
+      "revision": 8,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -810,16 +829,167 @@
         ]
       }
     },
+    "baidu": {
+      "artifacts": {},
+      "conversion_report": {
+        "adapterVersion": "1.4.0",
+        "arguments": {},
+        "convertedInputSha256": "c6e05423a0af766ea41e735949091eb8d42695efc77d7c22cc6f7f3fe7bca42c",
+        "counts": {
+          "bodyRewrite": 1,
+          "bodyRewriteBeforeOptimization": 1,
+          "bodyRewriteRulesSaved": 0,
+          "headerRewrite": 0,
+          "mapLocal": 7,
+          "mitmHostnames": 1,
+          "rewriteLines": 8,
+          "rules": 0,
+          "scripts": 0
+        },
+        "dependencies": [],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 14,
+            "pattern": "^https:\\/\\/pan\\.baidu\\.com\\/api\\/getconfig\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 15,
+            "pattern": "^https:\\/\\/pan\\.baidu\\.com\\/api\\/getsyscfg\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 17,
+            "pattern": "^https:\\/\\/pan\\.baidu\\.com\\/api\\/taskscore\\/tasklist\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 19,
+            "pattern": "^https:\\/\\/pan\\.baidu\\.com\\/act\\/api\\/activityentry\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 21,
+            "pattern": "^https:\\/\\/pan\\.baidu\\.com\\/rest\\/\\d\\.\\d\\/pcs\\/adv\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 23,
+            "pattern": "^https:\\/\\/pan\\.baidu\\.com\\/api\\/plugin\\/get\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 25,
+            "pattern": "^https:\\/\\/pan\\.baidu\\.com\\/recommend\\/query\\/list\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 27,
+            "pattern": "^https:\\/\\/pan\\.baidu\\.com\\/feed\\/kingkongdistrict\\?",
+            "phase": "response"
+          }
+        ],
+        "metadata": {
+          "author": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+          "date": "2026-10-02 13:57:49",
+          "desc": "移除开屏广告、首页卡片广告、传输页面广告、各类弹窗，精简侧拉抽屉和我的页面。",
+          "homepage": "https://hub.kelee.one",
+          "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BaiduNetDisk.png",
+          "loon_version": "3.5.1(998)",
+          "name": "百度网盘去广告",
+          "openUrl": "https://apps.apple.com/app/id547166701",
+          "system": "",
+          "system_version": "",
+          "tag": "去广告"
+        },
+        "minimumSurge": {
+          "ios": "5.14",
+          "mac": "5.9"
+        },
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
+        "ruleMockTransfers": [],
+        "rulePredicates": [],
+        "runtimeVerified": false,
+        "sourceRewriteLines": 8,
+        "sourceSha256": "c6e05423a0af766ea41e735949091eb8d42695efc77d7c22cc6f7f3fe7bca42c",
+        "validation": "offline-exact-structure-and-content",
+        "warnings": []
+      },
+      "converter": {
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
+      },
+      "dependencies": [],
+      "description": "移除开屏广告、首页卡片广告、传输页面广告、各类弹窗，精简侧拉抽屉和我的页面。",
+      "file": "modules/baidu.sgmodule",
+      "id": "baidu",
+      "module_sha256": "a4236b810e94a2c334d60458bfb3f2f3e471253a2209edd81920a4408c64c853",
+      "module_version": "1.0.1",
+      "name": "百度网盘去广告",
+      "revision": 1,
+      "source_date": "2026-10-02 13:57:49",
+      "source_min_loon_version": "3.5.1(998)",
+      "source_origin": "local",
+      "source_sha256": "c6e05423a0af766ea41e735949091eb8d42695efc77d7c22cc6f7f3fe7bca42c",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx",
+      "source_version": "",
+      "surge_name": "百度网盘去广告",
+      "validation": {
+        "scope": "Surge Mac parser; not iOS live traffic",
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
+      }
+    },
     "bilibili": {
       "artifacts": {
         "jq/bilibili/bilibili-mine.jq": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
         "jq/bilibili/bilibili-tab.jq": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
-        "scripts/bilibili/bilibili-live.js": "4cf11fb89090d87381465153545baaaf73a468f8613a6145263321e95e28a221",
-        "scripts/bilibili/bilibili-request.js": "ffd3d30d67997d51c5ac992597fff0d9a7a7518f5e8c34e9c090d66e92a68a65",
-        "scripts/bilibili/bilibili-response.js": "18bdfcf8f5c280ec072f194e86c1b3a4f8ff804110ce799a1f7131ed1328c612"
+        "scripts/bilibili/bilibili-live.js": "b149395aaacf459baee82ff16f9f756d21420cd22574e0b015563cef2553b011",
+        "scripts/bilibili/bilibili-request.js": "cbad1130681fc9e41d2d2394fe6a7b47cd5c0e6a9e230d4b5904d4b68bf54564",
+        "scripts/bilibili/bilibili-response.js": "552372ae83f717d49ecc6807baeae97a5ddfb4548092656ebe92cc63fd38a32e"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": [
           {
             "choices": [
@@ -919,12 +1089,12 @@
               "engine": "webview",
               "nativeSurgeBranch": true
             },
-            "guards": 2,
+            "guards": 1,
             "kind": "js",
             "origin": "local-loon-cache",
             "path": "scripts/bilibili/bilibili-request.js",
             "phase": "request",
-            "sha256": "ffd3d30d67997d51c5ac992597fff0d9a7a7518f5e8c34e9c090d66e92a68a65",
+            "sha256": "cbad1130681fc9e41d2d2394fe6a7b47cd5c0e6a9e230d4b5904d4b68bf54564",
             "sourceDate": "2026/9/6 18:56:07",
             "sourceSha256": "1b7e1d51efd960b10a22ea322630e72ecee646f2fdaad8a097c9e530fde1a857",
             "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_request_kokoryh.js"
@@ -947,12 +1117,12 @@
               "engine": "webview",
               "nativeSurgeBranch": true
             },
-            "guards": 4,
+            "guards": 3,
             "kind": "js",
             "origin": "local-loon-cache",
             "path": "scripts/bilibili/bilibili-response.js",
             "phase": "response",
-            "sha256": "18bdfcf8f5c280ec072f194e86c1b3a4f8ff804110ce799a1f7131ed1328c612",
+            "sha256": "552372ae83f717d49ecc6807baeae97a5ddfb4548092656ebe92cc63fd38a32e",
             "sourceDate": "2026/9/6 18:56:07",
             "sourceSha256": "e4a8426cffbfca85c78286126a10813051a2d1aeed018119bbabe3db5da85728",
             "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_response_kokoryh.js"
@@ -973,12 +1143,12 @@
               "engine": "webview",
               "nativeSurgeBranch": true
             },
-            "guards": 1,
+            "guards": 0,
             "kind": "js",
             "origin": "local-loon-cache",
             "path": "scripts/bilibili/bilibili-live.js",
             "phase": "response",
-            "sha256": "4cf11fb89090d87381465153545baaaf73a468f8613a6145263321e95e28a221",
+            "sha256": "b149395aaacf459baee82ff16f9f756d21420cd22574e0b015563cef2553b011",
             "sourceDate": "2026/7/24 21:02:09",
             "sourceSha256": "521a3974d1a485daf5750bc7b986ee5b64325480ed80da2e7d90265f4ad57090",
             "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_json_kokoryh.js"
@@ -1008,6 +1178,7 @@
             "phase": "response"
           },
           {
+            "action": "response.body.mock(\"text\", \"{\\\"code\\\":0,\\\"message\\\":\\\"OK\\\",\\\"ttl\\\":1,\\\"data\\\":{\\\"max_time\\\":0,\\\"min_interval\\\":31536000,\\\"pull_interval\\\":31536000,\\\"keep_ids\\\":[],\\\"show\\\":[],\\\"list\\\":[{}],\\\"splash_request_id\\\":\\\"\\\"}}\", 200)",
             "flags": "i",
             "kind": "terminal",
             "line": 33,
@@ -1029,6 +1200,7 @@
             "phase": "response"
           },
           {
+            "action": "response.body.mock(\"text\", \"{\\\"code\\\":0,\\\"data\\\":{\\\"closeType\\\":\\\"close_win\\\",\\\"container\\\":[],\\\"showTime\\\":\\\"\\\"},\\\"message\\\":\\\"success\\\"}\", 200)",
             "flags": "i",
             "kind": "terminal",
             "line": 39,
@@ -1057,6 +1229,7 @@
             "phase": "response"
           },
           {
+            "action": "response.body.mock(\"text\", \"{\\\"code\\\":-404,\\\"message\\\":\\\"-404\\\",\\\"ttl\\\":1,\\\"data\\\":null}\", 200)",
             "flags": "i",
             "kind": "terminal",
             "line": 46,
@@ -1064,6 +1237,7 @@
             "phase": "response"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 48,
@@ -1071,6 +1245,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 50,
@@ -1106,6 +1281,7 @@
             "phase": "response"
           },
           {
+            "action": "response.body.mock(\"text\", \"AAAAABMKEQgCEgl0ZWVuYWdlcnMgAioA\", 200, true)",
             "flags": "i",
             "kind": "terminal",
             "line": 60,
@@ -1113,6 +1289,7 @@
             "phase": "response"
           },
           {
+            "action": "response.body.mock(\"text\", \"AAAAACEaHeaQnOe0ouinhumikeOAgeeVquWJp+aIlnVw5Li7KAE=\", 200, true)",
             "flags": "i",
             "kind": "terminal",
             "line": 62,
@@ -1120,6 +1297,7 @@
             "phase": "response"
           },
           {
+            "action": "response.body.mock(\"text\", \"AAAAAAA=\", 200, true)",
             "flags": "i",
             "kind": "terminal",
             "line": 64,
@@ -1182,6 +1360,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"api.biliapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"app.biliapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -1205,15 +1384,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
-        "artifacts_sha256": "45a9eeed6eae296bd3af3f84a69b210d239076401c87782d0f84698aca7665c6",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
-        "dependencies_sha256": "15c811389bacd30923f0f7d2af3be3ced52e0bba7c4487f10e4e0e9b0977cc87",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
+        "artifacts_sha256": "8f4166ade48773b852839ca68121cf9b7fb66e66b300d56bc4eaaeb251555298",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
+        "dependencies_sha256": "bb1957d1fe9b313107cb5ca89210f6b13c250f7773a2f12edd0ad86348068669",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [
         {
@@ -1251,12 +1430,12 @@
             "engine": "webview",
             "nativeSurgeBranch": true
           },
-          "guards": 2,
+          "guards": 1,
           "kind": "js",
           "origin": "local-loon-cache",
           "path": "scripts/bilibili/bilibili-request.js",
           "phase": "request",
-          "sha256": "ffd3d30d67997d51c5ac992597fff0d9a7a7518f5e8c34e9c090d66e92a68a65",
+          "sha256": "cbad1130681fc9e41d2d2394fe6a7b47cd5c0e6a9e230d4b5904d4b68bf54564",
           "sourceDate": "2026/9/6 18:56:07",
           "sourceSha256": "1b7e1d51efd960b10a22ea322630e72ecee646f2fdaad8a097c9e530fde1a857",
           "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_request_kokoryh.js"
@@ -1279,12 +1458,12 @@
             "engine": "webview",
             "nativeSurgeBranch": true
           },
-          "guards": 4,
+          "guards": 3,
           "kind": "js",
           "origin": "local-loon-cache",
           "path": "scripts/bilibili/bilibili-response.js",
           "phase": "response",
-          "sha256": "18bdfcf8f5c280ec072f194e86c1b3a4f8ff804110ce799a1f7131ed1328c612",
+          "sha256": "552372ae83f717d49ecc6807baeae97a5ddfb4548092656ebe92cc63fd38a32e",
           "sourceDate": "2026/9/6 18:56:07",
           "sourceSha256": "e4a8426cffbfca85c78286126a10813051a2d1aeed018119bbabe3db5da85728",
           "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_response_kokoryh.js"
@@ -1305,12 +1484,12 @@
             "engine": "webview",
             "nativeSurgeBranch": true
           },
-          "guards": 1,
+          "guards": 0,
           "kind": "js",
           "origin": "local-loon-cache",
           "path": "scripts/bilibili/bilibili-live.js",
           "phase": "response",
-          "sha256": "4cf11fb89090d87381465153545baaaf73a468f8613a6145263321e95e28a221",
+          "sha256": "b149395aaacf459baee82ff16f9f756d21420cd22574e0b015563cef2553b011",
           "sourceDate": "2026/7/24 21:02:09",
           "sourceSha256": "521a3974d1a485daf5750bc7b986ee5b64325480ed80da2e7d90265f4ad57090",
           "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_json_kokoryh.js"
@@ -1319,10 +1498,10 @@
       "description": "过滤哔哩哔哩广告、移除青少年模式弹窗和交互式弹幕、移除无用功能和链接跟踪参数，增加空降助手以便跳过视频中插入的广告。此插件仅建议iOS 15以上设备使用，且必须启用MitM-over-HTTP/2功能。\\n\\n空降助手是第三方提供的功能，依赖于Android版空降助手的服务器数据运作，可能会存在不准确或者失效的问题，此功能与哔哩哔哩官方无关。",
       "file": "modules/bilibili.sgmodule",
       "id": "bilibili",
-      "module_sha256": "48763fe4508a9550dd367a7ecbbf778b315ed727e5cce7e7c4476b2e457e9852",
-      "module_version": "1.0.7",
+      "module_sha256": "488dd09c62801d6503b722b909426d4f2004ecf69b900b2361821530f6e2e185",
+      "module_version": "1.0.8",
       "name": "哔哩哔哩去广告",
-      "revision": 7,
+      "revision": 8,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1342,7 +1521,7 @@
     "coolapk": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": {},
         "convertedInputSha256": "4bbd1df6f6963bb6179cb1d2c11e825b555c76c53db459506eb9f7f4bd69ce0f",
         "counts": {
@@ -1367,6 +1546,7 @@
         },
         "matchers": [
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 14,
@@ -1451,6 +1631,7 @@
             "reason": "Preserve the original item ID before piping into the membership array."
           }
         ],
+        "ruleMockTransfers": [],
         "rulePredicates": [],
         "runtimeVerified": false,
         "sourceRewriteLines": 7,
@@ -1459,23 +1640,23 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
+        "publisher_version": "1.4.0",
         "reviewed_fixes_sha256": "e024e862def6e4f417b8921684dda888e9a0051cfb97a4d18aa7a0ed3e8eab1e",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [],
       "description": "过滤酷安广告",
       "file": "modules/coolapk.sgmodule",
       "id": "coolapk",
-      "module_sha256": "db4dd102f182d39ff00bd99b2c96b4d1cfe1332339d0c7c9ff8c090a97bd42ea",
-      "module_version": "1.0.2",
+      "module_sha256": "b8d002730f40385298414aa83679871972ae806f0f8ad1038cacad811c8be1e2",
+      "module_version": "1.0.3",
       "name": "酷安去广告",
-      "revision": 2,
+      "revision": 3,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1494,7 +1675,7 @@
     "fanqie": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": {},
         "convertedInputSha256": "da052ba71baa527147c11c63b88b5391eff2ac52da6c64bb7d696979f7e8aaee",
         "counts": {
@@ -1534,6 +1715,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"zlink.ugsdk.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mon.toutiaocloud.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -1577,22 +1759,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [],
       "description": "移除番茄小说开屏广告、移除文章底部和章末广告、移除听书页面广告、移除悬浮部件和底栏多余的福利标签。",
       "file": "modules/fanqie.sgmodule",
       "id": "fanqie",
-      "module_sha256": "c047df48a371544ac5f3fe5d42b2d76ce783b01df885cf8b769cd907c9ac590e",
-      "module_version": "1.0.7",
+      "module_sha256": "075d4603a4cdf93cfe55fc998964ef1dbbad50339ab1ff289a28496d8f337091",
+      "module_version": "1.0.8",
       "name": "番茄小说去广告",
-      "revision": 7,
+      "revision": 8,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1608,10 +1790,273 @@
         ]
       }
     },
+    "goofish": {
+      "artifacts": {},
+      "conversion_report": {
+        "adapterVersion": "1.4.0",
+        "arguments": {},
+        "convertedInputSha256": "b8e2c9b5df750c060895472ca9b8308e1a84e4ed2b22ae0af18b97dbb2cd51c2",
+        "counts": {
+          "bodyRewrite": 17,
+          "bodyRewriteBeforeOptimization": 17,
+          "bodyRewriteRulesSaved": 0,
+          "headerRewrite": 0,
+          "mapLocal": 7,
+          "mitmHostnames": 2,
+          "rewriteLines": 24,
+          "rules": 0,
+          "scripts": 0
+        },
+        "dependencies": [],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 14,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idlecommerce\\.splash\\.ads\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 16,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idlehome\\.home\\.nextfresh\\/",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 18,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idlehome\\.widget\\.refresh\\.get\\/",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 20,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idle\\.home\\.whale\\.modulet\\/",
+            "phase": "response"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 22,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idle\\.user\\.strategy\\.list\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 24,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idle\\.fun\\.follow\\.feed\\.list\\/",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 26,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idlehome\\.home\\.community\\/",
+            "phase": "response"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 28,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idle\\.item\\.recommend\\.list\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 30,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idlehome\\.home\\.newitem\\.page\\/",
+            "phase": "response"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 32,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idle\\.local\\.near\\.by\\.corner\\.info\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 34,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idle\\.local\\.flow\\.plat\\.section\\/",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 36,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idle\\.local\\.home\\.top\\/",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 38,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idle\\.local\\.home\\/",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 40,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.idle\\.user\\.page\\.my\\.adapter\\/",
+            "phase": "response"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 42,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idle\\.item\\.buy\\.feeds\\/",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 44,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idlemtopsearch\\.search\\.shade\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 46,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idlehome\\.home\\.circle\\.list\\/",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 48,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idlehome\\.magic\\.home\\.page\\.list\\/",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 50,
+            "pattern": "^https:\\/\\/g-acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idlemtopsearch\\.search\\/",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 52,
+            "pattern": "^https:\\/\\/g-acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idlemtopsearch\\.search\\/",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 54,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idlemtopsearch\\.search\\.discover\\/",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 56,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idlemtopsearch\\.item\\.search\\.activate\\/",
+            "phase": "response"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 58,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idle\\.playboy\\.recommend\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 60,
+            "pattern": "^https:\\/\\/acs\\.m\\.goofish\\.com\\/gw\\/mtop\\.taobao\\.idle\\.trade\\.full\\.info\\/",
+            "phase": "response"
+          }
+        ],
+        "metadata": {
+          "author": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+          "date": "2026-10-02 13:57:49",
+          "desc": "移除开屏广告、商品信息流广告、关注推荐、搜索栏填充词、首页签到入口及悬浮广告，精简我的页面。",
+          "homepage": "https://hub.kelee.one",
+          "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FleaMarket.png",
+          "loon_version": "3.5.1(998)",
+          "name": "闲鱼去广告",
+          "openUrl": "https://apps.apple.com/app/id510909506",
+          "system": "",
+          "system_version": "",
+          "tag": "去广告"
+        },
+        "minimumSurge": {
+          "ios": "5.14",
+          "mac": "5.9"
+        },
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
+        "ruleMockTransfers": [],
+        "rulePredicates": [],
+        "runtimeVerified": false,
+        "sourceRewriteLines": 24,
+        "sourceSha256": "b8e2c9b5df750c060895472ca9b8308e1a84e4ed2b22ae0af18b97dbb2cd51c2",
+        "validation": "offline-exact-structure-and-content",
+        "warnings": []
+      },
+      "converter": {
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
+      },
+      "dependencies": [],
+      "description": "移除开屏广告、商品信息流广告、关注推荐、搜索栏填充词、首页签到入口及悬浮广告，精简我的页面。",
+      "file": "modules/goofish.sgmodule",
+      "id": "goofish",
+      "module_sha256": "640f163ee83751a561c23b435e76d0420d4f2cc931b2208790a42c9391a57eb0",
+      "module_version": "1.0.1",
+      "name": "闲鱼去广告",
+      "revision": 1,
+      "source_date": "2026-10-02 13:57:49",
+      "source_min_loon_version": "3.5.1(998)",
+      "source_origin": "local",
+      "source_sha256": "b8e2c9b5df750c060895472ca9b8308e1a84e4ed2b22ae0af18b97dbb2cd51c2",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx",
+      "source_version": "",
+      "surge_name": "闲鱼去广告",
+      "validation": {
+        "scope": "Surge Mac parser; not iOS live traffic",
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
+      }
+    },
     "httpdns": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": {},
         "convertedInputSha256": "1565be1f81faba0918f717a7ffe06340ac85db7e850a8059d636dec03c696a3a",
         "counts": {
@@ -1636,6 +2081,7 @@
         },
         "matchers": [
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 224,
@@ -1643,6 +2089,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 226,
@@ -1650,6 +2097,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 228,
@@ -1657,6 +2105,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 230,
@@ -1664,6 +2113,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 232,
@@ -1671,6 +2121,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 234,
@@ -1694,6 +2145,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"httpdns\"},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"httpsdns\"},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -1865,22 +2317,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [],
       "description": "此插件是所有去广告插件的依赖，拦截常见的HTTPDNS服务，以确保这些请求都能够在Loon的DNS框架下工作。",
       "file": "modules/httpdns.sgmodule",
       "id": "httpdns",
-      "module_sha256": "28004cfddbcc18aa91fd04901c15f993f4116bb197abf0052dca0d1d8bb044b0",
-      "module_version": "1.0.9",
+      "module_sha256": "51fa5f2306b040559f4ecdb508491d0306efcc704f7153bb413775d924bf125e",
+      "module_version": "1.0.10",
       "name": "HTTPDNS拦截器",
-      "revision": 9,
+      "revision": 10,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1901,7 +2353,7 @@
         "scripts/jd/jd.js": "51e05d26041fd83e7dce50a45d69eb7a2803685d1002d83fe2c601325a9f6132"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": [],
         "convertedInputSha256": "1c3493c1d35666ac3675b40c8e3b969eb23627c2467fedf4ee159ca41c757564",
         "counts": {
@@ -1947,6 +2399,7 @@
         },
         "matchers": [
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 17,
@@ -1988,6 +2441,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/\\\\w{32}\\\\.jddebug\\\\.com\\\\/diagnose\\\\?\"},\"policy\":\"REJECT\",\"noResolve\":false}"
         ],
@@ -2003,15 +2457,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
         "artifacts_sha256": "077fad30d8f74f4db58cc84413c3a27a1b7645e3f729fdd79d7dbde5cb7ca6a5",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "dependencies_sha256": "1b4d89407d7cfb4147b01e92f3d563728ee347b2220c2eb1fb64d9ede022046f",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [
         {
@@ -2038,10 +2492,10 @@
       "description": "移除京东开屏广告，精简我的页面产品推广。",
       "file": "modules/jd.sgmodule",
       "id": "jd",
-      "module_sha256": "8a86dd4a0b17949b801ecbe086ce75a674d0472e6fb222922acb19682b8b43f1",
-      "module_version": "1.0.7",
+      "module_sha256": "01dbfe84227e12993ee40aba71aeb846a3fba0953eed3737591b244b1171487d",
+      "module_version": "1.0.8",
       "name": "京东去广告",
-      "revision": 7,
+      "revision": 8,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2057,12 +2511,986 @@
         ]
       }
     },
+    "kelee": {
+      "artifacts": {},
+      "conversion_report": {
+        "adapterVersion": "1.4.0",
+        "arguments": [],
+        "convertedInputSha256": "8a752c9b5968de51a4a591a5a37e7004512382ae2cd1ecddeb31f809099e5b91",
+        "counts": {
+          "bodyRewrite": 2,
+          "bodyRewriteBeforeOptimization": 2,
+          "bodyRewriteRulesSaved": 0,
+          "headerRewrite": 0,
+          "mapLocal": 82,
+          "mitmHostnames": 63,
+          "rewriteLines": 84,
+          "rules": 22,
+          "scripts": 0
+        },
+        "dependencies": [],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "remaining routing rules preserved; HTTP URL REJECT-DICT mapped to JSON responses after existing rewrites",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 49,
+            "pattern": "^https?:\\/\\/api-access\\.pangolin-sdk-toutiao\\.com\\/api\\/ad\\/union\\/sdk",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 51,
+            "pattern": "^https:\\/\\/cdn\\.web\\.chelaile\\.net\\.cn\\/info-flow\\/index\\.html",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 53,
+            "pattern": "^http:\\/\\/mercury-gateway\\.ixiaochuan\\.cn\\/mercury\\/v1\\/ad\\/",
+            "phase": "request"
+          },
+          {
+            "action": "reject(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 55,
+            "pattern": "^https?:\\/\\/api\\.m\\.mi\\.com\\/v\\d\\/app\\/start",
+            "phase": "request"
+          },
+          {
+            "action": "reject(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 56,
+            "pattern": "^https?:\\/\\/api\\.jr\\.mi\\.com\\/v\\d\\/adv\\/",
+            "phase": "request"
+          },
+          {
+            "action": "reject(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 57,
+            "pattern": "^https?:\\/\\/api\\.jr\\.mi\\.com\\/jr\\/api\\/playScreen",
+            "phase": "request"
+          },
+          {
+            "action": "reject(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 58,
+            "pattern": "^https?:\\/\\/api-mifit.+?\\.huami\\.com\\/discovery\\/mi\\/discovery\\/.+?_ad\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 59,
+            "pattern": "^https?:\\/\\/home\\.mi\\.com\\/cgi-op\\/api\\/v\\d\\/recommendation\\/banner",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 60,
+            "pattern": "^https?:\\/\\/(api-mifit|api-mifit-\\w+)\\.huami\\.com\\/discovery\\/mi\\/discovery\\/\\w+_ad\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_img(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 61,
+            "pattern": "^https?:\\/\\/api-mifit\\.huami\\.com\\/discovery\\/mi\\/discovery\\/homepage_ad\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_img(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 62,
+            "pattern": "^https?:\\/\\/api-mifit\\.huami\\.com\\/discovery\\/mi\\/discovery\\/sleep_ad\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_img(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 63,
+            "pattern": "^https?:\\/\\/api-mifit\\.huami\\.com\\/discovery\\/mi\\/discovery\\/sport_summary_ad\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_img(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 64,
+            "pattern": "^https?:\\/\\/api-mifit\\.huami\\.com\\/discovery\\/mi\\/discovery\\/sport_training_ad\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_img(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 65,
+            "pattern": "^https?:\\/\\/api-mifit\\.huami\\.com\\/discovery\\/mi\\/discovery\\/step_detail_ad\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_img(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 66,
+            "pattern": "^https?:\\/\\/api-mifit\\.huami\\.com\\/discovery\\/mi\\/discovery\\/training_video_ad\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 68,
+            "pattern": "^https:\\/\\/shopapi\\.io\\.mi\\.com\\/mtop\\/mf\\/resource\\/homePage\\/pageConfig",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 69,
+            "pattern": "^https:\\/\\/api-mifit-cn2\\.huami\\.com\\/discovery\\/mi\\/cards\\/startpage_ad",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 71,
+            "pattern": "^https:\\/\\/apiwz\\.midukanshu\\.com\\/advert\\/getPopup$",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 72,
+            "pattern": "^https:\\/\\/apiwz\\.midukanshu\\.com\\/advert\\/treasureInfo$",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 73,
+            "pattern": "^https:\\/\\/apiwz\\.midukanshu\\.com\\/config\\/getAds$",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 75,
+            "pattern": "^http:\\/\\/img\\.dailmo\\.com\\/img\\/61\\/23c7125bfe6166d69f3bff5b0ca4d31e\\.jpg",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 76,
+            "pattern": "^http:\\/\\/img\\.dailmo\\.com\\/img\\/50\\/edb40c6392f848df37f9c31d8a6f90f6\\.jpg",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 77,
+            "pattern": "^http:\\/\\/img\\.dailmo\\.com\\/img\\/6\\/90585d9e96c73dd49644af57d8501624\\.jpg",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 78,
+            "pattern": "^http:\\/\\/img\\.dailmo\\.com\\/img\\/5\\/6cb2aa237ce1f65944aa1ecb29fbdeef\\.jpg",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 79,
+            "pattern": "^http:\\/\\/img\\.allahall\\.com\\/img\\/61\\/23c7125bfe6166d69f3bff5b0ca4d31e\\.jpg",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 80,
+            "pattern": "^http:\\/\\/img\\.allahall\\.com\\/img\\/50\\/edb40c6392f848df37f9c31d8a6f90f6\\.jpg",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 81,
+            "pattern": "^http:\\/\\/img\\.allahall\\.com\\/img\\/6\\/90585d9e96c73dd49644af57d8501624\\.jpg",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 82,
+            "pattern": "^http:\\/\\/img\\.allahall\\.com\\/img\\/5\\/6cb2aa237ce1f65944aa1ecb29fbdeef\\.jpg",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 83,
+            "pattern": "^http:\\/\\/img\\.allahall\\.com\\/img\\/59\\/6a13a75dfe46ebfdac96bd27ef098885\\.jpg",
+            "phase": "request"
+          },
+          {
+            "action": "reject(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 84,
+            "pattern": "^http:\\/\\/app\\.zhoudamozi\\.com\\/ad\\/.+",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 86,
+            "pattern": "^https:\\/\\/api\\.(pinduoduo|yangkeduo)\\.com\\/api\\/cappuccino\\/splash",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 88,
+            "pattern": "^https:\\/\\/gw\\.alicdn\\.com\\/mt\\/",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 89,
+            "pattern": "^https:\\/\\/gw\\.alicdn\\.com\\/tfs\\/.+\\d{3,4}-\\d{4}",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 90,
+            "pattern": "^https:\\/\\/gw\\.alicdn\\.com\\/tps\\/.+\\d{3,4}-\\d{4}",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 91,
+            "pattern": "^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.taobao\\.idle\\.home\\.welcome",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 93,
+            "pattern": "^https:\\/\\/m\\.qianbao\\.qq\\.com\\/services\\/walletHome\\/getQQshopData\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 94,
+            "pattern": "^https:\\/\\/m\\.qianbao\\.qq\\.com\\/services\\/walletHome\\/getGameData\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 95,
+            "pattern": "^https:\\/\\/m\\.qianbao\\.qq\\.com\\/services\\/walletHome\\/getFootData\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 97,
+            "pattern": "^https:\\/\\/hfapp-service\\.qweather\\.net\\/v2\\.0\\/app\\/ad\\/list\\?",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 99,
+            "pattern": "^http:\\/\\/home\\.umetrip\\.com\\/gateway\\/api\\/umetrip\\/native",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 100,
+            "pattern": "^http:\\/\\/umerp\\.umetrip\\.com\\/gateway\\/api\\/umetrip\\/native",
+            "phase": "request"
+          },
+          {
+            "action": "reject(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 102,
+            "pattern": "^https?:\\/\\/us\\.l\\.qq\\.com\\/exapp",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 104,
+            "pattern": "^https:\\/\\/client\\.app\\.coc\\.10086\\.cn\\/biz-orange\\/DN\\/init\\/startInit$",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 106,
+            "pattern": "^https:\\/\\/dict\\.youdao\\.com\\/course\\/tab\\/translateTab",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 107,
+            "pattern": "^https:\\/\\/dict\\.youdao\\.com\\/homepage\\/tile",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 108,
+            "pattern": "^https:\\/\\/api-overmind\\.youdao\\.com\\/openapi\\/get\\/luna\\/dict\\/dict-mobile\\/prod\\/dictCommonConfig",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 109,
+            "pattern": "^https:\\/\\/cdke\\.youdao\\.com\\/course3\\/recommend\\/dict\\/startup",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 110,
+            "pattern": "^https:\\/\\/dict\\.youdao\\.com\\/commonsearch",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 111,
+            "pattern": "^https:\\/\\/dict\\.youdao\\.com\\/vip\\/activity\\/couponinfo",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 112,
+            "pattern": "^https:\\/\\/dict\\.youdao\\.com\\/dictusertask\\/system",
+            "phase": "request"
+          },
+          {
+            "action": "reject(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 114,
+            "pattern": "^https?:\\/\\/ecard\\.shenzhentong\\.com\\/wxweb\\/bwxppub2\\/QryAdvertList\\.do",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 116,
+            "pattern": "^https?:\\/\\/mob\\.mddcloud\\.com\\.cn\\/adApi\\/advert\\/(first|third)part\\/advertList",
+            "phase": "request"
+          },
+          {
+            "action": "reject(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 117,
+            "pattern": "^https?:\\/\\/t-dsp\\.pinduoduo\\.com",
+            "phase": "request"
+          },
+          {
+            "action": "reject(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 118,
+            "pattern": "^https?:\\/\\/mobads-pre-config\\.cdn\\.bcebos\\.com\\/preload\\.php",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 119,
+            "pattern": "^http?:\\/\\/sfo\\.mddcloud\\.com\\.cn\\/api\\/v2\\/sfo\\/popup_displays?",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 120,
+            "pattern": "^https?:\\/\\/tower\\.ubixioe\\.com\\/mob\\/mediation",
+            "phase": "request"
+          },
+          {
+            "action": "reject(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 121,
+            "pattern": "^https?:\\/\\/toblog\\.ctobsnssdk\\.com",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 122,
+            "pattern": "^https?:\\/\\/conf-darwin\\.xycdn\\.com",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 123,
+            "pattern": "^https?:\\/\\/sdk1xyajs\\.data\\.kuiniuca\\.com",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 125,
+            "pattern": "^https:\\/\\/gw\\.chuangkit\\.com\\/team\\/app\\/common\\/ad\\/",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 127,
+            "pattern": "^https:\\/\\/qiye\\.gaoding\\.com\\/api\\/v3\\/oc\\/v2\\/delivery-pits\\/ios-splash\\/",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 129,
+            "pattern": "^https:\\/\\/p0\\.pipi\\.cn\\/(adAdmin|mediaplus\\/maoyantong_ads_fe)\\/\\w+\\.jpg\\?imageMogr2\\/quality\\/",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 130,
+            "pattern": "^https:\\/\\/p0\\.pipi\\.cn\\/(adAdmin|mediaplus\\/maoyantong_ads_fe)\\/\\w+\\.(jpg|png)\\?imageMogr2\\/thumbnail\\/(860x0|!165x165|!1049x1169)",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 132,
+            "pattern": "^https:\\/\\/api\\.zcool\\.com\\.cn\\/v\\d\\.\\d\\.\\d\\/common\\/open-screen",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 134,
+            "pattern": "^https:\\/\\/shealthyapi\\.senssun\\.com\\/v1\\/app\\/banner\\/findByType\\?type=bottom$",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 136,
+            "pattern": "^https:\\/\\/lanfanapp\\.com\\/api\\/v1\\/ads\\/",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 138,
+            "pattern": "^https:\\/\\/client-api-v2\\.oray\\.com\\/materials\\/SLCC_IOS_STARTUP",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 139,
+            "pattern": "^https:\\/\\/client-api-v2\\.oray\\.com\\/materials\\/SLCC_IOS_DEVICE",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 140,
+            "pattern": "^https:\\/\\/client-api-v2\\.oray\\.com\\/materials\\/SUNLOGIN_CLIENT_IOS_PROMOTION",
+            "phase": "request"
+          },
+          {
+            "action": "reject(404)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 142,
+            "pattern": "^https:\\/\\/app\\.10099\\.com\\.cn\\/contact-web\\/api\\/version\\/getFlashScreenPage",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 144,
+            "pattern": "^https:\\/\\/api\\.flydigi\\.com\\/android\\/v2\\/ad",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 146,
+            "pattern": "^https:\\/\\/api\\.xiangji\\.qq\\.com\\/splash$",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 148,
+            "pattern": "^https:\\/\\/cdn\\.cmgadx\\.com\\/sdk\\/pool\\/",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 150,
+            "pattern": "^https:\\/\\/qadx\\.qinlinad\\.com\\/ad\\/",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 152,
+            "pattern": "^https:\\/\\/watch\\.iot\\.mi\\.com\\/cgi-op\\/api\\/v1\\/watch\\/health\\/resource\\?business=MI_WATCH_SPORT",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 154,
+            "pattern": "^https:\\/\\/watch\\.iot\\.mi\\.com\\/cgi-op\\/api\\/v1\\/watch\\/health\\/resource\\?business=MI_HEALTH_DEVICE_TAB_PAGE",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 156,
+            "pattern": "^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.film\\.mtopadvertiseapi\\.queryloadingbanner\\/",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 157,
+            "pattern": "^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.film\\.life\\.popup\\.get\\/",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 159,
+            "pattern": "^https:\\/\\/d\\.socdm\\.com\\/adsv\\/",
+            "phase": "request"
+          },
+          {
+            "action": "response.body.mock(\"json\", \"{\\\"imgIndex\\\":\\\"0\\\",\\\"adv\\\":{\\\"startup_adv\\\":{\\\"advCntList\\\":[],\\\"buttonList\\\":[]}},\\\"respCode\\\":\\\"0000\\\"}\")",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 161,
+            "pattern": "^https?:\\/\\/m\\.client\\.10010\\.com\\/mobileService\\/customer\\/accountListData\\.htm",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 163,
+            "pattern": "^https?:\\/\\/cmds\\.omesoft\\.com\\/HypnotistWS\\.asmx",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 165,
+            "pattern": "^https?:\\/\\/api\\.fenxianglife\\.com\\/njia\\/index\\/popup\\/v2",
+            "phase": "response"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "",
+            "kind": "terminal",
+            "line": 167,
+            "pattern": "^http:\\/\\/p\\.kuaidi100\\.com\\/mobile\\/mobileapi\\.do",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "",
+            "kind": "terminal",
+            "line": 168,
+            "pattern": "^http:\\/\\/p\\.kuaidi100\\.com\\/advertisement\\/",
+            "phase": "request"
+          }
+        ],
+        "metadata": {
+          "author": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+          "date": "2026-10-02 13:57:49",
+          "desc": "可莉自用的广告过滤器",
+          "homepage": "https://hub.kelee.one",
+          "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/KeLee.png",
+          "loon_version": "3.5.1(998)",
+          "name": "可莉广告过滤器",
+          "openUrl": "",
+          "system": "",
+          "system_version": "",
+          "tag": "去广告"
+        },
+        "minimumSurge": {
+          "ios": "5.14",
+          "mac": "5.9"
+        },
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
+        "ruleMockTransfers": [
+          {
+            "line": 40,
+            "reason": "Preserve HTTP 200 JSON {} instead of Script Hub REJECT-TINYGIF.",
+            "rewrite": "request if ${url} ~= /^http:\\/\\/p\\.kuaidi100\\.com\\/mobile\\/mobileapi\\.do/ then reject_dict(200)",
+            "source": "URL-REGEX, \"^http:\\/\\/p\\.kuaidi100\\.com\\/mobile\\/mobileapi\\.do\", REJECT-DICT"
+          },
+          {
+            "line": 41,
+            "reason": "Preserve HTTP 200 JSON {} instead of Script Hub REJECT-TINYGIF.",
+            "rewrite": "request if ${url} ~= /^http:\\/\\/p\\.kuaidi100\\.com\\/advertisement\\// then reject_dict(200)",
+            "source": "URL-REGEX, \"^http:\\/\\/p\\.kuaidi100\\.com\\/advertisement\\/\", REJECT-DICT"
+          }
+        ],
+        "rulePredicates": [
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"acdn.adnxs.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mediation.adnxs.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"sin3-ib.adnxs.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"sdkconfig.ad.xiaomi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"data.mistat.xiaomi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"tracking.intl.miui.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"sdkconfig.ad.xiaomi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"doubleclick-cn.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"doubleclick.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"business.msstatic.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"v1d.szbdyd.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/cdn\\\\.wup\\\\.huya\\\\.com\\\\/launch\\\\/queryHttpDns$\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"m1.ad.10010.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ad.21cn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ad.k.21cn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"admarket.21cn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"adshows.21cn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"122.229.8.47/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"122.229.29.89/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mall-dsp2.qinlinkeji.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mallapi2.qinlinkeji.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"open-pixon.ads-pixiv.net\"},\"policy\":\"REJECT\",\"noResolve\":false}"
+        ],
+        "runtimeVerified": false,
+        "sourceRewriteLines": 84,
+        "sourceSha256": "3f79243904d9718c9ec760442b2a669c4bdfea65770e3e33f6aa3f293524b801",
+        "validation": "offline-exact-structure-and-content",
+        "warnings": []
+      },
+      "converter": {
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
+      },
+      "dependencies": [],
+      "description": "可莉自用的广告过滤器",
+      "file": "modules/kelee.sgmodule",
+      "id": "kelee",
+      "module_sha256": "52ee77d8df2d59f43e700cb2e814e3b1b6d567e196b4e88b2702659078f50aa3",
+      "module_version": "1.0.1",
+      "name": "可莉广告过滤器",
+      "revision": 1,
+      "source_date": "2026-10-02 13:57:49",
+      "source_min_loon_version": "3.5.1(998)",
+      "source_origin": "local",
+      "source_sha256": "3f79243904d9718c9ec760442b2a669c4bdfea65770e3e33f6aa3f293524b801",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx",
+      "source_version": "",
+      "surge_name": "可莉广告过滤器",
+      "validation": {
+        "scope": "Surge Mac parser; not iOS live traffic",
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
+      }
+    },
+    "lebo": {
+      "artifacts": {
+        "scripts/lebo/lebo.js": "abde26673aa6e0c0afb82e2451d14f8a28a3c20700231fa46ddbc810b7a0e32a"
+      },
+      "conversion_report": {
+        "adapterVersion": "1.4.0",
+        "arguments": [],
+        "convertedInputSha256": "e66a60d19af2e53d68da8b4d9693693be44208fbc0aa52988fb9da2c347ebb30",
+        "counts": {
+          "bodyRewrite": 0,
+          "bodyRewriteBeforeOptimization": 0,
+          "bodyRewriteRulesSaved": 0,
+          "headerRewrite": 0,
+          "mapLocal": 5,
+          "mitmHostnames": 1,
+          "rewriteLines": 5,
+          "rules": 0,
+          "scripts": 1
+        },
+        "dependencies": [
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 0,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/lebo/lebo.js",
+            "phase": "response",
+            "sha256": "abde26673aa6e0c0afb82e2451d14f8a28a3c20700231fa46ddbc810b7a0e32a",
+            "sourceDate": "2024-07-11 01:56:32",
+            "sourceSha256": "a957df12593369f6ce111a79619ba88cdad4870aa18b639ff1942a92d441bb18",
+            "url": "https://kelee.one/Resource/JavaScript/TV_Assistant/TV_Assistant_remove_ads.js"
+          }
+        ],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 14,
+            "pattern": "^https:\\/\\/saas\\.hpplay\\.cn\\/api\\/lebo-desk\\/endpoint\\/app-resource\\/app_home_pop_up",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 15,
+            "pattern": "^https:\\/\\/saas\\.hpplay\\.cn\\/api\\/lebo-desk\\/endpoint\\/app-resource\\/app_home_tips",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 16,
+            "pattern": "^https:\\/\\/saas\\.hpplay\\.cn\\/api\\/lebo-desk\\/endpoint\\/app-resource\\/app_index_operate2",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 17,
+            "pattern": "^https:\\/\\/saas\\.hpplay\\.cn\\/api\\/lebo-rabbit\\/app-card\\/list",
+            "phase": "request"
+          },
+          {
+            "action": "reject_dict(200)",
+            "flags": "i",
+            "kind": "terminal",
+            "line": 18,
+            "pattern": "^https:\\/\\/saas\\.hpplay\\.cn\\/api\\/lebo-desk\\/endpoint\\/app-resource\\/app-user-banner",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 21,
+            "pattern": "^https:\\/\\/saas\\.hpplay\\.cn\\/api\\/lebo-desk\\/endpoint\\/app-resource\\/app_tab_red_dot\\?user-tag=1$",
+            "phase": "response"
+          }
+        ],
+        "metadata": {
+          "author": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+          "date": "2026-10-02 13:57:49",
+          "desc": "移除开屏广告、首页横幅推广、全网全网热投榜，移除我的页面横幅推广。",
+          "homepage": "https://hub.kelee.one",
+          "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TV_Assistant.png",
+          "loon_version": "3.5.1(998)",
+          "name": "乐播投屏去广告",
+          "openUrl": "https://apps.apple.com/app/id1116038378",
+          "system": "",
+          "system_version": "",
+          "tag": "去广告"
+        },
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
+        "ruleMockTransfers": [],
+        "rulePredicates": [],
+        "runtimeVerified": false,
+        "sourceRewriteLines": 5,
+        "sourceSha256": "6dddf3ae98926351336f2b7ec18c428d0370977bff891eb2441e1974ca1b0b68",
+        "validation": "offline-exact-structure-and-content",
+        "warnings": [
+          {
+            "code": "SCRIPT_RUNTIME_UNVERIFIED",
+            "message": "脚本已审查公共 API 与原生 Surge 分支，未验证真实应用流量；依赖取自本地 Loon 缓存。"
+          }
+        ]
+      },
+      "converter": {
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
+        "artifacts_sha256": "8612c3dbb09049106b743f46326ddc6430e10a89f74bd5e10f59a377ce1b4dbc",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
+        "dependencies_sha256": "a6c35d4909aa8190d7147a57e8620694df6d0c94187aa8257ab7095e83f4386d",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
+      },
+      "dependencies": [
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 0,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/lebo/lebo.js",
+          "phase": "response",
+          "sha256": "abde26673aa6e0c0afb82e2451d14f8a28a3c20700231fa46ddbc810b7a0e32a",
+          "sourceDate": "2024-07-11 01:56:32",
+          "sourceSha256": "a957df12593369f6ce111a79619ba88cdad4870aa18b639ff1942a92d441bb18",
+          "url": "https://kelee.one/Resource/JavaScript/TV_Assistant/TV_Assistant_remove_ads.js"
+        }
+      ],
+      "description": "移除开屏广告、首页横幅推广、全网全网热投榜，移除我的页面横幅推广。",
+      "file": "modules/lebo.sgmodule",
+      "id": "lebo",
+      "module_sha256": "7e3385267bb8f1fef8db15d183fa24a8ac7bf03b3d34c7304ef0394c84c99327",
+      "module_version": "1.0.1",
+      "name": "乐播投屏去广告",
+      "revision": 1,
+      "source_date": "2026-10-02 13:57:49",
+      "source_min_loon_version": "3.5.1(998)",
+      "source_origin": "local",
+      "source_sha256": "6dddf3ae98926351336f2b7ec18c428d0370977bff891eb2441e1974ca1b0b68",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/TV_Assistant_remove_ads.lpx",
+      "source_version": "",
+      "surge_name": "乐播投屏去广告",
+      "validation": {
+        "scope": "Surge Mac parser; not iOS live traffic",
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
+      }
+    },
     "pinduoduo": {
       "artifacts": {
         "scripts/pinduoduo/pinduoduo-pickup.js": "1213090ff9eff98b52713167b0c34586147091b0dd488166c9c0321cfc3511b1"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": [],
         "convertedInputSha256": "7c577feeee19b0ac8df8d1fa290c8d2b089a1101747f6e4c4bde8eefebfb0a6a",
         "counts": {
@@ -2107,6 +3535,7 @@
         },
         "matchers": [
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 33,
@@ -2114,6 +3543,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 34,
@@ -2121,6 +3551,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 35,
@@ -2128,6 +3559,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 36,
@@ -2135,6 +3567,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 37,
@@ -2142,6 +3575,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 38,
@@ -2149,6 +3583,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 39,
@@ -2156,6 +3591,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 40,
@@ -2163,6 +3599,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 41,
@@ -2170,6 +3607,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 42,
@@ -2177,6 +3615,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 43,
@@ -2184,6 +3623,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 44,
@@ -2191,6 +3631,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 45,
@@ -2198,6 +3639,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 46,
@@ -2205,6 +3647,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 47,
@@ -2212,6 +3655,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 48,
@@ -2219,6 +3663,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 49,
@@ -2226,6 +3671,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 50,
@@ -2233,6 +3679,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 51,
@@ -2240,6 +3687,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 53,
@@ -2330,6 +3778,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\\\/d(\\\\d)?\"},{\"type\":\"USER-AGENT\",\"value\":\"*com.xunmeng.pinduoduo*\"}]},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/\\\\[[0-9a-fA-F:]+\\\\]\\\\/d(\\\\d)?\\\\?\"},{\"type\":\"USER-AGENT\",\"value\":\"*com.xunmeng.pinduoduo*\"}]},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -2366,15 +3815,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
         "artifacts_sha256": "f15adfa5e69fafce6d2b81efbb53010cce86d1fe975b340dcc67d12e604896cc",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "dependencies_sha256": "89950362f91b7593b07e969a2c06fb038ae32ffcd9a9e76ebfa5da8033884f8a",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [
         {
@@ -2400,10 +3849,10 @@
       "description": "移除开屏广告、底栏多多视频、会场入口、聊天页面精选推荐及推广，精简首页和个人中心。",
       "file": "modules/pinduoduo.sgmodule",
       "id": "pinduoduo",
-      "module_sha256": "eea37fd9f5a50d06d5672a822304bf52d853707fc025c7d09f76b3ed306e0d71",
-      "module_version": "1.0.2",
+      "module_sha256": "22ada679c30b306b7d712e0640623c3ecfbe7c67c45547d57f517a5dbe92bae4",
+      "module_version": "1.0.3",
       "name": "拼多多去广告",
-      "revision": 2,
+      "revision": 3,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2422,7 +3871,7 @@
     "qidian": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": {},
         "convertedInputSha256": "73c6e2839aeb27619a9f4fe28302b5bf710d7e7ddb34643775074590339d3c57",
         "counts": {
@@ -2461,6 +3910,7 @@
             "phase": "response"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 18,
@@ -2468,6 +3918,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 20,
@@ -2475,6 +3926,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 22,
@@ -2482,6 +3934,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 24,
@@ -2489,6 +3942,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 26,
@@ -2503,6 +3957,7 @@
             "phase": "response"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 30,
@@ -2510,6 +3965,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 32,
@@ -2517,6 +3973,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 34,
@@ -2524,6 +3981,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 36,
@@ -2531,6 +3989,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 38,
@@ -2545,6 +4004,7 @@
             "phase": "response"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 42,
@@ -2552,6 +4012,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 44,
@@ -2559,6 +4020,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 46,
@@ -2586,6 +4048,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [],
         "runtimeVerified": false,
         "sourceRewriteLines": 17,
@@ -2602,22 +4065,22 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [],
       "description": "移除起点读书开屏广告、每日导读、各类弹窗、文末广告、搜索填充词，精简我的页面。",
       "file": "modules/qidian.sgmodule",
       "id": "qidian",
-      "module_sha256": "120d100b59eea5ad19c3602b2a911d692c6d4549792babc67da3b6587749a8b5",
-      "module_version": "1.0.9",
+      "module_sha256": "6b7930b91fc625493b8a0d0a0748a32ce3c5f41e865f6f3f7638f056a019cc1c",
+      "module_version": "1.0.10",
       "name": "起点读书去广告",
-      "revision": 9,
+      "revision": 10,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2638,7 +4101,7 @@
         "scripts/quark/quark-config.js": "6c57b650b0a0ab3eb58e1b7d5ecf3c0cd123751f6fe06fb1cbb9e2cd867c998a"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": {},
         "convertedInputSha256": "b2f31d98c78c7075795a360c4b754feec61f83cf8fde1a6c1d03c7ec4fe76ba7",
         "counts": {
@@ -2681,6 +4144,7 @@
             "phase": "response"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 17,
@@ -2688,6 +4152,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 18,
@@ -2715,6 +4180,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [],
         "runtimeVerified": false,
         "sourceRewriteLines": 3,
@@ -2723,23 +4189,23 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
         "artifacts_sha256": "7001bd53fc737ec8a9e73438fe3e719000492e0c0c6b73092cdcaf2359bc99eb",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [],
       "description": "移除阅读广告、各页面弹窗及横幅，精简我的页面。",
       "file": "modules/quark.sgmodule",
       "id": "quark",
-      "module_sha256": "34b0a9d4cc34da14da151d8c1bd546747b2e92e919264c2ff0885279090fab40",
-      "module_version": "1.0.7",
+      "module_sha256": "387a3d83a040014bfe2bd8f18af253a692c61adbcb4e66087045f3650cac9e3b",
+      "module_version": "1.0.8",
       "name": "夸克去广告",
-      "revision": 7,
+      "revision": 8,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2758,7 +4224,7 @@
     "shengqian": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": {},
         "convertedInputSha256": "973f112a629f30c90c6d8976ddd1613d3dbb79abceea843b1f83ba43f9e5c583",
         "counts": {
@@ -2783,6 +4249,7 @@
         },
         "matchers": [
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 14,
@@ -2797,6 +4264,7 @@
             "phase": "response"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 18,
@@ -2804,6 +4272,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 20,
@@ -2811,6 +4280,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 22,
@@ -2838,6 +4308,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [],
         "runtimeVerified": false,
         "sourceRewriteLines": 5,
@@ -2846,22 +4317,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [],
       "description": "移除开屏广告、横幅广告、商品推荐，精简我的页面。",
       "file": "modules/shengqian.sgmodule",
       "id": "shengqian",
-      "module_sha256": "754b23a548a3339f53d3d93cc0fb6008cf5ccf4635dc433d2be088e2a01c9a89",
-      "module_version": "1.0.7",
+      "module_sha256": "058d5685273471ca35d8708f00f3e302ee2fec56ec82cb08a16a3e71da4ad658",
+      "module_version": "1.0.8",
       "name": "省钱快报去广告",
-      "revision": 7,
+      "revision": 8,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2882,7 +4353,7 @@
         "scripts/taobao/taobao.js": "1479f4e2bc6c45103663bdf60e45f22e0514e489d5329313b914c4dbab8bb64c"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": [],
         "convertedInputSha256": "d44d5aa06c958c556eeca90ea7eb6f4d94e73c307955d7cbed5bd68bc1ff7db2",
         "counts": {
@@ -2928,6 +4399,7 @@
         },
         "matchers": [
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 22,
@@ -2935,6 +4407,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 23,
@@ -2942,6 +4415,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 24,
@@ -2949,6 +4423,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 25,
@@ -2956,6 +4431,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 26,
@@ -2963,6 +4439,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 27,
@@ -2970,6 +4447,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 28,
@@ -2977,6 +4455,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 29,
@@ -2984,6 +4463,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 30,
@@ -2991,6 +4471,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 31,
@@ -2998,6 +4479,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 32,
@@ -3035,6 +4517,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"adashx.m.taobao.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ossgw.alicdn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -3055,15 +4538,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
         "artifacts_sha256": "410665a2ad99afa41ee07ee23bc9db6f04528b057e58c3955717e1c8f3dfc33e",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "dependencies_sha256": "eca67d54448cb5e859acb63e084c26106399b42ef9e910970b9d98948f03da3e",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [
         {
@@ -3090,10 +4573,10 @@
       "description": "过滤淘宝开屏广告",
       "file": "modules/taobao.sgmodule",
       "id": "taobao",
-      "module_sha256": "50c00750257e14c6ea96edd1a12e45d7c961dc5736b02fd4004ff2c841aedbed",
-      "module_version": "1.0.7",
+      "module_sha256": "99b74c6184cf17090658d123e5dc7d68be7b06de7e8fc50759b6da09e9f85c40",
+      "module_version": "1.0.8",
       "name": "淘宝去广告",
-      "revision": 7,
+      "revision": 8,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -3125,7 +4608,7 @@
         "scripts/wechat-mini/xiaotucc.js": "9dfad76d64fb9c72f274a6d37a6e6bd43ff111eb42facb803e1a0d046d0d22ae"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": [],
         "convertedInputSha256": "96ed68efd2d7804cd43fd87644be42b60488440777ec8b57332128ad004d8618",
         "counts": {
@@ -3380,6 +4863,7 @@
         },
         "matchers": [
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 25,
@@ -3387,6 +4871,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 26,
@@ -3394,6 +4879,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 27,
@@ -3401,6 +4887,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 29,
@@ -3408,6 +4895,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 31,
@@ -3415,6 +4903,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 33,
@@ -3422,6 +4911,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 34,
@@ -3429,6 +4919,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 35,
@@ -3436,6 +4927,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 36,
@@ -3443,6 +4935,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 37,
@@ -3450,6 +4943,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 38,
@@ -3457,6 +4951,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 40,
@@ -3464,6 +4959,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 41,
@@ -3471,6 +4967,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 42,
@@ -3478,6 +4975,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 44,
@@ -3485,6 +4983,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 46,
@@ -3492,6 +4991,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 47,
@@ -3499,6 +4999,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 48,
@@ -3506,6 +5007,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 49,
@@ -3513,6 +5015,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 51,
@@ -3520,6 +5023,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 54,
@@ -3527,6 +5031,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 56,
@@ -3534,6 +5039,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 57,
@@ -3541,6 +5047,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 58,
@@ -3548,6 +5055,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 60,
@@ -3555,6 +5063,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 62,
@@ -3562,6 +5071,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 63,
@@ -3569,6 +5079,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 65,
@@ -3576,6 +5087,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 66,
@@ -3583,6 +5095,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 69,
@@ -3590,6 +5103,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 71,
@@ -3597,6 +5111,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 73,
@@ -3604,6 +5119,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 75,
@@ -3611,6 +5127,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 77,
@@ -3618,6 +5135,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 79,
@@ -3625,6 +5143,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 81,
@@ -3632,6 +5151,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 83,
@@ -3639,6 +5159,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 85,
@@ -3646,6 +5167,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 87,
@@ -3653,6 +5175,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 88,
@@ -3660,6 +5183,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 89,
@@ -3667,6 +5191,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 90,
@@ -3674,6 +5199,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 92,
@@ -3681,6 +5207,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 93,
@@ -3688,6 +5215,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 95,
@@ -3695,6 +5223,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 97,
@@ -3702,6 +5231,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 98,
@@ -3709,6 +5239,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 100,
@@ -3716,6 +5247,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 102,
@@ -3723,6 +5255,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 103,
@@ -3730,6 +5263,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 104,
@@ -3737,6 +5271,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 105,
@@ -3744,6 +5279,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 106,
@@ -3751,6 +5287,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 108,
@@ -3758,6 +5295,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 110,
@@ -3765,6 +5303,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 112,
@@ -3772,6 +5311,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 114,
@@ -3779,6 +5319,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 115,
@@ -3786,6 +5327,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 117,
@@ -3793,6 +5335,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 119,
@@ -3800,6 +5343,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 121,
@@ -3807,6 +5351,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 123,
@@ -3814,6 +5359,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 126,
@@ -3821,6 +5367,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 128,
@@ -3828,6 +5375,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 129,
@@ -3835,6 +5383,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 131,
@@ -3842,6 +5391,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 133,
@@ -3849,6 +5399,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 135,
@@ -3856,6 +5407,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 136,
@@ -3863,6 +5415,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 137,
@@ -3870,6 +5423,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 138,
@@ -3877,6 +5431,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 140,
@@ -3884,6 +5439,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 142,
@@ -3891,6 +5447,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 143,
@@ -3898,6 +5455,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 144,
@@ -3905,6 +5463,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 146,
@@ -3912,6 +5471,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 147,
@@ -3919,6 +5479,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 149,
@@ -3926,6 +5487,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 151,
@@ -3933,6 +5495,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 153,
@@ -3940,6 +5503,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 156,
@@ -3947,6 +5511,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 158,
@@ -3954,6 +5519,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 160,
@@ -3961,6 +5527,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 162,
@@ -3968,6 +5535,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 164,
@@ -3975,6 +5543,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 166,
@@ -3982,6 +5551,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 167,
@@ -3989,6 +5559,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 169,
@@ -3996,6 +5567,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 170,
@@ -4003,6 +5575,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 171,
@@ -4010,6 +5583,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 172,
@@ -4017,6 +5591,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 173,
@@ -4024,6 +5599,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 174,
@@ -4031,6 +5607,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 175,
@@ -4038,6 +5615,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 176,
@@ -4045,6 +5623,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 177,
@@ -4052,6 +5631,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 178,
@@ -4059,6 +5639,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 180,
@@ -4066,6 +5647,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 182,
@@ -4073,6 +5655,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 183,
@@ -4080,6 +5663,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 185,
@@ -4087,6 +5671,7 @@
             "phase": "request"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 187,
@@ -4094,6 +5679,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 189,
@@ -4101,6 +5687,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 190,
@@ -4108,6 +5695,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 192,
@@ -4115,6 +5703,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 193,
@@ -4136,6 +5725,7 @@
             "phase": "response"
           },
           {
+            "action": "reject(404)",
             "flags": "i",
             "kind": "terminal",
             "line": 198,
@@ -4143,6 +5733,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 200,
@@ -4150,6 +5741,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 201,
@@ -4157,6 +5749,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 202,
@@ -4192,6 +5785,7 @@
             "phase": "response"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 209,
@@ -4199,6 +5793,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 210,
@@ -4310,6 +5905,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"wxsnsdy.wxs.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"wxsmsdy.video.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -4335,15 +5931,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
         "artifacts_sha256": "c73364a4fdc78e6496befebd93773d07c289bdae76430ad26c5eb567a6957739",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "dependencies_sha256": "4adefe31d280eea5570dcbbd2836e9b08ff99b5e799005c5f99c84b8329e8b28",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [
         {
@@ -4579,10 +6175,10 @@
       "description": "收录常用小程序的去广告，作者署名在插件内。",
       "file": "modules/wechat-mini.sgmodule",
       "id": "wechat-mini",
-      "module_sha256": "4768ae8110847e38c18bfb97682ebe47bca15182f3480a5953e9c91e402a54d9",
-      "module_version": "1.0.2",
+      "module_sha256": "923cb2cbd83f8ea4eb5f50a487ddb5462aa375f4ae39d1ecf4cfca981e275c0d",
+      "module_version": "1.0.3",
       "name": "微信小程序去广告",
-      "revision": 2,
+      "revision": 3,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -4601,7 +6197,7 @@
     "wechat-official": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": {},
         "convertedInputSha256": "5fbb442e6178e8647c4a8c5a0c9601a463b4c75f403978e23bc4711f0be3af1b",
         "counts": {
@@ -4626,6 +6222,7 @@
         },
         "matchers": [
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 17,
@@ -4633,6 +6230,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 19,
@@ -4656,6 +6254,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"wxs.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}"
         ],
@@ -4666,22 +6265,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [],
       "description": "过滤微信公众号广告",
       "file": "modules/wechat-official.sgmodule",
       "id": "wechat-official",
-      "module_sha256": "ad117bdee424bb2256ddb7700e85cfe22a41e34f3e0918a16c6c09d5a7a59727",
-      "module_version": "1.0.2",
+      "module_sha256": "75c32ce8c1478f89d5fc7d7f742b8b72770c7f9b2e2adac2d806c98b7eb619cf",
+      "module_version": "1.0.3",
       "name": "微信公众号去广告",
-      "revision": 2,
+      "revision": 3,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -4702,7 +6301,7 @@
         "scripts/weibo/weibo.js": "711ad863485df94322222d0b3eed6a9aeb2c90be2336ac1ff46a99507f0a86ae"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": [],
         "convertedInputSha256": "27b8f1e888c64f13148632647e36f2ce592909f25f70ab6359d52fa191a1880c",
         "counts": {
@@ -4748,6 +6347,7 @@
         },
         "matchers": [
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 20,
@@ -4755,6 +6355,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 21,
@@ -4762,6 +6363,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 23,
@@ -4769,6 +6371,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 24,
@@ -4776,6 +6379,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 25,
@@ -4783,6 +6387,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 26,
@@ -4790,6 +6395,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 27,
@@ -4797,6 +6403,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 28,
@@ -4804,6 +6411,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 29,
@@ -4811,6 +6419,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 31,
@@ -4818,6 +6427,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 32,
@@ -4825,6 +6435,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 33,
@@ -4832,6 +6443,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 34,
@@ -4839,6 +6451,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 36,
@@ -4846,6 +6459,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 38,
@@ -4853,6 +6467,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 39,
@@ -4860,6 +6475,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 41,
@@ -4867,6 +6483,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 42,
@@ -5030,6 +6647,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"uve.weibo.com\"},\"policy\":\"DIRECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"huodong.weibo.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -5047,15 +6665,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
         "artifacts_sha256": "8099481a5888cd2ee988dad800f0f28da031f6cb5ca3e0572d90868f486594ab",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
         "dependencies_sha256": "00bb9feb53b39d18a367d77657ee2bcf009247fc60bd753ed6a2d4b38eecfb8d",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [
         {
@@ -5082,10 +6700,10 @@
       "description": "过滤微博广告及去除各部分推广模块",
       "file": "modules/weibo.sgmodule",
       "id": "weibo",
-      "module_sha256": "68bd27d6908b97d7f5fc621e62c29144d24323b6285a4ab7e64503a09118f9b3",
-      "module_version": "1.0.7",
+      "module_sha256": "29168075940aefa6c32be17d0e530da54816afccc8fc03d9bc3ae669b4d24415",
+      "module_version": "1.0.8",
       "name": "微博去广告",
-      "revision": 7,
+      "revision": 8,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -5103,10 +6721,10 @@
     },
     "xiaohongshu": {
       "artifacts": {
-        "scripts/xiaohongshu/xiaohongshu.js": "04ab29fd63773c2595adf8efb9ecca9eefc2f06a8a42a54a166897f5f99c2f03"
+        "scripts/xiaohongshu/xiaohongshu.js": "1bdfbd76b918750a849f57737cfd63f7a5a9d2d6722b76ffd72dbdb15b6a395f"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.1",
+        "adapterVersion": "1.4.0",
         "arguments": [],
         "convertedInputSha256": "2bfb4713912521e28ffd50a29954a8ef52b8d9674c546f8e42505034abe424f6",
         "counts": {
@@ -5132,12 +6750,12 @@
               "engine": "auto",
               "nativeSurgeBranch": true
             },
-            "guards": 1,
+            "guards": 0,
             "kind": "js",
             "origin": "local-loon-cache",
             "path": "scripts/xiaohongshu/xiaohongshu.js",
             "phase": "response",
-            "sha256": "04ab29fd63773c2595adf8efb9ecca9eefc2f06a8a42a54a166897f5f99c2f03",
+            "sha256": "1bdfbd76b918750a849f57737cfd63f7a5a9d2d6722b76ffd72dbdb15b6a395f",
             "sourceDate": "2026-02-14 15:00",
             "sourceSha256": "f7b637c9c738b18f72dd61824e25b06dad7d55553de204daad0dddd675a74f0c",
             "url": "https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js"
@@ -5153,6 +6771,7 @@
         },
         "matchers": [
           {
+            "action": "reject_img(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 17,
@@ -5160,6 +6779,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 19,
@@ -5167,6 +6787,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 20,
@@ -5174,6 +6795,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 22,
@@ -5181,6 +6803,7 @@
             "phase": "request"
           },
           {
+            "action": "reject_dict(200)",
             "flags": "i",
             "kind": "terminal",
             "line": 23,
@@ -5320,6 +6943,7 @@
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "reviewedFixes": [],
+        "ruleMockTransfers": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"PROTOCOL\",\"value\":\"QUIC\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"xiaohongshu.com\"}]},\"policy\":\"REJECT\",\"noResolve\":false}"
         ],
@@ -5370,15 +6994,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
-        "adapter_version": "1.3.1",
-        "artifacts_sha256": "ee945a4d5e29c57508b9da6709c71fe91b082ef98bfb92987498a1f58415cc5c",
-        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
-        "dependencies_sha256": "7f0ec490bce0f5aa33db2245059f8972e500aefc941db2f02ec00d8cf6f08c88",
+        "adapter_sha256": "7be3a59922f5bb7b6f89ad51650ef5ea0a73c6f87145c49eb088521cf0b78925",
+        "adapter_version": "1.4.0",
+        "artifacts_sha256": "f3d4e87f896b6775a8108474a6b5a9a4e25a34fa83e2a357cb0efe26d4f08648",
+        "conversion_policy_sha256": "d01f51d0d62baeb4630537f1acd75bdc04544cc5f0ce4b8b9ed896cfc0e4f1ab",
+        "dependencies_sha256": "179ca07ee499156f709a2b5aecac5693c8ffaece9f7cd9bda9add4c16093194b",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
-        "publisher_version": "1.3.0",
-        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
+        "publisher_version": "1.4.0",
+        "script_adapter_sha256": "ebe7380f2c6399b6c81287e2d7477a08dc45b10bb4ee8ae39d903f0b8cc1eb00"
       },
       "dependencies": [
         {
@@ -5392,12 +7016,12 @@
             "engine": "auto",
             "nativeSurgeBranch": true
           },
-          "guards": 1,
+          "guards": 0,
           "kind": "js",
           "origin": "local-loon-cache",
           "path": "scripts/xiaohongshu/xiaohongshu.js",
           "phase": "response",
-          "sha256": "04ab29fd63773c2595adf8efb9ecca9eefc2f06a8a42a54a166897f5f99c2f03",
+          "sha256": "1bdfbd76b918750a849f57737cfd63f7a5a9d2d6722b76ffd72dbdb15b6a395f",
           "sourceDate": "2026-02-14 15:00",
           "sourceSha256": "f7b637c9c738b18f72dd61824e25b06dad7d55553de204daad0dddd675a74f0c",
           "url": "https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js"
@@ -5406,10 +7030,10 @@
       "description": "过滤信息流推广，移除图片及视频水印，如有异常，请先清除缓存再尝试。",
       "file": "modules/xiaohongshu.sgmodule",
       "id": "xiaohongshu",
-      "module_sha256": "7aeeadc484eeb6a4cb598d969bdbab455f061550fe3ced5fb7942a786eadcd2a",
-      "module_version": "1.0.7",
+      "module_sha256": "afb46921ba6068f1a2c1825038ea3f1ecb36ef61b4f68cc6481bae414a7517f9",
+      "module_version": "1.0.8",
       "name": "小红书去广告",
-      "revision": 7,
+      "revision": 8,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
