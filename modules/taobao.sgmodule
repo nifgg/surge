@@ -1,6 +1,6 @@
 #!name=淘宝去广告
 #!desc=过滤淘宝开屏广告
-#!version=1.0.6
+#!version=1.0.7
 #!author=RuCu6[https://github.com/RuCu6]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Taobao.png
 #!category=去广告
@@ -9,7 +9,7 @@
 
 # Surge adaptation; upstream authorship retained above.
 # source-date=2026-10-02 13:57:49
-# adapter-version=1.3.0
+# adapter-version=1.3.1
 
 [Rule]
 DOMAIN,adashx.m.taobao.com,REJECT
@@ -43,8 +43,8 @@ DOMAIN,ut.taobao.com,REJECT
 (?i)^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-淘宝去广告 - 移除淘宝开屏广告 - 01 = type=http-response, pattern=(?i)^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/taobao/taobao.js, requires-body=true, timeout=20, engine=webview
-淘宝去广告 - 移除淘宝开屏广告 - 02 = type=http-response, pattern=(?i)^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/taobao/taobao.js, requires-body=true, timeout=20, engine=webview
+淘宝·开屏配置 = type=http-response, pattern=(?i)^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/taobao/taobao.js, requires-body=true, timeout=20, engine=webview
+淘宝·开屏弹层 = type=http-response, pattern=(?i)^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/taobao/taobao.js, requires-body=true, timeout=20, engine=webview
 
 [MITM]
 hostname = %APPEND% acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com

@@ -3,7 +3,7 @@
     "advertisers": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": {},
         "convertedInputSha256": "2947d7df2ceb8addb9b06d7651465f8166d61ebd02ce1d889d562c62739266c4",
         "counts": {
@@ -427,22 +427,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [],
       "description": "此插件是所有去广告插件的依赖，只针对广告平台处理。你依然需要安装其他去广告插件来搭配使用，并确保此插件始终排序在顶部。\\n\\n支持拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里巴巴、阿里妈妈、阿里百川、超级汇川、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通、聚次方、美数、嗨量、维快网络、变现猫、章鱼、分秒、泰之菩、翼信、快易、数萤技术、方麟、益起、上量优选、新义互联、腾云天下、布里奇、塔酷、丽声、推啊、旺脉、新度博望、新多广告、快易科技、封狐信息、互裕科技、旺脉信息、佳量动力、享点科技、游昆信息、小川科技、旺脉科技、萃弈、泛为、米漫、易量跃动、秒针、贵士移动、星讯、倍业科技、创聚科技、硬核聚视、数因科技、芒拓网络、上海领页、神蓍科技、酷盈、凡提科技、亿帆、作业帮、畅行未来、华夏乐游、邑维、趣小猫、极准网络、元气智广、Google、SupersonicAds、APPSAD、Adjust、Sigmob、TradPlus、Fancy、MedPro、AppLovin、Unity3D、Tapjoy、Liftoff、Vungle、Moloco、Smadex、Tapad、Appier、InMobi、AppsFlyer、AppLovin、Moloco、RayJump、RixEngine、Amazon、Skarb、Amplitude、ToBid、UMS等广告平台的广告请求，更适合iOS平台的应用。",
       "file": "modules/advertisers.sgmodule",
       "id": "advertisers",
-      "module_sha256": "4f4741314dbe13b857d725ef282117b7451d51f77780ac611c4a9090120edab9",
-      "module_version": "1.0.8",
+      "module_sha256": "3890be1db69bfc19f0eaeb479ac58f77243bc8b5a0314e89d5c4f899da070a67",
+      "module_version": "1.0.9",
       "name": "广告平台拦截器",
-      "revision": 8,
+      "revision": 9,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -463,7 +463,7 @@
         "scripts/amap/amap.js": "99ff3aa0e0b24fdafba0b60a28e2dc0a5a5391a9cb65f6a58b8692210e1d5558"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": [],
         "convertedInputSha256": "a326c0b8011c5fa453f2bb5b879a3043b66f83a62de6bc80436bf28fd059d982",
         "counts": {
@@ -756,15 +756,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "artifacts_sha256": "c7280b747fb461f17f180695464f2b7df12d7d84ddee6c64c6fa6a14c1dcc229",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "dependencies_sha256": "2432010a1fd88022d6489c1ff6533307d29a14241078964fe45c7c4d661f1d7a",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [
         {
@@ -791,10 +791,10 @@
       "description": "过滤高德地图开屏广告、各页面推广，精简我的页面。",
       "file": "modules/amap.sgmodule",
       "id": "amap",
-      "module_sha256": "e7cc8850f84a5f10c894bd76fa9dc17b31b704c76f794316035673bdd8aa9933",
-      "module_version": "1.0.6",
+      "module_sha256": "dade2985ab733006e4e1f8cbcf5c0eadef91060f01290c3663d44c2c56612d19",
+      "module_version": "1.0.7",
       "name": "高德地图去广告",
-      "revision": 6,
+      "revision": 7,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -819,7 +819,7 @@
         "scripts/bilibili/bilibili-response.js": "18bdfcf8f5c280ec072f194e86c1b3a4f8ff804110ce799a1f7131ed1328c612"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": [
           {
             "choices": [
@@ -1205,15 +1205,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "artifacts_sha256": "45a9eeed6eae296bd3af3f84a69b210d239076401c87782d0f84698aca7665c6",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "dependencies_sha256": "15c811389bacd30923f0f7d2af3be3ced52e0bba7c4487f10e4e0e9b0977cc87",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [
         {
@@ -1319,10 +1319,10 @@
       "description": "过滤哔哩哔哩广告、移除青少年模式弹窗和交互式弹幕、移除无用功能和链接跟踪参数，增加空降助手以便跳过视频中插入的广告。此插件仅建议iOS 15以上设备使用，且必须启用MitM-over-HTTP/2功能。\\n\\n空降助手是第三方提供的功能，依赖于Android版空降助手的服务器数据运作，可能会存在不准确或者失效的问题，此功能与哔哩哔哩官方无关。",
       "file": "modules/bilibili.sgmodule",
       "id": "bilibili",
-      "module_sha256": "cfdc1da5cd504b0780955481c3debaa833131697d223b4ae23d79a5c32cd9beb",
-      "module_version": "1.0.6",
+      "module_sha256": "48763fe4508a9550dd367a7ecbbf778b315ed727e5cce7e7c4476b2e457e9852",
+      "module_version": "1.0.7",
       "name": "哔哩哔哩去广告",
-      "revision": 6,
+      "revision": 7,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1342,7 +1342,7 @@
     "coolapk": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": {},
         "convertedInputSha256": "4bbd1df6f6963bb6179cb1d2c11e825b555c76c53db459506eb9f7f4bd69ce0f",
         "counts": {
@@ -1459,23 +1459,23 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
         "reviewed_fixes_sha256": "e024e862def6e4f417b8921684dda888e9a0051cfb97a4d18aa7a0ed3e8eab1e",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [],
       "description": "过滤酷安广告",
       "file": "modules/coolapk.sgmodule",
       "id": "coolapk",
-      "module_sha256": "7d24f376d6a6a644402a72b3fac6f885b5af5db05b62e1137519fe2f0a1b088b",
-      "module_version": "1.0.1",
+      "module_sha256": "db4dd102f182d39ff00bd99b2c96b4d1cfe1332339d0c7c9ff8c090a97bd42ea",
+      "module_version": "1.0.2",
       "name": "酷安去广告",
-      "revision": 1,
+      "revision": 2,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1494,7 +1494,7 @@
     "fanqie": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": {},
         "convertedInputSha256": "da052ba71baa527147c11c63b88b5391eff2ac52da6c64bb7d696979f7e8aaee",
         "counts": {
@@ -1577,22 +1577,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [],
       "description": "移除番茄小说开屏广告、移除文章底部和章末广告、移除听书页面广告、移除悬浮部件和底栏多余的福利标签。",
       "file": "modules/fanqie.sgmodule",
       "id": "fanqie",
-      "module_sha256": "fec52ba2c855b3abc2b0e6f94a5f5f1a416210c6f1c4973c2dc6889509e4f3e4",
-      "module_version": "1.0.6",
+      "module_sha256": "c047df48a371544ac5f3fe5d42b2d76ce783b01df885cf8b769cd907c9ac590e",
+      "module_version": "1.0.7",
       "name": "番茄小说去广告",
-      "revision": 6,
+      "revision": 7,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1611,7 +1611,7 @@
     "httpdns": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": {},
         "convertedInputSha256": "1565be1f81faba0918f717a7ffe06340ac85db7e850a8059d636dec03c696a3a",
         "counts": {
@@ -1865,22 +1865,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [],
       "description": "此插件是所有去广告插件的依赖，拦截常见的HTTPDNS服务，以确保这些请求都能够在Loon的DNS框架下工作。",
       "file": "modules/httpdns.sgmodule",
       "id": "httpdns",
-      "module_sha256": "f69ffc89144e26bc496b6f7d3e7e50d300e0ad1779cd0bca79fc838c90ba3a4e",
-      "module_version": "1.0.8",
+      "module_sha256": "28004cfddbcc18aa91fd04901c15f993f4116bb197abf0052dca0d1d8bb044b0",
+      "module_version": "1.0.9",
       "name": "HTTPDNS拦截器",
-      "revision": 8,
+      "revision": 9,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1901,7 +1901,7 @@
         "scripts/jd/jd.js": "51e05d26041fd83e7dce50a45d69eb7a2803685d1002d83fe2c601325a9f6132"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": [],
         "convertedInputSha256": "1c3493c1d35666ac3675b40c8e3b969eb23627c2467fedf4ee159ca41c757564",
         "counts": {
@@ -2003,15 +2003,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "artifacts_sha256": "077fad30d8f74f4db58cc84413c3a27a1b7645e3f729fdd79d7dbde5cb7ca6a5",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "dependencies_sha256": "1b4d89407d7cfb4147b01e92f3d563728ee347b2220c2eb1fb64d9ede022046f",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [
         {
@@ -2038,10 +2038,10 @@
       "description": "移除京东开屏广告，精简我的页面产品推广。",
       "file": "modules/jd.sgmodule",
       "id": "jd",
-      "module_sha256": "cac04b925f1b00a248e74709e022cdc9a4224379e12ff9716df075b395a4fad5",
-      "module_version": "1.0.6",
+      "module_sha256": "8a86dd4a0b17949b801ecbe086ce75a674d0472e6fb222922acb19682b8b43f1",
+      "module_version": "1.0.7",
       "name": "京东去广告",
-      "revision": 6,
+      "revision": 7,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2062,7 +2062,7 @@
         "scripts/pinduoduo/pinduoduo-pickup.js": "1213090ff9eff98b52713167b0c34586147091b0dd488166c9c0321cfc3511b1"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": [],
         "convertedInputSha256": "7c577feeee19b0ac8df8d1fa290c8d2b089a1101747f6e4c4bde8eefebfb0a6a",
         "counts": {
@@ -2366,15 +2366,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "artifacts_sha256": "f15adfa5e69fafce6d2b81efbb53010cce86d1fe975b340dcc67d12e604896cc",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "dependencies_sha256": "89950362f91b7593b07e969a2c06fb038ae32ffcd9a9e76ebfa5da8033884f8a",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [
         {
@@ -2400,10 +2400,10 @@
       "description": "移除开屏广告、底栏多多视频、会场入口、聊天页面精选推荐及推广，精简首页和个人中心。",
       "file": "modules/pinduoduo.sgmodule",
       "id": "pinduoduo",
-      "module_sha256": "c9eb99d030f743d34e949cd44daf3a70caf509089aaab5867ae721ef700757b1",
-      "module_version": "1.0.1",
+      "module_sha256": "eea37fd9f5a50d06d5672a822304bf52d853707fc025c7d09f76b3ed306e0d71",
+      "module_version": "1.0.2",
       "name": "拼多多去广告",
-      "revision": 1,
+      "revision": 2,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2422,7 +2422,7 @@
     "qidian": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": {},
         "convertedInputSha256": "73c6e2839aeb27619a9f4fe28302b5bf710d7e7ddb34643775074590339d3c57",
         "counts": {
@@ -2602,22 +2602,22 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [],
       "description": "移除起点读书开屏广告、每日导读、各类弹窗、文末广告、搜索填充词，精简我的页面。",
       "file": "modules/qidian.sgmodule",
       "id": "qidian",
-      "module_sha256": "c656319012d2addfab186d12c8f9466c2ba4e367057111f62dee073a2c14ee67",
-      "module_version": "1.0.8",
+      "module_sha256": "120d100b59eea5ad19c3602b2a911d692c6d4549792babc67da3b6587749a8b5",
+      "module_version": "1.0.9",
       "name": "起点读书去广告",
-      "revision": 8,
+      "revision": 9,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2638,7 +2638,7 @@
         "scripts/quark/quark-config.js": "6c57b650b0a0ab3eb58e1b7d5ecf3c0cd123751f6fe06fb1cbb9e2cd867c998a"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": {},
         "convertedInputSha256": "b2f31d98c78c7075795a360c4b754feec61f83cf8fde1a6c1d03c7ec4fe76ba7",
         "counts": {
@@ -2723,23 +2723,23 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "artifacts_sha256": "7001bd53fc737ec8a9e73438fe3e719000492e0c0c6b73092cdcaf2359bc99eb",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [],
       "description": "移除阅读广告、各页面弹窗及横幅，精简我的页面。",
       "file": "modules/quark.sgmodule",
       "id": "quark",
-      "module_sha256": "f4b89a1373ce8ac571615c4f137a62bc74441ff43e0354e5a9dbd97902a040d2",
-      "module_version": "1.0.6",
+      "module_sha256": "34b0a9d4cc34da14da151d8c1bd546747b2e92e919264c2ff0885279090fab40",
+      "module_version": "1.0.7",
       "name": "夸克去广告",
-      "revision": 6,
+      "revision": 7,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2758,7 +2758,7 @@
     "shengqian": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": {},
         "convertedInputSha256": "973f112a629f30c90c6d8976ddd1613d3dbb79abceea843b1f83ba43f9e5c583",
         "counts": {
@@ -2846,22 +2846,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [],
       "description": "移除开屏广告、横幅广告、商品推荐，精简我的页面。",
       "file": "modules/shengqian.sgmodule",
       "id": "shengqian",
-      "module_sha256": "98ff4bd211572d555f834d29ecc242847639eaf4edfba487e5516ac7071705e1",
-      "module_version": "1.0.6",
+      "module_sha256": "754b23a548a3339f53d3d93cc0fb6008cf5ccf4635dc433d2be088e2a01c9a89",
+      "module_version": "1.0.7",
       "name": "省钱快报去广告",
-      "revision": 6,
+      "revision": 7,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2882,7 +2882,7 @@
         "scripts/taobao/taobao.js": "1479f4e2bc6c45103663bdf60e45f22e0514e489d5329313b914c4dbab8bb64c"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": [],
         "convertedInputSha256": "d44d5aa06c958c556eeca90ea7eb6f4d94e73c307955d7cbed5bd68bc1ff7db2",
         "counts": {
@@ -3055,15 +3055,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "artifacts_sha256": "410665a2ad99afa41ee07ee23bc9db6f04528b057e58c3955717e1c8f3dfc33e",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "dependencies_sha256": "eca67d54448cb5e859acb63e084c26106399b42ef9e910970b9d98948f03da3e",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [
         {
@@ -3090,10 +3090,10 @@
       "description": "过滤淘宝开屏广告",
       "file": "modules/taobao.sgmodule",
       "id": "taobao",
-      "module_sha256": "5d3feb0949560478356f16cfd41a36696782d0e143496c287b3c7718826e0e93",
-      "module_version": "1.0.6",
+      "module_sha256": "50c00750257e14c6ea96edd1a12e45d7c961dc5736b02fd4004ff2c841aedbed",
+      "module_version": "1.0.7",
       "name": "淘宝去广告",
-      "revision": 6,
+      "revision": 7,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -3125,7 +3125,7 @@
         "scripts/wechat-mini/xiaotucc.js": "9dfad76d64fb9c72f274a6d37a6e6bd43ff111eb42facb803e1a0d046d0d22ae"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": [],
         "convertedInputSha256": "96ed68efd2d7804cd43fd87644be42b60488440777ec8b57332128ad004d8618",
         "counts": {
@@ -4335,15 +4335,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "artifacts_sha256": "c73364a4fdc78e6496befebd93773d07c289bdae76430ad26c5eb567a6957739",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "dependencies_sha256": "4adefe31d280eea5570dcbbd2836e9b08ff99b5e799005c5f99c84b8329e8b28",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [
         {
@@ -4579,10 +4579,10 @@
       "description": "收录常用小程序的去广告，作者署名在插件内。",
       "file": "modules/wechat-mini.sgmodule",
       "id": "wechat-mini",
-      "module_sha256": "385bb89a38e2a2e14e8286022b52b11afa6d1ffc405d4efd98603526a8c63c80",
-      "module_version": "1.0.1",
+      "module_sha256": "4768ae8110847e38c18bfb97682ebe47bca15182f3480a5953e9c91e402a54d9",
+      "module_version": "1.0.2",
       "name": "微信小程序去广告",
-      "revision": 1,
+      "revision": 2,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -4601,7 +4601,7 @@
     "wechat-official": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": {},
         "convertedInputSha256": "5fbb442e6178e8647c4a8c5a0c9601a463b4c75f403978e23bc4711f0be3af1b",
         "counts": {
@@ -4666,22 +4666,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [],
       "description": "过滤微信公众号广告",
       "file": "modules/wechat-official.sgmodule",
       "id": "wechat-official",
-      "module_sha256": "071fea168c9433a80c72aaea3b0c435aada53dc8417a3883b856c43c509a1d88",
-      "module_version": "1.0.1",
+      "module_sha256": "ad117bdee424bb2256ddb7700e85cfe22a41e34f3e0918a16c6c09d5a7a59727",
+      "module_version": "1.0.2",
       "name": "微信公众号去广告",
-      "revision": 1,
+      "revision": 2,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -4702,7 +4702,7 @@
         "scripts/weibo/weibo.js": "711ad863485df94322222d0b3eed6a9aeb2c90be2336ac1ff46a99507f0a86ae"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": [],
         "convertedInputSha256": "27b8f1e888c64f13148632647e36f2ce592909f25f70ab6359d52fa191a1880c",
         "counts": {
@@ -5047,15 +5047,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "artifacts_sha256": "8099481a5888cd2ee988dad800f0f28da031f6cb5ca3e0572d90868f486594ab",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "dependencies_sha256": "00bb9feb53b39d18a367d77657ee2bcf009247fc60bd753ed6a2d4b38eecfb8d",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [
         {
@@ -5082,10 +5082,10 @@
       "description": "过滤微博广告及去除各部分推广模块",
       "file": "modules/weibo.sgmodule",
       "id": "weibo",
-      "module_sha256": "5524e3d7b8af0017cad36a54e95e69459ce9f09b3be5f7232f555161cb9ff89e",
-      "module_version": "1.0.6",
+      "module_sha256": "68bd27d6908b97d7f5fc621e62c29144d24323b6285a4ab7e64503a09118f9b3",
+      "module_version": "1.0.7",
       "name": "微博去广告",
-      "revision": 6,
+      "revision": 7,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -5106,7 +5106,7 @@
         "scripts/xiaohongshu/xiaohongshu.js": "04ab29fd63773c2595adf8efb9ecca9eefc2f06a8a42a54a166897f5f99c2f03"
       },
       "conversion_report": {
-        "adapterVersion": "1.3.0",
+        "adapterVersion": "1.3.1",
         "arguments": [],
         "convertedInputSha256": "2bfb4713912521e28ffd50a29954a8ef52b8d9674c546f8e42505034abe424f6",
         "counts": {
@@ -5370,15 +5370,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
-        "adapter_version": "1.3.0",
+        "adapter_sha256": "7bab584a986fa0b83f04d148775c4da575e407dff6ac5e0773adb0766d439455",
+        "adapter_version": "1.3.1",
         "artifacts_sha256": "ee945a4d5e29c57508b9da6709c71fe91b082ef98bfb92987498a1f58415cc5c",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "dependencies_sha256": "7f0ec490bce0f5aa33db2245059f8972e500aefc941db2f02ec00d8cf6f08c88",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+        "script_adapter_sha256": "f1e88eabb44621952d1075cd8b181333eaf16efce0e5145718620371cc562b95"
       },
       "dependencies": [
         {
@@ -5406,10 +5406,10 @@
       "description": "过滤信息流推广，移除图片及视频水印，如有异常，请先清除缓存再尝试。",
       "file": "modules/xiaohongshu.sgmodule",
       "id": "xiaohongshu",
-      "module_sha256": "b50914ced03c1a831de81dab794fad265ba1d15b6a1972e3dd9dd5fab662c205",
-      "module_version": "1.0.6",
+      "module_sha256": "7aeeadc484eeb6a4cb598d969bdbab455f061550fe3ced5fb7942a786eadcd2a",
+      "module_version": "1.0.7",
       "name": "小红书去广告",
-      "revision": 6,
+      "revision": 7,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",

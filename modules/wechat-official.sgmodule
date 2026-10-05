@@ -1,6 +1,6 @@
 #!name=微信公众号去广告
 #!desc=过滤微信公众号广告
-#!version=1.0.1
+#!version=1.0.2
 #!author=RuCu6[https://github.com/RuCu6]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weixin.png
 #!category=去广告
@@ -9,7 +9,7 @@
 
 # Surge adaptation; upstream authorship retained above.
 # source-date=2026-10-02 13:57:49
-# adapter-version=1.3.0
+# adapter-version=1.3.1
 
 [Rule]
 DOMAIN-SUFFIX,wxs.qq.com,REJECT
