@@ -3,7 +3,7 @@
     "advertisers": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.2.0",
+        "adapterVersion": "1.3.0",
         "arguments": {},
         "convertedInputSha256": "2947d7df2ceb8addb9b06d7651465f8166d61ebd02ce1d889d562c62739266c4",
         "counts": {
@@ -18,6 +18,44 @@
           "scripts": 0
         },
         "dependencies": [],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 480,
+            "pattern": "^https:\\/\\/video-dsp\\.pddpic\\.com\\/market-dsp-video\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 481,
+            "pattern": "^https:\\/\\/t-dsp\\.pinduoduo\\.com\\/dspcb\\/i\\/mrk_",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 482,
+            "pattern": "^https:\\/\\/images\\.pinduoduo\\.com\\/mrk\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 483,
+            "pattern": "^https:\\/\\/images\\.pinduoduo\\.com\\/marketing_api\\/",
+            "phase": "request"
+          }
+        ],
         "metadata": {
           "author": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
           "date": "2026-10-02 13:57:49",
@@ -31,8 +69,356 @@
           "system_version": "",
           "tag": "去广告, 依赖"
         },
-        "parserCommit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parserSha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "rulePredicates": [
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"adstrategy\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"tnc\"},{\"type\":\"OR\",\"children\":[{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"capcutapi.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"zijieapi.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"isnssdk.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"toutiaoapi.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"bytedance.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"snssdk.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"sgsnssdk.com\"}]}]},\"policy\":\"DIRECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"-ad-\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"byteimg.com\"}]},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"ads\"},{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"-normal.zijieapi.com\"}]},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"lf-ad-ies.bytecdn.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"dig.bdurl.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"extlog.snssdk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mcs.snssdk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"bds.snssdk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"byteadverts.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"ctobsnssdk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"pangle.io\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"pangolin\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"pglstatp\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"panplayable-toutiao\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"-ad-sign.byteimg.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"-ad.byteoversea.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"asiad.byteactivity\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"iflyad.bj.openstorage.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"bjimp.voiceads.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"1rtb.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"1rtb.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"yfanads.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"halomobi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"hubcloud.com.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"inmobi.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"uyunad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"puata.info\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"gdfp.gifshow.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"open.e.kuaishou.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"open.e.kuaishou.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"adtrack.e.kuaishou.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"partner.gifshow.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adukwai.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adkwai.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"supersonicads.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"appsad.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"beizi.biz\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"ad-scope.com.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adn-plus.com.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"beizi.biz\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adhub.com.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adnplus.com.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adscope.com.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adscope.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adscope.xyz\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"beizi.info\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"beizi.online\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"miaozhen.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"admobile.top\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"tianmu.mobi\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"admobile.mobi\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"admobile.net.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"popadshop.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"admobile.vip\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"yksdks.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"dutils.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"init.sms.mob.com\"},\"policy\":\"DIRECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"sdkapi.sms.mob.com\"},\"policy\":\"DIRECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"code.sms.mob.com\"},\"policy\":\"DIRECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"mob.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"smartop-sdkapi.jiguang.cn\"},\"policy\":\"DIRECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"sdk.verification.jiguang.cn\"},\"policy\":\"DIRECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"jiguang.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"jpush.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"jpush.io\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"afd.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"als.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"bgg.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"cpro.baidustatic.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"feed-image.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"click-bes.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"eclick.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mobads-logs.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mobads-pre-config.cdn.bcebos.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mobads.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"nadvideo2.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"wn.pos.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"miniapp-ad.cdn.bcebos.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mobads-pre-config.cdn.bcebos.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"hm.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"dlswbr.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"miao.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"union.baidu.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"union.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"tdid.m.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"adsmind.gdtimg.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"adsmind.ugdtimg.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ads.privacy.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"huatuocode.huatuo.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"info4.video.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"info6.video.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ios.bugly.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"pro.bugly.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ios.video.mpush.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"otheve.beacon.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"pgdt.gtimg.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"pgdt.ugdtimg.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"qzs.gdtimg.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"qzs.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"rmonitor.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"sdkconfig.video.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"tmead.y.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"tmeadbak.y.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"tmeadcomm.y.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"tpns.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"wup.imtt.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"tpstelemetry.tencent.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"otheve.beacon.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"stat.y.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"stat6.y.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"oth.str.mdt.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"h.trace.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"sdk.e.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"tangram.e.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"trace.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"trace.video.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"ad.hunyuan.tencent.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"gdt.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"l.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"imtmp.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"gdtimg.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"ugdtimg.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"47.110.187.87/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"opadlink.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"staevent.work\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"openinstall.online\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"statchannel.store\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"oplinking.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"deepinstall.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"openinstall.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"installtongji.top\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"openlink.cc\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"opstatistics.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"installtongji.online\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"statschannel.xyz\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"staevent.xyz\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"opstatistics.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"openinstall.top\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"openinstall.io\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"statsinstall.xyz\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"statchannel.top\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"getui.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"getui.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"igexin.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"umtrack.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"umeng.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"umsns.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"lydass.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"lydass.com.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"lydaas.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"lydass.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"lydaas.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"lydaas.com.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"fwosapp.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"rhinokeen.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"lydaas.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"xixikf.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"wrating.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"puata.info\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"mobmore.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"um0.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"umv0.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"umtrack1.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"eshiqi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"umv5.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"dratio.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"umtrack0.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"uyunad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"whalecloud.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"umtrack2.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"umengcloud.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"umeng.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"umtrack.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"um1.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"umsns.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adfunlink.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"tianmu.mobi\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"ubixioe.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ossgw.alicdn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ems.youku.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"hudong.alicdn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"et.tanx.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"df.tanx.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"opehs.tanx.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"beacon-api.aliyuncs.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"adash.man.aliyuncs.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"adashx.m.taobao.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"applog.uc.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"atoken.m.taobao.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"adash\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"ut.taobao.com\"}]},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"baichuan-sdk.alicdn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"acs4baichuan.m.taobao.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"nbsdk-baichuan.alicdn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"api.sm.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"c.sm.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"content-understand-strategy.sm.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"hc-ssp.sm.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"sdk-log.partner.sm.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"partner.uc.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"cpc-service-square.aiclk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"logrcv.aiclk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"acjs.aliyun.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"retcode.alicdn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"arms-retcode.aliyuncs.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"iytcdn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"huichuan.sm.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"huichuan-mc.sm.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"api.sm.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"nex.163.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"iad.g.163.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"gorgon.youdao.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"ad.xiaomi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"al-log.d.meituan.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"babel-statistics-android.d.meituan.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"maplocatesdksnapshot.d.meituan.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"metrics-picture.d.meituan.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"route-stats.d.meituan.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"dsp-x.jd.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"im-x.jd.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"xlog.jd.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"janapi.jd.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"toponadss.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"toponad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"motowoo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"guide2.bianxianmao.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"sdk.zhangyuyidong.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"sdklog.zhangyuyidong.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adintl.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adtaipo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adx.yixin.im\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"kuaiyiad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adtianmai.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"readgps.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"fanglinad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"17admob.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"slyxmobi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"mobrtb.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"maplehaze.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"lnk0.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"bridgeoos.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"anythinktech.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"birdgesdk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"toponadss.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"bridgeoos.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"anyrtb.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"anythinktech.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"combocn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"beanxin.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"letway.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"newitai.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"fireluck.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"setway.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"artcto.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"wayio.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"iaddata.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ad-evods.tianya.tv\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"tuia.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"66mobi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"xdplt.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ads.cup.com.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adjust.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adjust.io\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adjust.net.in\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"app-analytics-services.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"odm.app-ads-services.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"firebaselogging-pa.googleapis.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"firebaseinappmessaging.googleapis.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"fundingchoicesmessages.google.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"doubleclick.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"doubleclick-cn.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"googlesyndication.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"googlesyndication-cn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"xinduoad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"kuaiyiad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"statis.miwuad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"sigmob.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"richmob.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"66mobi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ad.shunchangzhixing.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"redirect.shunchangzhixing.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"api.touch-moblie.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"api.touch-moblie.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mercury-gateway.ixiaochuan.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"adapi.izuiyou.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"domob.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adwangmai.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"bxsnews.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"ranfenghd.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"miaozhen.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"qchannel01.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"ad.xelements.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adsrvr.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adsrvr.org\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"fancydsp.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"xcultur.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"bayescom.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"etoolads.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ad.aggrxinc.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"mentamob.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"advlion.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"shanghailingye.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"shenshiads.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adshenshi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"qidianad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"kuaichuanad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"statisticslinks.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"adx.zuoyebang.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"cxwlad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"ad.gameley.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"yiweiads.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adx.52qumao.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"hzjizhun.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"hzjizhun.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"sogaha.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"zxid-m.mobileservice.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"xadsmartget.adgain.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"tradplusad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"fancyapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"medproad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"applovin.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"iads.unity3d.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"unityads.unity3d.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"unityads.unitychina.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"tapjoy.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"vungle.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adsmoloco.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"smadex.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"tapad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"adsappier.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"inmobi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"inmobicdn.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"appsflyersdk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"applvn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"moloco.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"rayjump.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"rixengine.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"amazon-adsystem.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"skarb.club\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"skarb.work\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"amplitude.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"fivecdm.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"doubleverify.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"tobidad.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"tobidad.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ep7.facebook.com\"},\"policy\":\"REJECT\",\"noResolve\":false}"
+        ],
         "runtimeVerified": false,
         "sourceRewriteLines": 4,
         "sourceSha256": "2947d7df2ceb8addb9b06d7651465f8166d61ebd02ce1d889d562c62739266c4",
@@ -40,21 +426,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
-        "adapter_version": "1.2.0",
-        "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.2.0",
-        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
+        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_version": "1.3.0",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
       },
       "dependencies": [],
       "description": "此插件是所有去广告插件的依赖，只针对广告平台处理。你依然需要安装其他去广告插件来搭配使用，并确保此插件始终排序在顶部。\\n\\n支持拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里巴巴、阿里妈妈、阿里百川、超级汇川、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通、聚次方、美数、嗨量、维快网络、变现猫、章鱼、分秒、泰之菩、翼信、快易、数萤技术、方麟、益起、上量优选、新义互联、腾云天下、布里奇、塔酷、丽声、推啊、旺脉、新度博望、新多广告、快易科技、封狐信息、互裕科技、旺脉信息、佳量动力、享点科技、游昆信息、小川科技、旺脉科技、萃弈、泛为、米漫、易量跃动、秒针、贵士移动、星讯、倍业科技、创聚科技、硬核聚视、数因科技、芒拓网络、上海领页、神蓍科技、酷盈、凡提科技、亿帆、作业帮、畅行未来、华夏乐游、邑维、趣小猫、极准网络、元气智广、Google、SupersonicAds、APPSAD、Adjust、Sigmob、TradPlus、Fancy、MedPro、AppLovin、Unity3D、Tapjoy、Liftoff、Vungle、Moloco、Smadex、Tapad、Appier、InMobi、AppsFlyer、AppLovin、Moloco、RayJump、RixEngine、Amazon、Skarb、Amplitude、ToBid、UMS等广告平台的广告请求，更适合iOS平台的应用。",
       "file": "modules/advertisers.sgmodule",
       "id": "advertisers",
-      "module_sha256": "3ab5a3000e892adb2713d55c616bcf86cff247d16d246923747e16d18a553250",
-      "module_version": "1.0.6",
+      "module_sha256": "5ca10ca837d8e40abd43bafdd941c1d1045fedf021189e718ec75897ef2d6e26",
+      "module_version": "1.0.7",
       "name": "广告平台拦截器",
-      "revision": 6,
+      "revision": 7,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -72,10 +459,10 @@
     },
     "amap": {
       "artifacts": {
-        "scripts/amap/c77e9ddcb234c32a/amap.js": "c77e9ddcb234c32a196ba32a9c2e3442c33850d74c130fb8e5cc255fc303099a"
+        "scripts/amap/amap.js": "9891d34810a2e58d77b7adf10fda9fa4e250614a2e9e25cfe11a7a4b288f5a93"
       },
       "conversion_report": {
-        "adapterVersion": "1.2.0",
+        "adapterVersion": "1.3.0",
         "arguments": [],
         "convertedInputSha256": "a326c0b8011c5fa453f2bb5b879a3043b66f83a62de6bc80436bf28fd059d982",
         "counts": {
@@ -103,12 +490,232 @@
             "guards": 16,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/amap/c77e9ddcb234c32a/amap.js",
+            "path": "scripts/amap/amap.js",
             "phase": "response",
-            "sha256": "c77e9ddcb234c32a196ba32a9c2e3442c33850d74c130fb8e5cc255fc303099a",
+            "sha256": "9891d34810a2e58d77b7adf10fda9fa4e250614a2e9e25cfe11a7a4b288f5a93",
             "sourceDate": "2026-03-09 08:15",
             "sourceSha256": "b351ddf6e353c85e58a7a98fc1fe66e07542d370154d486ed4efbc9660e6d7a2",
             "url": "https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js"
+          }
+        ],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 20,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search\\/new_hotword\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 21,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/faas\\/amap-navigation\\/card-service-(?:car-end|route-plan)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 22,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search_business\\/process\\/marketingOperationStructured\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 23,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search_poi\\/homepage\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 24,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search_poi\\/tips_adv\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 25,
+            "pattern": "^https:\\/\\/oss\\.amap\\.com\\/ws\\/banner\\/lists\\/\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 27,
+            "pattern": "^https:\\/\\/ai\\.amap\\.com\\/v1\\/ai_rec\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 28,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/aos\\/main\\/page\\/product\\/list\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 29,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/faas\\/amap-navigation\\/(?:main-page-assets|main-page-location|ridewalk-end-fc|usr-profile-fc\\/homeV2)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 30,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/(?:mapapi\\/hint_text\\/offline_data|message\\/notice\\/list|shield\\/search\\/new_hotword)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 31,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/scene\\/recommend\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 32,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/valueadded\\/weather\\/v2\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 33,
+            "pattern": "^https:\\/\\/sns\\.amap\\.com\\/ws\\/msgbox\\/pull_mp\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 35,
+            "pattern": "^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/boss\\/(?:order\\/car\\/(?:feedback\\/get_card_questions|feedback\\/viptips|king_toolbox_car_bubble|remark\\/satisfactionConf|rights_information)|tips\\/onscene_visual_optimization)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 36,
+            "pattern": "^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/boss\\/(?:pay\\/web\\/paySuccess\\/info\\/request|transportation\\/diversion\\/resource\\/driving)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 37,
+            "pattern": "^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/sharedtrip\\/taxi\\/order_detail_car_tips\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 40,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/aos\\/perception\\/publicTravel\\/beforeNavi\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 41,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/bus\\/plan\\/integrate\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 42,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/c3frontend\\/(?:af-(?:hotel|launch)\\/page\\/main|af-nearby\\/nearby)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 43,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/perception\\/drive\\/(?:routeInfo|routePlan)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 44,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search_bff\\/hotword\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 45,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search_poi\\/(?:mps|search\\/sp|sug|tips_operation_location)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 46,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/faas\\/amap-navigation\\/(?:card-service-plan-home|main-page)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 47,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/frogserver\\/aocs\\/updatable\\/1\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 48,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/dsp\\/profile\\/index\\/nodefaasv3\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 49,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search\\/nearbyrec_smart\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 50,
+            "pattern": "^https:\\/\\/m5\\.amap\\.com\\/ws\\/valueadded\\/alimama\\/splash_screen\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 51,
+            "pattern": "^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/boss\\/(?:car\\/order\\/content_info|order_web\\/friendly_information)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 52,
+            "pattern": "^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/promotion-web\\/resource(\\/home)?\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 53,
+            "pattern": "^https:\\/\\/(?:info|m5)\\.amap\\.com\\/ws\\/shield\\/search\\/(?:common\\/coupon\\/info|poi\\/detail)",
+            "phase": "response"
           }
         ],
         "metadata": {
@@ -128,8 +735,13 @@
           "ios": "5.14",
           "mac": "5.9"
         },
-        "parserCommit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parserSha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "rulePredicates": [
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"amap-aos-info-nogw.amap.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"free-aos-cdn-image.amap.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"v.smtcdns.com\"},\"policy\":\"REJECT\",\"noResolve\":false}"
+        ],
         "runtimeVerified": false,
         "sourceRewriteLines": 16,
         "sourceSha256": "36b1d2156c6d36511e324ac328a865f89695e5d93e959c7bca2d547b25578ef3",
@@ -142,14 +754,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
-        "adapter_version": "1.2.0",
-        "artifacts_sha256": "512e9c618b448263095d79620f884f2b57891c3efed7d07f21a77444883b0d58",
-        "dependencies_sha256": "8c18990038bf424acc340db9ef91d7acf03ce4ac48d1d6924d0bee3618ba6c55",
-        "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.2.0",
-        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
+        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_version": "1.3.0",
+        "artifacts_sha256": "e9651d6cd91388dca04a0a3df12c241d115f8c85302b53eef8ab12f9af397c7b",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "dependencies_sha256": "523b36c27c386d8c4a4e753880c8fc74ab6517c84b8db46203b74c52a3847858",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
       },
       "dependencies": [
         {
@@ -165,9 +778,9 @@
           "guards": 16,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/amap/c77e9ddcb234c32a/amap.js",
+          "path": "scripts/amap/amap.js",
           "phase": "response",
-          "sha256": "c77e9ddcb234c32a196ba32a9c2e3442c33850d74c130fb8e5cc255fc303099a",
+          "sha256": "9891d34810a2e58d77b7adf10fda9fa4e250614a2e9e25cfe11a7a4b288f5a93",
           "sourceDate": "2026-03-09 08:15",
           "sourceSha256": "b351ddf6e353c85e58a7a98fc1fe66e07542d370154d486ed4efbc9660e6d7a2",
           "url": "https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js"
@@ -176,10 +789,10 @@
       "description": "过滤高德地图开屏广告、各页面推广，精简我的页面。",
       "file": "modules/amap.sgmodule",
       "id": "amap",
-      "module_sha256": "002a78ff1c25d3abf6d59d121cee48c4486fc3348eb966d4859d5cada21376bc",
-      "module_version": "1.0.4",
+      "module_sha256": "c776c301e6c54ef4d3d9c18885afcc8d8941cd7052ad5e6073bd6932311e7c95",
+      "module_version": "1.0.5",
       "name": "高德地图去广告",
-      "revision": 4,
+      "revision": 5,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -197,14 +810,14 @@
     },
     "bilibili": {
       "artifacts": {
-        "dependencies/bilibili/69b4b2129be425df/bilibili-tab.jq": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
-        "dependencies/bilibili/e99d5ea7038cb973/bilibili-mine.jq": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
-        "scripts/bilibili/009e1b1209138bc0/bilibili-response.js": "009e1b1209138bc04ec279a2b75038214942683204dd0f599aa3b8f1bbbae46e",
-        "scripts/bilibili/d303a6e1af01bead/bilibili-live.js": "d303a6e1af01bead91683b91d13495ee34f2b44ae0d75017cdfa7e9aa33135c4",
-        "scripts/bilibili/da0f723824dbb8ae/bilibili-request.js": "da0f723824dbb8aed26e555347baa80b6f7bd40d9b87eed6fcd8350acb817ea4"
+        "jq/bilibili/bilibili-mine.jq": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
+        "jq/bilibili/bilibili-tab.jq": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
+        "scripts/bilibili/bilibili-live.js": "7d51fc8186b5b4c0aedbc0bd27107efaf3708165c826a26e2d28ea6fa2662516",
+        "scripts/bilibili/bilibili-request.js": "1fab5a928c463007817bb4dc9887725dbb48c0b7b79b388652e66f75e21ba64b",
+        "scripts/bilibili/bilibili-response.js": "afe1cb8d528155f0ec21bc280e3475d58a0cb47b8e0d12654d01a8aba01dea44"
       },
       "conversion_report": {
-        "adapterVersion": "1.2.0",
+        "adapterVersion": "1.3.0",
         "arguments": [
           {
             "choices": [
@@ -272,7 +885,7 @@
           {
             "kind": "jq",
             "origin": "local-loon-cache",
-            "path": "dependencies/bilibili/69b4b2129be425df/bilibili-tab.jq",
+            "path": "jq/bilibili/bilibili-tab.jq",
             "sha256": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
             "sourceDate": null,
             "sourceSha256": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
@@ -281,7 +894,7 @@
           {
             "kind": "jq",
             "origin": "local-loon-cache",
-            "path": "dependencies/bilibili/e99d5ea7038cb973/bilibili-mine.jq",
+            "path": "jq/bilibili/bilibili-mine.jq",
             "sha256": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
             "sourceDate": null,
             "sourceSha256": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
@@ -304,12 +917,12 @@
               "engine": "webview",
               "nativeSurgeBranch": true
             },
-            "guards": 2,
+            "guards": 8,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/bilibili/da0f723824dbb8ae/bilibili-request.js",
+            "path": "scripts/bilibili/bilibili-request.js",
             "phase": "request",
-            "sha256": "da0f723824dbb8aed26e555347baa80b6f7bd40d9b87eed6fcd8350acb817ea4",
+            "sha256": "1fab5a928c463007817bb4dc9887725dbb48c0b7b79b388652e66f75e21ba64b",
             "sourceDate": "2026/9/6 18:56:07",
             "sourceSha256": "1b7e1d51efd960b10a22ea322630e72ecee646f2fdaad8a097c9e530fde1a857",
             "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_request_kokoryh.js"
@@ -335,9 +948,9 @@
             "guards": 19,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/bilibili/009e1b1209138bc0/bilibili-response.js",
+            "path": "scripts/bilibili/bilibili-response.js",
             "phase": "response",
-            "sha256": "009e1b1209138bc04ec279a2b75038214942683204dd0f599aa3b8f1bbbae46e",
+            "sha256": "afe1cb8d528155f0ec21bc280e3475d58a0cb47b8e0d12654d01a8aba01dea44",
             "sourceDate": "2026/9/6 18:56:07",
             "sourceSha256": "e4a8426cffbfca85c78286126a10813051a2d1aeed018119bbabe3db5da85728",
             "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_response_kokoryh.js"
@@ -361,12 +974,190 @@
             "guards": 19,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/bilibili/d303a6e1af01bead/bilibili-live.js",
+            "path": "scripts/bilibili/bilibili-live.js",
             "phase": "response",
-            "sha256": "d303a6e1af01bead91683b91d13495ee34f2b44ae0d75017cdfa7e9aa33135c4",
+            "sha256": "7d51fc8186b5b4c0aedbc0bd27107efaf3708165c826a26e2d28ea6fa2662516",
             "sourceDate": "2026/7/24 21:02:09",
             "sourceSha256": "521a3974d1a485daf5750bc7b986ee5b64325480ed80da2e7d90265f4ad57090",
             "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_json_kokoryh.js"
+          }
+        ],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 29,
+            "pattern": "^https:\\/\\/api\\.bilibili\\.com\\/x\\/pd-proxy\\/tracker\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 31,
+            "pattern": "^https:\\/\\/app\\.bilibili\\.com\\/x\\/v2\\/splash\\/(show|event\\/list2)\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 33,
+            "pattern": "^https:\\/\\/app\\.bilibili\\.com\\/x\\/v2\\/splash\\/list\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 35,
+            "pattern": "^https:\\/\\/app\\.bilibili\\.com\\/x\\/resource\\/show\\/tab\\/v2\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 37,
+            "pattern": "^https:\\/\\/app\\.bilibili\\.com\\/x\\/v2\\/feed\\/index\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 39,
+            "pattern": "^https:\\/\\/api\\.bilibili\\.com\\/pgc\\/activity\\/deliver\\/material\\/receive\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 40,
+            "pattern": "^https:\\/\\/api\\.bilibili\\.com\\/pgc\\/view\\/v2\\/app\\/season\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 42,
+            "pattern": "^https:\\/\\/api\\.bilibili\\.com\\/pgc\\/page\\/channel\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 44,
+            "pattern": "^https:\\/\\/app\\.bilibili\\.com\\/x\\/v2\\/feed\\/index\\/story\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 46,
+            "pattern": "^https:\\/\\/ap[ip]\\.bilibili\\.com\\/x\\/(resource\\/(top\\/activity|patch\\/tab(\\/v2)?)|v2\\/search\\/square|vip\\/ads\\/materials)\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 48,
+            "pattern": "^https:\\/\\/line3-h5-mobile-api\\.biligame\\.com\\/game\\/live\\/large_card_material\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 50,
+            "pattern": "^https:\\/\\/api\\.live\\.bilibili\\.com\\/xlive\\/e-commerce-interface\\/v1\\/ecommerce-user\\/get_shopping_info\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 52,
+            "pattern": "^https:\\/\\/api\\.live\\.bilibili\\.com\\/xlive\\/open-interface\\/v2\\/tracker\\/conf\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 54,
+            "pattern": "^https:\\/\\/app\\.bilibili\\.com\\/x\\/resource\\/show\\/skin\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 56,
+            "pattern": "^https:\\/\\/app\\.bilibili\\.com\\/x\\/v2\\/account\\/mine(\\/ipad)?\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 58,
+            "pattern": "^https:\\/\\/app\\.bilibili\\.com\\/x\\/v2\\/account\\/myinfo\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 60,
+            "pattern": "^https:\\/\\/grpc\\.biliapi\\.net\\/bilibili\\.app\\.interface\\.v1\\.Teenagers\\/ModeStatus$",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 62,
+            "pattern": "^https:\\/\\/grpc\\.biliapi\\.net\\/bilibili\\.app\\.interface\\.v1\\.Search\\/DefaultWords$",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 64,
+            "pattern": "^https:\\/\\/grpc\\.biliapi\\.net\\/bilibili\\.app\\.(view\\.v1\\.View\\/TFInfo|viewunite\\.v1\\.View\\/(PlayPause|ViewEndPage))$",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "header",
+            "line": 65,
+            "pattern": "^https:\\/\\/grpc\\.biliapi\\.net\\/bilibili\\.app\\.(interface\\.v1\\.(Teenagers\\/ModeStatus|Search\\/DefaultWords)|view\\.v1\\.View\\/TFInfo|viewunite\\.v1\\.View\\/(PlayPause|ViewEndPage))$",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 68,
+            "pattern": "^https:\\/\\/(?:grpc\\.biliapi\\.net|app\\.bilibili\\.com)\\/bilibili\\.community\\.service\\.dm\\.v1\\.DM\\/DmSegMobile$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 70,
+            "pattern": "^https:\\/\\/(?:grpc\\.biliapi\\.net|app\\.bilibili\\.com)\\/bilibili\\.(?:app\\.viewunite\\.v1\\.View\\/View|main\\.community\\.reply\\.v1\\.Reply\\/MainList)$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 72,
+            "pattern": "^https:\\/\\/(grpc\\.biliapi\\.net|app\\.bilibili\\.com)\\/bilibili\\.(app\\.(show\\.v1\\.Popular\\/Index|dynamic\\.v2\\.Dynamic\\/DynAll|view(unite)?\\.v1\\.View\\/(View|ViewProgress|RelatesFeed|AIRelateAsync)|playurl\\.v1\\.PlayURL\\/PlayView|playerunite\\.v1\\.Player\\/PlayViewUnite)|polymer\\.app\\.search\\.v1\\.Search\\/SearchAll|community\\.service\\.dm\\.v1\\.DM\\/DmView|main\\.community\\.reply\\.v1\\.Reply\\/MainList|pgc\\.gateway\\.player\\.v2\\.PlayURL\\/PlayView)$",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 74,
+            "pattern": "^https:\\/\\/api\\.live\\.bilibili\\.com\\/xlive\\/(?:app-interface\\/v2\\/index\\/feed|app-room\\/v1\\/index\\/getInfoBy(?:Room|User))\\?",
+            "phase": "response"
           }
         ],
         "metadata": {
@@ -386,43 +1177,20 @@
           "ios": "5.14",
           "mac": "5.9"
         },
-        "parserCommit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parserSha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "rulePredicates": [
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"api.biliapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"app.biliapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"api.biliapi.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"app.biliapi.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"chat.bilibili.com\"},{\"type\":\"OR\",\"children\":[{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"stun\"},{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"tracker\"},{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"p2p\"}]}]},\"policy\":\"REJECT\",\"noResolve\":false}"
+        ],
         "runtimeVerified": false,
         "sourceRewriteLines": 20,
         "sourceSha256": "8db02264fa15b0271ccad40eaa5c14ea3f40864aa5af501c7a64941620e6b0e5",
         "validation": "offline-exact-structure-and-content",
         "warnings": [
-          {
-            "code": "RESPONSE_MOCK_MAP_LOCAL",
-            "line": 25,
-            "message": "Loon response mock 转为 Surge Map Local 固定响应，会在请求阶段返回；响应内容/状态/类型已逐项核对。"
-          },
-          {
-            "code": "RESPONSE_MOCK_MAP_LOCAL",
-            "line": 31,
-            "message": "Loon response mock 转为 Surge Map Local 固定响应，会在请求阶段返回；响应内容/状态/类型已逐项核对。"
-          },
-          {
-            "code": "RESPONSE_MOCK_MAP_LOCAL",
-            "line": 38,
-            "message": "Loon response mock 转为 Surge Map Local 固定响应，会在请求阶段返回；响应内容/状态/类型已逐项核对。"
-          },
-          {
-            "code": "RESPONSE_MOCK_MAP_LOCAL",
-            "line": 52,
-            "message": "Loon response mock 转为 Surge Map Local 固定响应，会在请求阶段返回；响应内容/状态/类型已逐项核对。"
-          },
-          {
-            "code": "RESPONSE_MOCK_MAP_LOCAL",
-            "line": 54,
-            "message": "Loon response mock 转为 Surge Map Local 固定响应，会在请求阶段返回；响应内容/状态/类型已逐项核对。"
-          },
-          {
-            "code": "RESPONSE_MOCK_MAP_LOCAL",
-            "line": 56,
-            "message": "Loon response mock 转为 Surge Map Local 固定响应，会在请求阶段返回；响应内容/状态/类型已逐项核对。"
-          },
           {
             "code": "SCRIPT_RUNTIME_UNVERIFIED",
             "message": "脚本已审查公共 API 与原生 Surge 分支，未验证真实应用流量；依赖取自本地 Loon 缓存。"
@@ -434,20 +1202,21 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
-        "adapter_version": "1.2.0",
-        "artifacts_sha256": "4fff236e6f6a5ce88fa68297c0f27d7fb934747551af9bb5e6f0cc622e77e070",
-        "dependencies_sha256": "17f24b5f1fd94677097a6f6f704a0d54849e4f54961266daa645ef34aceb9af4",
-        "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.2.0",
-        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
+        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_version": "1.3.0",
+        "artifacts_sha256": "de6d2d2335ec2b4ea250fa6d7c47ad63db633ff1771a092bba62db3e1fc8e7c6",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "dependencies_sha256": "6f18a69cebbc87cda147ac4697fef51c6dcd350079ee41c22d1a1a2d54b68643",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
       },
       "dependencies": [
         {
           "kind": "jq",
           "origin": "local-loon-cache",
-          "path": "dependencies/bilibili/69b4b2129be425df/bilibili-tab.jq",
+          "path": "jq/bilibili/bilibili-tab.jq",
           "sha256": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
           "sourceDate": null,
           "sourceSha256": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
@@ -456,7 +1225,7 @@
         {
           "kind": "jq",
           "origin": "local-loon-cache",
-          "path": "dependencies/bilibili/e99d5ea7038cb973/bilibili-mine.jq",
+          "path": "jq/bilibili/bilibili-mine.jq",
           "sha256": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
           "sourceDate": null,
           "sourceSha256": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
@@ -479,12 +1248,12 @@
             "engine": "webview",
             "nativeSurgeBranch": true
           },
-          "guards": 2,
+          "guards": 8,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/bilibili/da0f723824dbb8ae/bilibili-request.js",
+          "path": "scripts/bilibili/bilibili-request.js",
           "phase": "request",
-          "sha256": "da0f723824dbb8aed26e555347baa80b6f7bd40d9b87eed6fcd8350acb817ea4",
+          "sha256": "1fab5a928c463007817bb4dc9887725dbb48c0b7b79b388652e66f75e21ba64b",
           "sourceDate": "2026/9/6 18:56:07",
           "sourceSha256": "1b7e1d51efd960b10a22ea322630e72ecee646f2fdaad8a097c9e530fde1a857",
           "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_request_kokoryh.js"
@@ -510,9 +1279,9 @@
           "guards": 19,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/bilibili/009e1b1209138bc0/bilibili-response.js",
+          "path": "scripts/bilibili/bilibili-response.js",
           "phase": "response",
-          "sha256": "009e1b1209138bc04ec279a2b75038214942683204dd0f599aa3b8f1bbbae46e",
+          "sha256": "afe1cb8d528155f0ec21bc280e3475d58a0cb47b8e0d12654d01a8aba01dea44",
           "sourceDate": "2026/9/6 18:56:07",
           "sourceSha256": "e4a8426cffbfca85c78286126a10813051a2d1aeed018119bbabe3db5da85728",
           "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_response_kokoryh.js"
@@ -536,9 +1305,9 @@
           "guards": 19,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/bilibili/d303a6e1af01bead/bilibili-live.js",
+          "path": "scripts/bilibili/bilibili-live.js",
           "phase": "response",
-          "sha256": "d303a6e1af01bead91683b91d13495ee34f2b44ae0d75017cdfa7e9aa33135c4",
+          "sha256": "7d51fc8186b5b4c0aedbc0bd27107efaf3708165c826a26e2d28ea6fa2662516",
           "sourceDate": "2026/7/24 21:02:09",
           "sourceSha256": "521a3974d1a485daf5750bc7b986ee5b64325480ed80da2e7d90265f4ad57090",
           "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_json_kokoryh.js"
@@ -547,10 +1316,10 @@
       "description": "过滤哔哩哔哩广告、移除青少年模式弹窗和交互式弹幕、移除无用功能和链接跟踪参数，增加空降助手以便跳过视频中插入的广告。此插件仅建议iOS 15以上设备使用，且必须启用MitM-over-HTTP/2功能。\\n\\n空降助手是第三方提供的功能，依赖于Android版空降助手的服务器数据运作，可能会存在不准确或者失效的问题，此功能与哔哩哔哩官方无关。",
       "file": "modules/bilibili.sgmodule",
       "id": "bilibili",
-      "module_sha256": "58b97ea5b4485fb3832053ce1d7c0c0c8ece70e1aded07b56a7ad49c254e29ea",
-      "module_version": "1.0.4",
+      "module_sha256": "c7f3f2796d157f6a744ca96e18f7a4b4f8bd41f344007cbab736ba4272147cd2",
+      "module_version": "1.0.5",
       "name": "哔哩哔哩去广告",
-      "revision": 4,
+      "revision": 5,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -570,7 +1339,7 @@
     "fanqie": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.2.0",
+        "adapterVersion": "1.3.0",
         "arguments": {},
         "convertedInputSha256": "da052ba71baa527147c11c63b88b5391eff2ac52da6c64bb7d696979f7e8aaee",
         "counts": {
@@ -585,6 +1354,15 @@
           "scripts": 0
         },
         "dependencies": [],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [],
         "metadata": {
           "author": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
           "date": "2026-10-02 13:57:49",
@@ -598,8 +1376,44 @@
           "system_version": "",
           "tag": "去广告"
         },
-        "parserCommit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parserSha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "rulePredicates": [
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"zlink.ugsdk.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mon.toutiaocloud.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"lf-normal-gr-sourcecdn.bytegecko.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"lf-webcast-gr-sourcecdn.bytegecko.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"p3-developer.bytemaimg.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"webcast-open.douyin.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"p11-webcast-sign.douyinpic.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"p3-webcast-sign.douyinpic.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"log3-applog.fqnovel.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"log5-applog.fqnovel.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mon11-misc-lq.fqnovel.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mon11-misc.fqnovel.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mon3-misc.fqnovel.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"rtlog3-applog.fqnovel.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"rtlog5-applog.fqnovel.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"effect.snssdk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"i.snssdk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"is-lq.snssdk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"is.snssdk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"security.snssdk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"vas.snssdk.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mon.toutiaocloud.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"abtest3-misc.zijieapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ads3-normal.zijieapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ads5-normal.zijieapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"feedback-c.zijieapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"gecko3.zijieapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"gecko5.zijieapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ma.zijieapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"minigame3-normal.zijieapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"minigame5-normal.zijieapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mssdk.zijieapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"timon.zijieapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"vcs.zijieapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}"
+        ],
         "runtimeVerified": false,
         "sourceRewriteLines": 0,
         "sourceSha256": "da052ba71baa527147c11c63b88b5391eff2ac52da6c64bb7d696979f7e8aaee",
@@ -607,21 +1421,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
-        "adapter_version": "1.2.0",
-        "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.2.0",
-        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
+        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_version": "1.3.0",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
       },
       "dependencies": [],
       "description": "移除番茄小说开屏广告、移除文章底部和章末广告、移除听书页面广告、移除悬浮部件和底栏多余的福利标签。",
       "file": "modules/fanqie.sgmodule",
       "id": "fanqie",
-      "module_sha256": "bf8408b88c3206c975456f466cfe7167239976134909a01c3ab796c420c0147d",
-      "module_version": "1.0.4",
+      "module_sha256": "33b4979886d3a3c742d4e6ad3d5dd58073b76be4169551c38eb6097ada41cb42",
+      "module_version": "1.0.5",
       "name": "番茄小说去广告",
-      "revision": 4,
+      "revision": 5,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -640,7 +1455,7 @@
     "httpdns": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.2.0",
+        "adapterVersion": "1.3.0",
         "arguments": {},
         "convertedInputSha256": "1565be1f81faba0918f717a7ffe06340ac85db7e850a8059d636dec03c696a3a",
         "counts": {
@@ -655,6 +1470,58 @@
           "scripts": 0
         },
         "dependencies": [],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 224,
+            "pattern": "^https?:\\/\\/appconf\\.mail\\.163\\.com\\/mailmaster\\/api\\/http\\/urlConfig\\.do$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 226,
+            "pattern": "^https?:\\/\\/cdn\\.wup\\.huya\\.com\\/monitor\\/monitor\\.jsp",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 228,
+            "pattern": "^https:\\/\\/msglb\\.91160\\.com\\/msg\\/outer\\/broker\\/get$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 230,
+            "pattern": "^https:\\/\\/gslbali\\.ximalaya\\.com\\/linkeye-cloud\\/httpdns\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 232,
+            "pattern": "^https:\\/\\/ucdc\\d?-upaas\\.uc\\.cn\\/api\\/v\\d\\/dns_query\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 234,
+            "pattern": "^https:\\/\\/gw-cn\\.jiaoliuqu\\.com\\/taqu-im-broadcast-srv\\/v\\d\\/Comet\\/get\\?",
+            "phase": "request"
+          }
+        ],
         "metadata": {
           "author": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], VirgilClyne[https://github.com/VirgilClyne]",
           "date": "2026-10-02 13:57:49",
@@ -668,8 +1535,172 @@
           "system_version": "",
           "tag": "去广告, 依赖"
         },
-        "parserCommit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parserSha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "rulePredicates": [
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"httpdns\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"httpsdns\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"USER-AGENT\",\"value\":\"httpdns*\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"USER-AGENT\",\"value\":\"httpsdns*\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"USER-AGENT\",\"value\":\"Httpdns*\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"USER-AGENT\",\"value\":\"Httpsdns*\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/119\\\\.29\\\\.29\\\\.90\\\\/d\\\\?\"},{\"type\":\"USER-AGENT\",\"value\":\"%E5%98%80%E5%97%92%E5%87%BA%E8%A1%8C*\"}]},\"policy\":\"DIRECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/119\\\\.28\\\\.28\\\\.90\\\\/d\\\\?\"},{\"type\":\"USER-AGENT\",\"value\":\"%E5%98%80%E5%97%92%E5%87%BA%E8%A1%8C*\"}]},\"policy\":\"DIRECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\\\\/v?[0-9]+)?\\\\/(?:sign_)?(?:(?:d|ss)[46]?|resolve)\\\\?\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/\\\\[[0-9a-fA-F:]+\\\\](?:\\\\/v?[0-9]+)?\\\\/(?:sign_)?(?:(?:d|ss)[46]?|resolve)\\\\?\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"yyapp-httpdns.gslb.yy.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"union-httpdns.gslb.yy.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"yuyin-httpdns.gslb.yy.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns-v6.gslb.yy.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/103\\\\.44\\\\.58\\\\.64\\\\/md\\\\?\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/cdn\\\\.wup\\\\.huya\\\\.com\\\\/launch\\\\/queryHttpDns\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"dns2.q2cdn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/xmc\\\\.ximalaya\\\\.com\\\\/xmlymain-login-web\\\\/login\\\\/\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"dns.weixin.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"dns.weixin.qq.com.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"aedns.weixin.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"39.156.140.30/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"39.156.140.47/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"39.156.140.245/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"42.81.232.18/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"42.187.182.106/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"42.187.182.123/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"42.187.184.154/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"43.130.30.237/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"43.130.30.240/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"43.137.153.151/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"43.137.159.31/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"43.152.112.101/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"43.153.248.120/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"60.28.172.100/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"61.151.231.157/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"101.32.104.104/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"106.39.206.21/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"106.39.206.25/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"106.39.206.70/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"111.31.201.194/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"111.31.241.76/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"111.31.241.140/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"111.206.147.156/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"111.206.147.210/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"111.206.148.27/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"116.128.177.249/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"116.130.224.150/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"116.130.224.205/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"117.185.247.73/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"123.151.48.171/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"123.151.48.193/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"123.151.48.208/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"123.151.54.50/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"180.153.202.85/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"183.192.196.31/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"203.205.129.102/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"203.205.234.132/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"220.196.159.73/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR6\",\"value\":\"240e:928:1400:10::25/128\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR6\",\"value\":\"2402:4e00:8030:1::17/128\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR6\",\"value\":\"2402:4e00:1900:1700:0:9554:1ad9:c3a/128\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR6\",\"value\":\"2408:8711:10:10::20/128\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR6\",\"value\":\"2409:8702:4860:10::4d/128\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.kg.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.bilivideo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.browser.miui.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"resolver.msg.xiaomi.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.alicdn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns-api.aliyuncs.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns-sc.aliyuncs.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"203.107.1.0/24\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"amdc.alipay.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ucdc.upaas.quark.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.danuoyi.tbcache.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/amdc\\\\.m\\\\.taobao\\\\.com\\\\/amdc\\\\/mobileDispatch\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/47\\\\.246\\\\.103\\\\.9\\\\/amdc\\\\/mobileDispatch\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/47\\\\.246\\\\.103\\\\.10\\\\/amdc\\\\/mobileDispatch\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/59\\\\.82\\\\.113\\\\.10\\\\/amdc\\\\/mobileDispatch\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/59\\\\.82\\\\.113\\\\.219\\\\/amdc\\\\/mobileDispatch\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"xpis-xcdn.youku.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"pre-xpis-xcdn.youku.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"xpis-tel-xcdn.youku.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"xpis-mob-xcdn.youku.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.cctv.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns-browser.platform.dbankcloud.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.huaweicloud.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.c.cdnhwc2.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.platform.dbankcloud.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.platform.dbankcloud.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns1.cc.cdnhwc5.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"doh.ptqy.gitv.tv\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpsdns.baidu.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.bcelive.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.baidubce.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"dns.iqiyi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"doh.iqiyi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"dns.qiyipic.iqiyi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.n.shifen.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"186.76.76.200/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"180.76.76.200/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.ocloud.heytapmobi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.push.heytapmobi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"dns.jd.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"101.124.19.122/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR6\",\"value\":\"2402:db40:5100:1011::5/128\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"103.224.222.208/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"119.29.29.98/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"119.29.29.99/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"dotserver.douyucdn.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"hdns.ksyun.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.push.oppomobile.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.ocloud.oppomobile.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"cdndns.kwd.inkuai.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"hdns.k-dyn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"kuaishou.httpdns.pro\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.kwd.inkuai.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"apidns.kwd.inkuai.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"apidns-js.kwd.inkuai.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.meituan.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdnsmultiapi.meituan.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdnsmultiapivip.meituan.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/103\\\\.37\\\\.155\\\\.60\\\\/fetch\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.music.163.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.n.netease.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns-sdk.n.netease.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.yunxindns.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"lofter.httpdns.c.163.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"music.httpdns.c.163.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.yunxindns.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"59.111.239.61/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"59.111.239.62/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"115.236.121.51/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"115.236.121.195/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.zybang.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.calorietech.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"dns.weibo.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"39.97.130.51/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"39.97.128.148/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/api\\\\.weibo\\\\.cn\\\\/\\\\d+\\\\/httpdns\\\\/config\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/api\\\\.weibo\\\\.cn\\\\/httpdns\\\\/config\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\\\/v\\\\d\\\\/resolv\\\\?\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"103.41.167.237/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"118.89.204.198/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"182.61.194.7/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR6\",\"value\":\"2402:4e00:1200:ed00:0:9089:6dac:96b6/128\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR6\",\"value\":\"240c:409f:1000::/128\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"hd.xiaojukeji.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"116.85.2.41/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"116.85.3.39/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"123.207.209.142/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"139.199.240.84/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.zybang.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"serveraddr.service.kugou.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"twns.p2ptun.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"tp2p.kg.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"IP-CIDR\",\"value\":\"81.71.61.216/32\"},\"policy\":\"REJECT\",\"noResolve\":true}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.immomo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?):\\\\d+\\\\/httpdns\\\\/\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/\\\\[[0-9a-fA-F:]+\\\\]:\\\\d+\\\\/httpdns\\\\/\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"httpdns.zybang.com\"},\"policy\":\"REJECT\",\"noResolve\":false}"
+        ],
         "runtimeVerified": false,
         "sourceRewriteLines": 6,
         "sourceSha256": "1565be1f81faba0918f717a7ffe06340ac85db7e850a8059d636dec03c696a3a",
@@ -677,21 +1708,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
-        "adapter_version": "1.2.0",
-        "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.2.0",
-        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
+        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_version": "1.3.0",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
       },
       "dependencies": [],
       "description": "此插件是所有去广告插件的依赖，拦截常见的HTTPDNS服务，以确保这些请求都能够在Loon的DNS框架下工作。",
       "file": "modules/httpdns.sgmodule",
       "id": "httpdns",
-      "module_sha256": "a2b4a46dddf7a9f10c4a1e113abcbf143c5307d56124e47f7906b49cd29daa62",
-      "module_version": "1.0.6",
+      "module_sha256": "afb993bf9a13ee7797922f8ff5d47064e0802baeb3bc136a6716b545e285d950",
+      "module_version": "1.0.7",
       "name": "HTTPDNS拦截器",
-      "revision": 6,
+      "revision": 7,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -709,10 +1741,10 @@
     },
     "jd": {
       "artifacts": {
-        "scripts/jd/7ac084633388ea2a/jd.js": "7ac084633388ea2a72ff8abb7a526dafa7671e6410046ea4093e719baeefc3c5"
+        "scripts/jd/jd.js": "cd418a96f9b5acbe577d3686b76749f3b93b2cdd1575c132f864b8fee71c73da"
       },
       "conversion_report": {
-        "adapterVersion": "1.2.0",
+        "adapterVersion": "1.3.0",
         "arguments": [],
         "convertedInputSha256": "1c3493c1d35666ac3675b40c8e3b969eb23627c2467fedf4ee159ca41c757564",
         "counts": {
@@ -740,12 +1772,43 @@
             "guards": 2,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/jd/7ac084633388ea2a/jd.js",
+            "path": "scripts/jd/jd.js",
             "phase": "response",
-            "sha256": "7ac084633388ea2a72ff8abb7a526dafa7671e6410046ea4093e719baeefc3c5",
+            "sha256": "cd418a96f9b5acbe577d3686b76749f3b93b2cdd1575c132f864b8fee71c73da",
             "sourceDate": "2024-01-23 09:50",
             "sourceSha256": "c029c4151fe73b3a6f660d0933393d1b6afd1969651f01a88d5a357abfdd7cb4",
             "url": "https://kelee.one/Resource/JavaScript/JD/JD_remove_ads.js"
+          }
+        ],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 17,
+            "pattern": "^https:\\/\\/api\\.m\\.jd\\.com\\/client\\.action\\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06])",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 19,
+            "pattern": "^https:\\/\\/api\\.m\\.jd\\.com\\/client\\.action\\?functionId=basicConfig",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 22,
+            "pattern": "^https:\\/\\/api\\.m\\.jd\\.com\\/client\\.action\\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome)",
+            "phase": "response"
           }
         ],
         "metadata": {
@@ -765,8 +1828,11 @@
           "ios": "5.14",
           "mac": "5.9"
         },
-        "parserCommit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parserSha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "rulePredicates": [
+          "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/\\\\w{32}\\\\.jddebug\\\\.com\\\\/diagnose\\\\?\"},\"policy\":\"REJECT\",\"noResolve\":false}"
+        ],
         "runtimeVerified": false,
         "sourceRewriteLines": 2,
         "sourceSha256": "282d322d5939dc2c103846eefbbd98c535e783324a95655e74f1a841b78b42c6",
@@ -779,14 +1845,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
-        "adapter_version": "1.2.0",
-        "artifacts_sha256": "cafc685b091f0e827037ba9d5820b43c956b2742beaffea891be83152914e294",
-        "dependencies_sha256": "fdea08551884c159b3a64975dec1a34c6a569f88890e3c2faa03f7b075d675ef",
-        "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.2.0",
-        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
+        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_version": "1.3.0",
+        "artifacts_sha256": "d408db280a00af8baef003c03ca96f28e005d170c44b6cf9994c2411172a51e9",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "dependencies_sha256": "958db0eeeeaacad350a5f0519f51acb46469ecbd9a1015f43d9d652dfa7ce27a",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
       },
       "dependencies": [
         {
@@ -802,9 +1869,9 @@
           "guards": 2,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/jd/7ac084633388ea2a/jd.js",
+          "path": "scripts/jd/jd.js",
           "phase": "response",
-          "sha256": "7ac084633388ea2a72ff8abb7a526dafa7671e6410046ea4093e719baeefc3c5",
+          "sha256": "cd418a96f9b5acbe577d3686b76749f3b93b2cdd1575c132f864b8fee71c73da",
           "sourceDate": "2024-01-23 09:50",
           "sourceSha256": "c029c4151fe73b3a6f660d0933393d1b6afd1969651f01a88d5a357abfdd7cb4",
           "url": "https://kelee.one/Resource/JavaScript/JD/JD_remove_ads.js"
@@ -813,10 +1880,10 @@
       "description": "移除京东开屏广告，精简我的页面产品推广。",
       "file": "modules/jd.sgmodule",
       "id": "jd",
-      "module_sha256": "75e07704d683f36a32d62c8ad9d3368875b18718b149dde591276f291dd13da7",
-      "module_version": "1.0.4",
+      "module_sha256": "e8adcaedb80780e88ba117dcd1a0aff9e74c1addc67bd8a45d1600025e6e9c47",
+      "module_version": "1.0.5",
       "name": "京东去广告",
-      "revision": 4,
+      "revision": 5,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -835,7 +1902,7 @@
     "qidian": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.2.0",
+        "adapterVersion": "1.3.0",
         "arguments": {},
         "convertedInputSha256": "73c6e2839aeb27619a9f4fe28302b5bf710d7e7ddb34643775074590339d3c57",
         "counts": {
@@ -850,6 +1917,135 @@
           "scripts": 0
         },
         "dependencies": [],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 14,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v1\\/client\\/getconf$",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 16,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v1\\/client\\/getconf$",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 18,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v4\\/client\\/getsplashscreen\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 20,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v1\\/adv\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 22,
+            "pattern": "^https:\\/\\/ywab\\.reader\\.qq\\.com\\/user\\/experiments\\/v2\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 24,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v1\\/checkin\\/simpleinfo\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 26,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v1\\/push\\/getdialog\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 28,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v2\\/dailyrecommend\\/getdailyrecommend\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 30,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v1\\/message\\/getpushedmessagelist$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 32,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v1\\/maintain\\/playstrip$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 34,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v1\\/dailyrecommend\\/recommendBook\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 36,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v1\\/freshman\\/bookshelfbtn$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 38,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v1\\/bookshelf\\/getTopOperation$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 40,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v3\\/user\\/getaccountpage\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 42,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v1\\/booksearch\\/hotWords\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 44,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v1\\/followsubscribe\\/showChapterEndModule\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 46,
+            "pattern": "^https:\\/\\/magev6\\.if\\.qidian\\.com\\/argus\\/api\\/v1\\/young\\/getconf$",
+            "phase": "request"
+          }
+        ],
         "metadata": {
           "author": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
           "date": "2026-10-02 13:57:49",
@@ -867,8 +2063,9 @@
           "ios": "5.14",
           "mac": "5.9"
         },
-        "parserCommit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parserSha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "rulePredicates": [],
         "runtimeVerified": false,
         "sourceRewriteLines": 17,
         "sourceSha256": "73c6e2839aeb27619a9f4fe28302b5bf710d7e7ddb34643775074590339d3c57",
@@ -884,21 +2081,22 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
-        "adapter_version": "1.2.0",
-        "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.2.0",
-        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
+        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_version": "1.3.0",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
       },
       "dependencies": [],
       "description": "移除起点读书开屏广告、每日导读、各类弹窗、文末广告、搜索填充词，精简我的页面。",
       "file": "modules/qidian.sgmodule",
       "id": "qidian",
-      "module_sha256": "98e05487cc3bfa3bf11ec2362cad4fe34058be5d5adbb75511a4803fcacdf317",
-      "module_version": "1.0.6",
+      "module_sha256": "a7b902e8e70a2541cbed33c84a9af677d14e87c726600e9bc48514c0254d0099",
+      "module_version": "1.0.7",
       "name": "起点读书去广告",
-      "revision": 6,
+      "revision": 7,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -915,13 +2113,15 @@
       }
     },
     "quark": {
-      "artifacts": {},
+      "artifacts": {
+        "scripts/quark/quark-config.js": "6c57b650b0a0ab3eb58e1b7d5ecf3c0cd123751f6fe06fb1cbb9e2cd867c998a"
+      },
       "conversion_report": {
-        "adapterVersion": "1.2.0",
+        "adapterVersion": "1.3.0",
         "arguments": {},
         "convertedInputSha256": "b2f31d98c78c7075795a360c4b754feec61f83cf8fde1a6c1d03c7ec4fe76ba7",
         "counts": {
-          "bodyRewrite": 1,
+          "bodyRewrite": 0,
           "bodyRewriteBeforeOptimization": 703,
           "bodyRewriteRulesSaved": 702,
           "headerRewrite": 0,
@@ -929,9 +2129,51 @@
           "mitmHostnames": 2,
           "rewriteLines": 3,
           "rules": 0,
-          "scripts": 0
+          "scripts": 1
         },
         "dependencies": [],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "generatedTransforms": [
+          {
+            "fieldCount": 703,
+            "kind": "object-key-delete",
+            "parent": [
+              "result"
+            ],
+            "path": "scripts/quark/quark-config.js",
+            "pattern": "(?i)^https:\\/\\/open-cms-api\\.quark\\.cn\\/open-cms\\?"
+          }
+        ],
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 15,
+            "pattern": "^https:\\/\\/open-cms-api\\.quark\\.cn\\/open-cms\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 17,
+            "pattern": "^https:\\/\\/stars\\.shuqireader\\.com\\/kkios\\/render\\/load\\/resource\\/app$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 18,
+            "pattern": "^https:\\/\\/stars\\.shuqireader\\.com\\/kkios\\/render\\/load\\/resource\\/appConfig$",
+            "phase": "request"
+          }
+        ],
         "metadata": {
           "author": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
           "date": "2026-10-02 13:57:49",
@@ -949,8 +2191,9 @@
           "ios": "5.14",
           "mac": "5.9"
         },
-        "parserCommit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parserSha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "rulePredicates": [],
         "runtimeVerified": false,
         "sourceRewriteLines": 3,
         "sourceSha256": "b2f31d98c78c7075795a360c4b754feec61f83cf8fde1a6c1d03c7ec4fe76ba7",
@@ -958,21 +2201,23 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
-        "adapter_version": "1.2.0",
-        "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.2.0",
-        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
+        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_version": "1.3.0",
+        "artifacts_sha256": "7001bd53fc737ec8a9e73438fe3e719000492e0c0c6b73092cdcaf2359bc99eb",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
       },
       "dependencies": [],
       "description": "移除阅读广告、各页面弹窗及横幅，精简我的页面。",
       "file": "modules/quark.sgmodule",
       "id": "quark",
-      "module_sha256": "731df60220f38f17fbd8177d98366e6564b6fbd82338cc7e8c6de2b13894827f",
-      "module_version": "1.0.4",
+      "module_sha256": "3c264ec788aafae8cb0ce2372f8371d3acd712085bd4b6dbb6d481c0571780b3",
+      "module_version": "1.0.5",
       "name": "夸克去广告",
-      "revision": 4,
+      "revision": 5,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -991,7 +2236,7 @@
     "shengqian": {
       "artifacts": {},
       "conversion_report": {
-        "adapterVersion": "1.2.0",
+        "adapterVersion": "1.3.0",
         "arguments": {},
         "convertedInputSha256": "973f112a629f30c90c6d8976ddd1613d3dbb79abceea843b1f83ba43f9e5c583",
         "counts": {
@@ -1006,6 +2251,51 @@
           "scripts": 0
         },
         "dependencies": [],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 14,
+            "pattern": "^https:\\/\\/api\\.17gwx\\.com\\/v2\\/base\\/app\\/ad\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 16,
+            "pattern": "^https:\\/\\/api\\.17gwx\\.com\\/operate\\/elements\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 18,
+            "pattern": "^https:\\/\\/api\\.17gwx\\.com\\/v2\\/growth\\/popup\\/remind$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 20,
+            "pattern": "^https:\\/\\/api\\.17gwx\\.com\\/v2\\/recommend\\/feed\\/list\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 22,
+            "pattern": "^https:\\/\\/api\\.17gwx\\.com\\/v2\\/homepage\\/feed\\/similarList\\?",
+            "phase": "request"
+          }
+        ],
         "metadata": {
           "author": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
           "date": "2026-10-02 13:57:49",
@@ -1023,8 +2313,9 @@
           "ios": "5.14",
           "mac": "5.9"
         },
-        "parserCommit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parserSha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "rulePredicates": [],
         "runtimeVerified": false,
         "sourceRewriteLines": 5,
         "sourceSha256": "973f112a629f30c90c6d8976ddd1613d3dbb79abceea843b1f83ba43f9e5c583",
@@ -1032,21 +2323,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
-        "adapter_version": "1.2.0",
-        "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.2.0",
-        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
+        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_version": "1.3.0",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
       },
       "dependencies": [],
       "description": "移除开屏广告、横幅广告、商品推荐，精简我的页面。",
       "file": "modules/shengqian.sgmodule",
       "id": "shengqian",
-      "module_sha256": "416c61262262943dd27712a8c16738cf8c837145f32e8dc1ba8c1c07fc479de4",
-      "module_version": "1.0.4",
+      "module_sha256": "660d0c861db9457c153fc4ca856ca6ee8246c909c26e45490ab7d8c321ef18e6",
+      "module_version": "1.0.5",
       "name": "省钱快报去广告",
-      "revision": 4,
+      "revision": 5,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1064,10 +2356,10 @@
     },
     "taobao": {
       "artifacts": {
-        "scripts/taobao/4aac3cca8c1745aa/taobao.js": "4aac3cca8c1745aa17c80d9ff4c168ce5e59a0391441cfc6b03c9c5fbcada827"
+        "scripts/taobao/taobao.js": "94bbe80fe7246316527aca43eea2caaa01b2a895cb497f3b0cfc6ff522e325af"
       },
       "conversion_report": {
-        "adapterVersion": "1.2.0",
+        "adapterVersion": "1.3.0",
         "arguments": [],
         "convertedInputSha256": "d44d5aa06c958c556eeca90ea7eb6f4d94e73c307955d7cbed5bd68bc1ff7db2",
         "counts": {
@@ -1095,12 +2387,113 @@
             "guards": 11,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/taobao/4aac3cca8c1745aa/taobao.js",
+            "path": "scripts/taobao/taobao.js",
             "phase": "response",
-            "sha256": "4aac3cca8c1745aa17c80d9ff4c168ce5e59a0391441cfc6b03c9c5fbcada827",
+            "sha256": "94bbe80fe7246316527aca43eea2caaa01b2a895cb497f3b0cfc6ff522e325af",
             "sourceDate": "2024-01-12 09:10",
             "sourceSha256": "3ccb2093683d84a0085a24506fb04d3ac87713e8e1bade764711816e8908d903",
             "url": "https://kelee.one/Resource/JavaScript/Taobao/Taobao_remove_ads.js"
+          }
+        ],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 22,
+            "pattern": "^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.fliggy\\.crm\\.screen\\.(allresource|predict)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 23,
+            "pattern": "^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.alibaba\\.advertisementservice\\.getadv",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 24,
+            "pattern": "^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.alimama\\.etao\\.config\\.query\\/.+?etao_advertise",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 25,
+            "pattern": "^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.alimusic\\.common\\.mobileservice\\.startinit",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 26,
+            "pattern": "^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.etao\\.noah\\.query\\/.+tao_splash",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 27,
+            "pattern": "^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.film\\.mtopadvertiseapi\\.queryadvertise",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 28,
+            "pattern": "^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.o2o\\.ad\\.gateway\\.get",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 29,
+            "pattern": "^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.taobao\\.idle\\.home\\.welcome",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 30,
+            "pattern": "^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.trip\\.activity\\.querytmsresources",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 31,
+            "pattern": "^https:\\/\\/(?:gw|heic)\\.alicdn\\.com\\/imgextra\\/i\\d\\/\\d*\\/?[\\w!]+-\\d-(?:octopus|tps)-(?:1080|1125)-\\d{4}\\.(?:jpg|png)_(?:1\\d{3}|9\\d{2})x(?:\\d|1\\d{3}|9\\d{2})q[59]0",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 32,
+            "pattern": "^https:\\/\\/guide-acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.taobao\\.(volvo\\.secondfloor\\.getconfig|wireless\\.home\\.newface\\.awesome\\.get)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 35,
+            "pattern": "^https:\\/\\/guide-acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.taobao\\.(cloudvideo\\.video\\.query|wireless\\.home\\.splash\\.awesome\\.get)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 37,
+            "pattern": "^https:\\/\\/poplayer\\.template\\.alibaba\\.com\\/\\w+\\.json",
+            "phase": "response"
           }
         ],
         "metadata": {
@@ -1116,8 +2509,16 @@
           "system_version": "",
           "tag": "去广告"
         },
-        "parserCommit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parserSha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "rulePredicates": [
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"adashx.m.taobao.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ossgw.alicdn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ems.youku.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"hudong.alicdn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"h-adashx.ut.taobao.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ut.taobao.com\"},\"policy\":\"REJECT\",\"noResolve\":false}"
+        ],
         "runtimeVerified": false,
         "sourceRewriteLines": 11,
         "sourceSha256": "23f29f4b051c237b802a5b22a4fd9f7e7eb713a559e5f81ca94d8d6b6f4554cc",
@@ -1130,14 +2531,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
-        "adapter_version": "1.2.0",
-        "artifacts_sha256": "e4dd4f5158989ae977299796e4fc0ee4209e7558a451112258cc78c25465cf13",
-        "dependencies_sha256": "ef3ec365dcce657b52da296a3282ebe5112f2086d2c7901402d8e7891cde2972",
-        "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.2.0",
-        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
+        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_version": "1.3.0",
+        "artifacts_sha256": "f9ce19ee2170b8ce7f9d044f7856ae968e1221438233e1ed82797c9618b72071",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "dependencies_sha256": "ead3e06fae660b928b8189229e08f18bb92b1f0f8fd848713a59530d6bfa2d80",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
       },
       "dependencies": [
         {
@@ -1153,9 +2555,9 @@
           "guards": 11,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/taobao/4aac3cca8c1745aa/taobao.js",
+          "path": "scripts/taobao/taobao.js",
           "phase": "response",
-          "sha256": "4aac3cca8c1745aa17c80d9ff4c168ce5e59a0391441cfc6b03c9c5fbcada827",
+          "sha256": "94bbe80fe7246316527aca43eea2caaa01b2a895cb497f3b0cfc6ff522e325af",
           "sourceDate": "2024-01-12 09:10",
           "sourceSha256": "3ccb2093683d84a0085a24506fb04d3ac87713e8e1bade764711816e8908d903",
           "url": "https://kelee.one/Resource/JavaScript/Taobao/Taobao_remove_ads.js"
@@ -1164,10 +2566,10 @@
       "description": "过滤淘宝开屏广告",
       "file": "modules/taobao.sgmodule",
       "id": "taobao",
-      "module_sha256": "8f604059347b329ef302f915f79dff5846488ab422c8d31e747a4ba9add3e768",
-      "module_version": "1.0.4",
+      "module_sha256": "893a8c2c5abb06a68b41ea6c0076768c63144b49e6adb5dc9bb859038d470b45",
+      "module_version": "1.0.5",
       "name": "淘宝去广告",
-      "revision": 4,
+      "revision": 5,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1185,10 +2587,10 @@
     },
     "weibo": {
       "artifacts": {
-        "scripts/weibo/7c237f89cddf7d27/weibo.js": "7c237f89cddf7d274eab2f5b20833d11a847baa3f5138a0c7caeb52c847b0e72"
+        "scripts/weibo/weibo.js": "94dd7771bbfff4844cb2f0394d7fd315ef8b4504ca28bbbe60ceb0f23ac2c4e7"
       },
       "conversion_report": {
-        "adapterVersion": "1.2.0",
+        "adapterVersion": "1.3.0",
         "arguments": [],
         "convertedInputSha256": "27b8f1e888c64f13148632647e36f2ce592909f25f70ab6359d52fa191a1880c",
         "counts": {
@@ -1216,12 +2618,288 @@
             "guards": 18,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/weibo/7c237f89cddf7d27/weibo.js",
+            "path": "scripts/weibo/weibo.js",
             "phase": "response",
-            "sha256": "7c237f89cddf7d274eab2f5b20833d11a847baa3f5138a0c7caeb52c847b0e72",
+            "sha256": "94dd7771bbfff4844cb2f0394d7fd315ef8b4504ca28bbbe60ceb0f23ac2c4e7",
             "sourceDate": "2026-04-23 18:00",
             "sourceSha256": "026ccd766a53f744c2bf2aad93c4deb6f207defe4daf973178bb3e4193c997fb",
             "url": "https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js"
+          }
+        ],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 20,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/(?:ug\\/checkin\\/list|push\\/daily|push\\/info)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 21,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/!\\/live\\/media_homelist\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 23,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/comments\\/bullet_screens\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 24,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/photo\\/info\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 25,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/statuses\\/(?:container_positive|push_info)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 26,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/vote\\/get_vote_detail\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 27,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/!\\/chaohua\\/discovery\\/home_bottom\\/switch\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 28,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/!\\/huati\\/(?:discovery_home_bottom_getdotinfo|mobile_discovery_searchchange)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 29,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/!\\/wbox\\/\\w+\\/(?:home_bottom_modal|interest_category)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 31,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/search\\/(?:container_discover|finder_nav_polling)\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 32,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/hot\\/hours_spotlight\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 33,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/video\\/redpacket\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 34,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/!\\/(?:search\\/finder_nav_polling|sug\\/list\\/finderchange|was\\/finder\\/searchbarchange)\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 36,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/video\\/tiny_video_info_show\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 38,
+            "pattern": "^https:\\/\\/bootrealtime\\.uve\\.weibo\\.com\\/v[23]\\/ad\\/realtime",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 39,
+            "pattern": "^https:\\/\\/sdkapp\\.uve\\.weibo\\.com\\/interface\\/sdk\\/(?:get-lbs-cell-info\\.php|sdkconfig\\.php)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 41,
+            "pattern": "^https:\\/\\/card\\.weibo\\.com\\/article\\/m\\/aj\\/(?:reward|uvead)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 42,
+            "pattern": "^https:\\/\\/weibo\\.com\\/ttarticle\\/x\\/m\\/aj\\/(?:reward|uvead)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 45,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/(?:checkin\\/show|client\\/publisher_list|push\\/active)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 47,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/groups\\/allgroups\\/v2\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 49,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/(?:cardlist|page)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 51,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/comments\\/build_comments\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 53,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/(?:container\\/asyn|flowlist|flowpage)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 55,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/friendships\\/(?:create|destroy)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 57,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/profile\\/(?:container_timeline|dealatt|me|statuses\\/tab|userinfo)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 59,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/shproxy\\/chaohua\\/discovery\\/searchactive\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 61,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/statuses\\/(?:comments_expand_child|container_detail_comment)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 63,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/statuses\\/(?:container_detail\\?|container_timeline(?:_hot|_topic|_topicpage|_unread)?|repost_timeline|unread_hot_timeline)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 65,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/statuses\\/(?:extend|show)\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 67,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/video\\/(?:full_screen_stream|tiny_stream_mid_detail|tiny_stream_video_list)\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 69,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/!\\/huati\\/discovery_home_bottom_channels\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 71,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/direct_messages\\/user_list\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 73,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/messageflow\\/notice\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 75,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/search\\/(?:container_timeline|finder)\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 77,
+            "pattern": "^https:\\/\\/api\\.weibo\\.cn\\/2\\/searchall\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 79,
+            "pattern": "^https:\\/\\/bootpreload\\.uve\\.weibo\\.com\\/v[12]\\/ad\\/preload",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 81,
+            "pattern": "^https:\\/\\/sdkapp\\.uve\\.weibo\\.com\\/interface\\/sdk\\/sdkad\\.php",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 83,
+            "pattern": "^https:\\/\\/wbapp\\.uve\\.weibo\\.com\\/(?:preload\\/get_ad|wbapplua\\/wbpullad\\.lua)",
+            "phase": "response"
           }
         ],
         "metadata": {
@@ -1237,8 +2915,13 @@
           "system_version": "",
           "tag": "去广告"
         },
-        "parserCommit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parserSha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "rulePredicates": [
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"uve.weibo.com\"},\"policy\":\"DIRECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"huodong.weibo.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"biz.weibo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}"
+        ],
         "runtimeVerified": false,
         "sourceRewriteLines": 18,
         "sourceSha256": "2d48b4f03df6341dedf6a44c1ba71953c9140e533a50dd43005100b51d7cc425",
@@ -1251,14 +2934,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
-        "adapter_version": "1.2.0",
-        "artifacts_sha256": "0fb4e9f4e678e63cd910de1a0ea75c0248e96205fdae4bfc1cc6ca650c3db892",
-        "dependencies_sha256": "c3446913f4ca8cdc89cc85c7816dbaa88af37b84bc72381f9e21b48542f56263",
-        "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.2.0",
-        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
+        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_version": "1.3.0",
+        "artifacts_sha256": "b404eb4a347713a383be6de50a0d8487f9bf0ab5ec4c84719ba597dcc63ab7cd",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "dependencies_sha256": "e642268a82d392c1f41449e2e8044e548e69cf940450aa57b76655270cf760cc",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
       },
       "dependencies": [
         {
@@ -1274,9 +2958,9 @@
           "guards": 18,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/weibo/7c237f89cddf7d27/weibo.js",
+          "path": "scripts/weibo/weibo.js",
           "phase": "response",
-          "sha256": "7c237f89cddf7d274eab2f5b20833d11a847baa3f5138a0c7caeb52c847b0e72",
+          "sha256": "94dd7771bbfff4844cb2f0394d7fd315ef8b4504ca28bbbe60ceb0f23ac2c4e7",
           "sourceDate": "2026-04-23 18:00",
           "sourceSha256": "026ccd766a53f744c2bf2aad93c4deb6f207defe4daf973178bb3e4193c997fb",
           "url": "https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js"
@@ -1285,10 +2969,10 @@
       "description": "过滤微博广告及去除各部分推广模块",
       "file": "modules/weibo.sgmodule",
       "id": "weibo",
-      "module_sha256": "842dd571643ac9ff2ffc6195b09f55825839823881dea01c10f8a1107520f632",
-      "module_version": "1.0.4",
+      "module_sha256": "fe72a2d794e1eb798523cf1f77e3705d0b2cc931513d0fdc2c81fc887ed13728",
+      "module_version": "1.0.5",
       "name": "微博去广告",
-      "revision": 4,
+      "revision": 5,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1306,10 +2990,10 @@
     },
     "xiaohongshu": {
       "artifacts": {
-        "scripts/xiaohongshu/128ea0330d6b7581/xiaohongshu.js": "128ea0330d6b758133bec32a00fcdd44cd1dcd25cf0056b34c7605e158878e3c"
+        "scripts/xiaohongshu/xiaohongshu.js": "48026720103ae889ef4bdd64c19b4aa23a7fd1251c68aa5c4bf5b10a5a94d655"
       },
       "conversion_report": {
-        "adapterVersion": "1.2.0",
+        "adapterVersion": "1.3.0",
         "arguments": [],
         "convertedInputSha256": "2bfb4713912521e28ffd50a29954a8ef52b8d9674c546f8e42505034abe424f6",
         "counts": {
@@ -1338,12 +3022,169 @@
             "guards": 9,
             "kind": "js",
             "origin": "local-loon-cache",
-            "path": "scripts/xiaohongshu/128ea0330d6b7581/xiaohongshu.js",
+            "path": "scripts/xiaohongshu/xiaohongshu.js",
             "phase": "response",
-            "sha256": "128ea0330d6b758133bec32a00fcdd44cd1dcd25cf0056b34c7605e158878e3c",
+            "sha256": "48026720103ae889ef4bdd64c19b4aa23a7fd1251c68aa5c4bf5b10a5a94d655",
             "sourceDate": "2026-02-14 15:00",
             "sourceSha256": "f7b637c9c738b18f72dd61824e25b06dad7d55553de204daad0dddd675a74f0c",
             "url": "https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js"
+          }
+        ],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 17,
+            "pattern": "^https:\\/\\/ci\\.xiaohongshu\\.com\\/system_config\\/watermark",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 19,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/surprisebox\\/(?:get_style|open|submit_action)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 20,
+            "pattern": "^https:\\/\\/www\\.xiaohongshu\\.com\\/api\\/marketing\\/box\\/trigger\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 22,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v2\\/guide\\/user_banner|v3\\/note\\/guide)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 23,
+            "pattern": "^https:\\/\\/www\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v1\\/ads\\/resource|v2\\/hey\\/\\w+\\/hey_gallery)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 25,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/search\\/banner_list$",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 26,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/search\\/hot_list$",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 27,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v4\\/search\\/hint",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 28,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v4\\/search\\/trending\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 31,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/note\\/(?:imagefeed|live_photo\\/save)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 33,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/system\\/service\\/ui\\/config\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 35,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/system_service\\/config\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 37,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v2\\/system_service\\/splash_config",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 39,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v2\\/(?:note\\/widgets|user\\/followings\\/followfeed)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 41,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v4\\/followfeed\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 43,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v5\\/recommend\\/user\\/follow_recommend\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 45,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v1\\/interaction\\/comment\\/video\\/download|v5\\/note\\/comment\\/list)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 47,
+            "pattern": "^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v2\\/note\\/feed|v3\\/note\\/videofeed)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 49,
+            "pattern": "^https:\\/\\/(?:edith|rec)\\.xiaohongshu\\.com\\/api\\/sns\\/v6\\/homefeed\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 51,
+            "pattern": "^https:\\/\\/(?:edith|so)\\.xiaohongshu\\.com\\/api\\/sns\\/v10\\/search\\/notes\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 53,
+            "pattern": "^https:\\/\\/(?:edith|rec|www)\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v4\\/note\\/videofeed|v10\\/note\\/video\\/save)",
+            "phase": "response"
           }
         ],
         "metadata": {
@@ -1363,8 +3204,11 @@
           "ios": "5.14",
           "mac": "5.9"
         },
-        "parserCommit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parserSha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "rulePredicates": [
+          "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"PROTOCOL\",\"value\":\"QUIC\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"xiaohongshu.com\"}]},\"policy\":\"REJECT\",\"noResolve\":false}"
+        ],
         "runtimeVerified": false,
         "sourceRewriteLines": 9,
         "sourceSha256": "b782ea4f811702a80f853eae8bd3a3f7a33c8a3af833f5c54fba3d75a524f646",
@@ -1412,14 +3256,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "1fee35405ca935b770ae357c85d2377db05c67a6fec680c78cd93945eab926f1",
-        "adapter_version": "1.2.0",
-        "artifacts_sha256": "4635e49b3161b242071f820061f2469e7d495cbd884625813e15c732e83c48cb",
-        "dependencies_sha256": "efecc8b320a3d353278a04857549cb3fd569988174cd9e4445d76b7b440e2ba0",
-        "parser_commit": "83f4628193fda0215da3b76e542f493cf27ceb40",
-        "parser_sha256": "4b8e25c6e07d72d6780129e3abdc527ba668546960ce7d065c1f233a08a851d9",
-        "publisher_version": "1.2.0",
-        "script_adapter_sha256": "a27ac07bd7899feacc93e6e83afda066ca2abb44256f43c2aac219d5b5c068c0"
+        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_version": "1.3.0",
+        "artifacts_sha256": "738c68925553913ee65273fe88922dc7e7c9f4f879fb2008aef32f944a9a8bd8",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "dependencies_sha256": "67089af352d55adc365f1809d49ba68090f0c0cd316f39313bab41e45f98e5d9",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
       },
       "dependencies": [
         {
@@ -1436,9 +3281,9 @@
           "guards": 9,
           "kind": "js",
           "origin": "local-loon-cache",
-          "path": "scripts/xiaohongshu/128ea0330d6b7581/xiaohongshu.js",
+          "path": "scripts/xiaohongshu/xiaohongshu.js",
           "phase": "response",
-          "sha256": "128ea0330d6b758133bec32a00fcdd44cd1dcd25cf0056b34c7605e158878e3c",
+          "sha256": "48026720103ae889ef4bdd64c19b4aa23a7fd1251c68aa5c4bf5b10a5a94d655",
           "sourceDate": "2026-02-14 15:00",
           "sourceSha256": "f7b637c9c738b18f72dd61824e25b06dad7d55553de204daad0dddd675a74f0c",
           "url": "https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js"
@@ -1447,10 +3292,10 @@
       "description": "过滤信息流推广，移除图片及视频水印，如有异常，请先清除缓存再尝试。",
       "file": "modules/xiaohongshu.sgmodule",
       "id": "xiaohongshu",
-      "module_sha256": "8b89d92869a49ae7d452bfb4efe01a94f7cb54496a53bdb74665cc56cafd52f5",
-      "module_version": "1.0.4",
+      "module_sha256": "da56b74be7c55c132603f980fedfc5ca22792934a91b07044d95376236b6cfcd",
+      "module_version": "1.0.5",
       "name": "小红书去广告",
-      "revision": 4,
+      "revision": 5,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",

@@ -1,6 +1,12 @@
-// Surge compatibility wrapper 1.1.0; original source follows unchanged.
-// Source SHA256: f7b637c9c738b18f72dd61824e25b06dad7d55553de204daad0dddd675a74f0c
-(function (__nativeHTTP) {
+// Surge compatibility wrapper 1.2.0; original source follows unchanged.
+(function (__nativeHTTP, __nativeDone) {
+  let __completed = false;
+  function $done(result) {
+    if (__completed) return;
+    __completed = true;
+    return __nativeDone(result === undefined ? {} : result);
+  }
+  try {
   let __args = {}; try { if (typeof $argument === 'string') __args = JSON.parse($argument); } catch { return $done({}); }
   if (__args.__enabled === false) return $done({});
   if ([["^https:\\/\\/ci\\.xiaohongshu\\.com\\/system_config\\/watermark","i"],["^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/surprisebox\\/(?:get_style|open|submit_action)","i"],["^https:\\/\\/www\\.xiaohongshu\\.com\\/api\\/marketing\\/box\\/trigger\\?","i"],["^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v2\\/guide\\/user_banner|v3\\/note\\/guide)","i"],["^https:\\/\\/www\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v1\\/ads\\/resource|v2\\/hey\\/\\w+\\/hey_gallery)","i"],["^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/search\\/banner_list$","i"],["^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/search\\/hot_list$","i"],["^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v4\\/search\\/hint","i"],["^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v4\\/search\\/trending\\?","i"]].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
@@ -413,4 +419,8 @@ function replaceRedIdWithFmz200(obj) {
     });
   }
 }
-})(typeof $httpClient !== 'undefined' ? $httpClient : {});
+  } catch (__error) {
+    console.log('[Surge adapter] Script failed; keeping original response: ' + __error.name);
+    $done({});
+  }
+})(typeof $httpClient !== 'undefined' ? $httpClient : {}, $done);

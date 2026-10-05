@@ -1,21 +1,15 @@
 #!name=省钱快报去广告
 #!desc=移除开屏广告、横幅广告、商品推荐，精简我的页面。
-#!version=1.0.4
+#!version=1.0.5
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YueDanBa.png
-#!openUrl=https://apps.apple.com/app/id1116025300
 #!category=去广告
-#!loon_version=3.5.1(998)
 #!homepage=https://hub.kelee.one
 #!date=2026-10-02 13:57:49
 
 # Surge adaptation; upstream authorship retained above.
-# source-sha256=973f112a629f30c90c6d8976ddd1613d3dbb79abceea843b1f83ba43f9e5c583
 # source-date=2026-10-02 13:57:49
-# adapter-version=1.2.0
-
-[Body Rewrite]
-http-response-jq (?i)^https:\/\/api\.17gwx\.com\/operate\/elements\? '.data |= with_entries(select(.key | test("home_mid_many|home_mid_banner_multi|user_center_slide_show_pic|newfeed_detail_oper_middle|main_rebate_banner|zhekou_coupon_detail_oper|zhekou_jdcoupon_detail_oper|zhekou_vipcoupon_detail_oper|zhekou_pddcoupon_detail_oper") | not))'
+# adapter-version=1.3.0
 
 [Map Local]
 (?i)^https:\/\/api\.17gwx\.com\/v2\/base\/app\/ad\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -25,6 +19,9 @@ http-response-jq (?i)^https:\/\/api\.17gwx\.com\/operate\/elements\? '.data |= w
 (?i)^https:\/\/api\.17gwx\.com\/v2\/recommend\/feed\/list\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 (?i)^https:\/\/api\.17gwx\.com\/v2\/homepage\/feed\/similarList\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Body Rewrite]
+http-response-jq (?i)^https:\/\/api\.17gwx\.com\/operate\/elements\? '.data |= with_entries(select(.key | test("home_mid_many|home_mid_banner_multi|user_center_slide_show_pic|newfeed_detail_oper_middle|main_rebate_banner|zhekou_coupon_detail_oper|zhekou_jdcoupon_detail_oper|zhekou_vipcoupon_detail_oper|zhekou_pddcoupon_detail_oper") | not))'
 
 [MITM]
 hostname = %APPEND% api.17gwx.com

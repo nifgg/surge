@@ -1,18 +1,15 @@
 #!name=淘宝去广告
 #!desc=过滤淘宝开屏广告
-#!version=1.0.4
+#!version=1.0.5
 #!author=RuCu6[https://github.com/RuCu6]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Taobao.png
-#!openUrl=https://apps.apple.com/app/id387682726
 #!category=去广告
-#!loon_version=3.5.1(998)
 #!homepage=https://hub.kelee.one
 #!date=2026-10-02 13:57:49
 
 # Surge adaptation; upstream authorship retained above.
-# source-sha256=23f29f4b051c237b802a5b22a4fd9f7e7eb713a559e5f81ca94d8d6b6f4554cc
 # source-date=2026-10-02 13:57:49
-# adapter-version=1.2.0
+# adapter-version=1.3.0
 
 [Rule]
 DOMAIN,adashx.m.taobao.com,REJECT
@@ -45,9 +42,9 @@ DOMAIN,ut.taobao.com,REJECT
 
 (?i)^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
+[Script]
+淘宝去广告 - 移除淘宝开屏广告 - 01 = type=http-response, pattern=(?i)^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/taobao/taobao.js, requires-body=true, timeout=20, engine=webview
+淘宝去广告 - 移除淘宝开屏广告 - 02 = type=http-response, pattern=(?i)^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/taobao/taobao.js, requires-body=true, timeout=20, engine=webview
+
 [MITM]
 hostname = %APPEND% acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-
-[Script]
-淘宝去广告 - 移除淘宝开屏广告 - 01 = type=http-response, pattern=^(?!(?:(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict))|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources)|(?i:^https:\/\/(?:gw|heic)\.alicdn\.com\/imgextra\/i\d\/\d*\/?[\w!]+-\d-(?:octopus|tps)-(?:1080|1125)-\d{4}\.(?:jpg|png)_(?:1\d{3}|9\d{2})x(?:\d|1\d{3}|9\d{2})q[59]0)|(?i:^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get))))(?i:^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get)), script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/taobao/4aac3cca8c1745aa/taobao.js, requires-body=true, timeout=20
-淘宝去广告 - 移除淘宝开屏广告 - 02 = type=http-response, pattern=^(?!(?:(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict))|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome)|(?i:^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources)|(?i:^https:\/\/(?:gw|heic)\.alicdn\.com\/imgextra\/i\d\/\d*\/?[\w!]+-\d-(?:octopus|tps)-(?:1080|1125)-\d{4}\.(?:jpg|png)_(?:1\d{3}|9\d{2})x(?:\d|1\d{3}|9\d{2})q[59]0)|(?i:^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get))))(?i:^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json), script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/taobao/4aac3cca8c1745aa/taobao.js, requires-body=true, timeout=20

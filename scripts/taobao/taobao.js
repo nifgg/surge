@@ -1,6 +1,12 @@
-// Surge compatibility wrapper 1.1.0; original source follows unchanged.
-// Source SHA256: 3ccb2093683d84a0085a24506fb04d3ac87713e8e1bade764711816e8908d903
-(function (__nativeHTTP) {
+// Surge compatibility wrapper 1.2.0; original source follows unchanged.
+(function (__nativeHTTP, __nativeDone) {
+  let __completed = false;
+  function $done(result) {
+    if (__completed) return;
+    __completed = true;
+    return __nativeDone(result === undefined ? {} : result);
+  }
+  try {
   let __args = {}; try { if (typeof $argument === 'string') __args = JSON.parse($argument); } catch { return $done({}); }
   if (__args.__enabled === false) return $done({});
   if ([["^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.fliggy\\.crm\\.screen\\.(allresource|predict)","i"],["^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.alibaba\\.advertisementservice\\.getadv","i"],["^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.alimama\\.etao\\.config\\.query\\/.+?etao_advertise","i"],["^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.alimusic\\.common\\.mobileservice\\.startinit","i"],["^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.etao\\.noah\\.query\\/.+tao_splash","i"],["^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.film\\.mtopadvertiseapi\\.queryadvertise","i"],["^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.o2o\\.ad\\.gateway\\.get","i"],["^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.taobao\\.idle\\.home\\.welcome","i"],["^https:\\/\\/acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.trip\\.activity\\.querytmsresources","i"],["^https:\\/\\/(?:gw|heic)\\.alicdn\\.com\\/imgextra\\/i\\d\\/\\d*\\/?[\\w!]+-\\d-(?:octopus|tps)-(?:1080|1125)-\\d{4}\\.(?:jpg|png)_(?:1\\d{3}|9\\d{2})x(?:\\d|1\\d{3}|9\\d{2})q[59]0","i"],["^https:\\/\\/guide-acs\\.m\\.taobao\\.com\\/gw\\/mtop\\.taobao\\.(volvo\\.secondfloor\\.getconfig|wireless\\.home\\.newface\\.awesome\\.get)","i"]].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
@@ -104,4 +110,8 @@ switch (isResp) {
 }
 
 $done({ body });
-})(typeof $httpClient !== 'undefined' ? $httpClient : {});
+  } catch (__error) {
+    console.log('[Surge adapter] Script failed; keeping original response: ' + __error.name);
+    $done({});
+  }
+})(typeof $httpClient !== 'undefined' ? $httpClient : {}, $done);

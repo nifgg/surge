@@ -1,6 +1,12 @@
-// Surge compatibility wrapper 1.0.1; original source follows unchanged.
-// Source SHA256: 026ccd766a53f744c2bf2aad93c4deb6f207defe4daf973178bb3e4193c997fb
-(function (__nativeHTTP) {
+// Surge compatibility wrapper 1.2.0; original source follows unchanged.
+(function (__nativeHTTP, __nativeDone) {
+  let __completed = false;
+  function $done(result) {
+    if (__completed) return;
+    __completed = true;
+    return __nativeDone(result === undefined ? {} : result);
+  }
+  try {
   let __args = {}; try { if (typeof $argument === 'string') __args = JSON.parse($argument); } catch { return $done({}); }
   if (__args.__enabled === false) return $done({});
   if ([["^https:\\/\\/api\\.weibo\\.cn\\/2\\/(?:ug\\/checkin\\/list|push\\/daily|push\\/info)","i"],["^https:\\/\\/api\\.weibo\\.cn\\/2\\/!\\/live\\/media_homelist\\?","i"],["^https:\\/\\/api\\.weibo\\.cn\\/2\\/comments\\/bullet_screens\\?","i"],["^https:\\/\\/api\\.weibo\\.cn\\/2\\/photo\\/info\\?","i"],["^https:\\/\\/api\\.weibo\\.cn\\/2\\/statuses\\/(?:container_positive|push_info)","i"],["^https:\\/\\/api\\.weibo\\.cn\\/2\\/vote\\/get_vote_detail\\?","i"],["^https:\\/\\/api\\.weibo\\.cn\\/2\\/!\\/chaohua\\/discovery\\/home_bottom\\/switch\\?","i"],["^https:\\/\\/api\\.weibo\\.cn\\/2\\/!\\/huati\\/(?:discovery_home_bottom_getdotinfo|mobile_discovery_searchchange)","i"],["^https:\\/\\/api\\.weibo\\.cn\\/2\\/!\\/wbox\\/\\w+\\/(?:home_bottom_modal|interest_category)","i"],["^https:\\/\\/api\\.weibo\\.cn\\/2\\/search\\/(?:container_discover|finder_nav_polling)\\?","i"],["^https:\\/\\/api\\.weibo\\.cn\\/2\\/hot\\/hours_spotlight\\?","i"],["^https:\\/\\/api\\.weibo\\.cn\\/2\\/video\\/redpacket\\?","i"],["^https:\\/\\/api\\.weibo\\.cn\\/2\\/!\\/(?:search\\/finder_nav_polling|sug\\/list\\/finderchange|was\\/finder\\/searchbarchange)\\?","i"],["^https:\\/\\/api\\.weibo\\.cn\\/2\\/video\\/tiny_video_info_show\\?","i"],["^https:\\/\\/bootrealtime\\.uve\\.weibo\\.com\\/v[23]\\/ad\\/realtime","i"],["^https:\\/\\/sdkapp\\.uve\\.weibo\\.com\\/interface\\/sdk\\/(?:get-lbs-cell-info\\.php|sdkconfig\\.php)","i"],["^https:\\/\\/card\\.weibo\\.com\\/article\\/m\\/aj\\/(?:reward|uvead)","i"],["^https:\\/\\/weibo\\.com\\/ttarticle\\/x\\/m\\/aj\\/(?:reward|uvead)","i"]].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
@@ -1598,4 +1604,8 @@ function removeVoteInfo(item) {
     delete item.page_info.media_info.vote_info;
   }
 }
-})(typeof $httpClient !== 'undefined' ? $httpClient : {});
+  } catch (__error) {
+    console.log('[Surge adapter] Script failed; keeping original response: ' + __error.name);
+    $done({});
+  }
+})(typeof $httpClient !== 'undefined' ? $httpClient : {}, $done);

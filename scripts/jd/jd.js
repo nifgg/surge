@@ -1,6 +1,12 @@
-// Surge compatibility wrapper 1.1.0; original source follows unchanged.
-// Source SHA256: c029c4151fe73b3a6f660d0933393d1b6afd1969651f01a88d5a357abfdd7cb4
-(function (__nativeHTTP) {
+// Surge compatibility wrapper 1.2.0; original source follows unchanged.
+(function (__nativeHTTP, __nativeDone) {
+  let __completed = false;
+  function $done(result) {
+    if (__completed) return;
+    __completed = true;
+    return __nativeDone(result === undefined ? {} : result);
+  }
+  try {
   let __args = {}; try { if (typeof $argument === 'string') __args = JSON.parse($argument); } catch { return $done({}); }
   if (__args.__enabled === false) return $done({});
   if ([["^https:\\/\\/api\\.m\\.jd\\.com\\/client\\.action\\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06])","i"],["^https:\\/\\/api\\.m\\.jd\\.com\\/client\\.action\\?functionId=basicConfig","i"]].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
@@ -204,4 +210,8 @@ if (url.includes("functionId=deliverLayer") || url.includes("functionId=orderTra
 }
 
 $done({ body: JSON.stringify(obj) });
-})(typeof $httpClient !== 'undefined' ? $httpClient : {});
+  } catch (__error) {
+    console.log('[Surge adapter] Script failed; keeping original response: ' + __error.name);
+    $done({});
+  }
+})(typeof $httpClient !== 'undefined' ? $httpClient : {}, $done);

@@ -1,6 +1,12 @@
-// Surge compatibility wrapper 1.1.0; original source follows unchanged.
-// Source SHA256: b351ddf6e353c85e58a7a98fc1fe66e07542d370154d486ed4efbc9660e6d7a2
-(function (__nativeHTTP) {
+// Surge compatibility wrapper 1.2.0; original source follows unchanged.
+(function (__nativeHTTP, __nativeDone) {
+  let __completed = false;
+  function $done(result) {
+    if (__completed) return;
+    __completed = true;
+    return __nativeDone(result === undefined ? {} : result);
+  }
+  try {
   let __args = {}; try { if (typeof $argument === 'string') __args = JSON.parse($argument); } catch { return $done({}); }
   if (__args.__enabled === false) return $done({});
   if ([["^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search\\/new_hotword\\?","i"],["^https:\\/\\/m5\\.amap\\.com\\/ws\\/faas\\/amap-navigation\\/card-service-(?:car-end|route-plan)","i"],["^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search_business\\/process\\/marketingOperationStructured\\?","i"],["^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search_poi\\/homepage\\?","i"],["^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/search_poi\\/tips_adv\\?","i"],["^https:\\/\\/oss\\.amap\\.com\\/ws\\/banner\\/lists\\/\\?","i"],["^https:\\/\\/ai\\.amap\\.com\\/v1\\/ai_rec\\/","i"],["^https:\\/\\/m5\\.amap\\.com\\/ws\\/aos\\/main\\/page\\/product\\/list\\?","i"],["^https:\\/\\/m5\\.amap\\.com\\/ws\\/faas\\/amap-navigation\\/(?:main-page-assets|main-page-location|ridewalk-end-fc|usr-profile-fc\\/homeV2)","i"],["^https:\\/\\/m5\\.amap\\.com\\/ws\\/(?:mapapi\\/hint_text\\/offline_data|message\\/notice\\/list|shield\\/search\\/new_hotword)","i"],["^https:\\/\\/m5\\.amap\\.com\\/ws\\/shield\\/scene\\/recommend\\?","i"],["^https:\\/\\/m5\\.amap\\.com\\/ws\\/valueadded\\/weather\\/v2\\?","i"],["^https:\\/\\/sns\\.amap\\.com\\/ws\\/msgbox\\/pull_mp\\?","i"],["^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/boss\\/(?:order\\/car\\/(?:feedback\\/get_card_questions|feedback\\/viptips|king_toolbox_car_bubble|remark\\/satisfactionConf|rights_information)|tips\\/onscene_visual_optimization)","i"],["^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/boss\\/(?:pay\\/web\\/paySuccess\\/info\\/request|transportation\\/diversion\\/resource\\/driving)","i"],["^https:\\/\\/m5-zb\\.amap\\.com\\/ws\\/sharedtrip\\/taxi\\/order_detail_car_tips\\?","i"]].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
@@ -677,4 +683,8 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
 }
 
 $done({ body: JSON.stringify(obj) });
-})(typeof $httpClient !== 'undefined' ? $httpClient : {});
+  } catch (__error) {
+    console.log('[Surge adapter] Script failed; keeping original response: ' + __error.name);
+    $done({});
+  }
+})(typeof $httpClient !== 'undefined' ? $httpClient : {}, $done);
