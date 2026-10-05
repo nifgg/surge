@@ -36,4 +36,4 @@ Surge 远程模块集合，提供 HTTPDNS 拦截、广告平台拦截和应用�
 
 ## 来源
 
-上游插件来自 [可莉插件中心](https://hub.kelee.one/)，适配参考 [LoonKissSurge](https://github.com/QingRex/LoonKissSurge)。模块保留原作者署名，权利与使用条件由上游原作者规定。
+上游插件适配参考 [LoonKissSurge](https://github.com/QingRex/LoonKissSurge)。模块保留原作者署名，权利与使用条件由上游原作者规定。
