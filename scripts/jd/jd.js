@@ -9,7 +9,7 @@
   try {
   let __args = {}; try { if (typeof $argument === 'string') __args = JSON.parse($argument); } catch { return $done({}); }
   if (__args.__enabled === false) return $done({});
-  if ([["^https:\\/\\/api\\.m\\.jd\\.com\\/client\\.action\\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06])","i"],["^https:\\/\\/api\\.m\\.jd\\.com\\/client\\.action\\?functionId=basicConfig","i"]].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
+  if ([["^https:\\/\\/api\\.m\\.jd\\.com\\/client\\.action\\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06])","i"]].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
 
 /*
 脚本引用https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js

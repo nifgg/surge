@@ -71,6 +71,7 @@
         },
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"adstrategy\"},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"tnc\"},{\"type\":\"OR\",\"children\":[{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"capcutapi.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"zijieapi.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"isnssdk.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"toutiaoapi.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"bytedance.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"snssdk.com\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"sgsnssdk.com\"}]}]},\"policy\":\"DIRECT\",\"noResolve\":false}",
@@ -426,22 +427,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
         "adapter_version": "1.3.0",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
       },
       "dependencies": [],
       "description": "此插件是所有去广告插件的依赖，只针对广告平台处理。你依然需要安装其他去广告插件来搭配使用，并确保此插件始终排序在顶部。\\n\\n支持拦截腾讯、字节跳动、快手、百度、邑盟、倍孜、艾狄墨搏、袤博、极光、个推、友盟、阿里巴巴、阿里妈妈、阿里百川、超级汇川、优比客思、秒针、网易、美团、小米、京东、天目、讯飞、泛连、锐讯灵通、聚次方、美数、嗨量、维快网络、变现猫、章鱼、分秒、泰之菩、翼信、快易、数萤技术、方麟、益起、上量优选、新义互联、腾云天下、布里奇、塔酷、丽声、推啊、旺脉、新度博望、新多广告、快易科技、封狐信息、互裕科技、旺脉信息、佳量动力、享点科技、游昆信息、小川科技、旺脉科技、萃弈、泛为、米漫、易量跃动、秒针、贵士移动、星讯、倍业科技、创聚科技、硬核聚视、数因科技、芒拓网络、上海领页、神蓍科技、酷盈、凡提科技、亿帆、作业帮、畅行未来、华夏乐游、邑维、趣小猫、极准网络、元气智广、Google、SupersonicAds、APPSAD、Adjust、Sigmob、TradPlus、Fancy、MedPro、AppLovin、Unity3D、Tapjoy、Liftoff、Vungle、Moloco、Smadex、Tapad、Appier、InMobi、AppsFlyer、AppLovin、Moloco、RayJump、RixEngine、Amazon、Skarb、Amplitude、ToBid、UMS等广告平台的广告请求，更适合iOS平台的应用。",
       "file": "modules/advertisers.sgmodule",
       "id": "advertisers",
-      "module_sha256": "5ca10ca837d8e40abd43bafdd941c1d1045fedf021189e718ec75897ef2d6e26",
-      "module_version": "1.0.7",
+      "module_sha256": "4f4741314dbe13b857d725ef282117b7451d51f77780ac611c4a9090120edab9",
+      "module_version": "1.0.8",
       "name": "广告平台拦截器",
-      "revision": 7,
+      "revision": 8,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -459,7 +460,7 @@
     },
     "amap": {
       "artifacts": {
-        "scripts/amap/amap.js": "9891d34810a2e58d77b7adf10fda9fa4e250614a2e9e25cfe11a7a4b288f5a93"
+        "scripts/amap/amap.js": "99ff3aa0e0b24fdafba0b60a28e2dc0a5a5391a9cb65f6a58b8692210e1d5558"
       },
       "conversion_report": {
         "adapterVersion": "1.3.0",
@@ -487,12 +488,12 @@
               "engine": "auto",
               "nativeSurgeBranch": true
             },
-            "guards": 16,
+            "guards": 1,
             "kind": "js",
             "origin": "local-loon-cache",
             "path": "scripts/amap/amap.js",
             "phase": "response",
-            "sha256": "9891d34810a2e58d77b7adf10fda9fa4e250614a2e9e25cfe11a7a4b288f5a93",
+            "sha256": "99ff3aa0e0b24fdafba0b60a28e2dc0a5a5391a9cb65f6a58b8692210e1d5558",
             "sourceDate": "2026-03-09 08:15",
             "sourceSha256": "b351ddf6e353c85e58a7a98fc1fe66e07542d370154d486ed4efbc9660e6d7a2",
             "url": "https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js"
@@ -737,6 +738,7 @@
         },
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"amap-aos-info-nogw.amap.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"free-aos-cdn-image.amap.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -754,15 +756,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
         "adapter_version": "1.3.0",
-        "artifacts_sha256": "e9651d6cd91388dca04a0a3df12c241d115f8c85302b53eef8ab12f9af397c7b",
+        "artifacts_sha256": "c7280b747fb461f17f180695464f2b7df12d7d84ddee6c64c6fa6a14c1dcc229",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
-        "dependencies_sha256": "523b36c27c386d8c4a4e753880c8fc74ab6517c84b8db46203b74c52a3847858",
+        "dependencies_sha256": "2432010a1fd88022d6489c1ff6533307d29a14241078964fe45c7c4d661f1d7a",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
       },
       "dependencies": [
         {
@@ -775,12 +777,12 @@
             "engine": "auto",
             "nativeSurgeBranch": true
           },
-          "guards": 16,
+          "guards": 1,
           "kind": "js",
           "origin": "local-loon-cache",
           "path": "scripts/amap/amap.js",
           "phase": "response",
-          "sha256": "9891d34810a2e58d77b7adf10fda9fa4e250614a2e9e25cfe11a7a4b288f5a93",
+          "sha256": "99ff3aa0e0b24fdafba0b60a28e2dc0a5a5391a9cb65f6a58b8692210e1d5558",
           "sourceDate": "2026-03-09 08:15",
           "sourceSha256": "b351ddf6e353c85e58a7a98fc1fe66e07542d370154d486ed4efbc9660e6d7a2",
           "url": "https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js"
@@ -789,10 +791,10 @@
       "description": "过滤高德地图开屏广告、各页面推广，精简我的页面。",
       "file": "modules/amap.sgmodule",
       "id": "amap",
-      "module_sha256": "c776c301e6c54ef4d3d9c18885afcc8d8941cd7052ad5e6073bd6932311e7c95",
-      "module_version": "1.0.5",
+      "module_sha256": "e7cc8850f84a5f10c894bd76fa9dc17b31b704c76f794316035673bdd8aa9933",
+      "module_version": "1.0.6",
       "name": "高德地图去广告",
-      "revision": 5,
+      "revision": 6,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -812,9 +814,9 @@
       "artifacts": {
         "jq/bilibili/bilibili-mine.jq": "e99d5ea7038cb973996a04fde3cd9a2840dbba6dcfbfb437c00cb383f53fda2f",
         "jq/bilibili/bilibili-tab.jq": "69b4b2129be425dfa26fe7f06786a8710129c2ce5702fdcd36d90f842aea4dec",
-        "scripts/bilibili/bilibili-live.js": "7d51fc8186b5b4c0aedbc0bd27107efaf3708165c826a26e2d28ea6fa2662516",
-        "scripts/bilibili/bilibili-request.js": "1fab5a928c463007817bb4dc9887725dbb48c0b7b79b388652e66f75e21ba64b",
-        "scripts/bilibili/bilibili-response.js": "afe1cb8d528155f0ec21bc280e3475d58a0cb47b8e0d12654d01a8aba01dea44"
+        "scripts/bilibili/bilibili-live.js": "4cf11fb89090d87381465153545baaaf73a468f8613a6145263321e95e28a221",
+        "scripts/bilibili/bilibili-request.js": "ffd3d30d67997d51c5ac992597fff0d9a7a7518f5e8c34e9c090d66e92a68a65",
+        "scripts/bilibili/bilibili-response.js": "18bdfcf8f5c280ec072f194e86c1b3a4f8ff804110ce799a1f7131ed1328c612"
       },
       "conversion_report": {
         "adapterVersion": "1.3.0",
@@ -917,12 +919,12 @@
               "engine": "webview",
               "nativeSurgeBranch": true
             },
-            "guards": 8,
+            "guards": 2,
             "kind": "js",
             "origin": "local-loon-cache",
             "path": "scripts/bilibili/bilibili-request.js",
             "phase": "request",
-            "sha256": "1fab5a928c463007817bb4dc9887725dbb48c0b7b79b388652e66f75e21ba64b",
+            "sha256": "ffd3d30d67997d51c5ac992597fff0d9a7a7518f5e8c34e9c090d66e92a68a65",
             "sourceDate": "2026/9/6 18:56:07",
             "sourceSha256": "1b7e1d51efd960b10a22ea322630e72ecee646f2fdaad8a097c9e530fde1a857",
             "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_request_kokoryh.js"
@@ -945,12 +947,12 @@
               "engine": "webview",
               "nativeSurgeBranch": true
             },
-            "guards": 19,
+            "guards": 4,
             "kind": "js",
             "origin": "local-loon-cache",
             "path": "scripts/bilibili/bilibili-response.js",
             "phase": "response",
-            "sha256": "afe1cb8d528155f0ec21bc280e3475d58a0cb47b8e0d12654d01a8aba01dea44",
+            "sha256": "18bdfcf8f5c280ec072f194e86c1b3a4f8ff804110ce799a1f7131ed1328c612",
             "sourceDate": "2026/9/6 18:56:07",
             "sourceSha256": "e4a8426cffbfca85c78286126a10813051a2d1aeed018119bbabe3db5da85728",
             "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_response_kokoryh.js"
@@ -971,12 +973,12 @@
               "engine": "webview",
               "nativeSurgeBranch": true
             },
-            "guards": 19,
+            "guards": 1,
             "kind": "js",
             "origin": "local-loon-cache",
             "path": "scripts/bilibili/bilibili-live.js",
             "phase": "response",
-            "sha256": "7d51fc8186b5b4c0aedbc0bd27107efaf3708165c826a26e2d28ea6fa2662516",
+            "sha256": "4cf11fb89090d87381465153545baaaf73a468f8613a6145263321e95e28a221",
             "sourceDate": "2026/7/24 21:02:09",
             "sourceSha256": "521a3974d1a485daf5750bc7b986ee5b64325480ed80da2e7d90265f4ad57090",
             "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_json_kokoryh.js"
@@ -1179,6 +1181,7 @@
         },
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"api.biliapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"app.biliapi.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -1202,15 +1205,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
         "adapter_version": "1.3.0",
-        "artifacts_sha256": "de6d2d2335ec2b4ea250fa6d7c47ad63db633ff1771a092bba62db3e1fc8e7c6",
+        "artifacts_sha256": "45a9eeed6eae296bd3af3f84a69b210d239076401c87782d0f84698aca7665c6",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
-        "dependencies_sha256": "6f18a69cebbc87cda147ac4697fef51c6dcd350079ee41c22d1a1a2d54b68643",
+        "dependencies_sha256": "15c811389bacd30923f0f7d2af3be3ced52e0bba7c4487f10e4e0e9b0977cc87",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
       },
       "dependencies": [
         {
@@ -1248,12 +1251,12 @@
             "engine": "webview",
             "nativeSurgeBranch": true
           },
-          "guards": 8,
+          "guards": 2,
           "kind": "js",
           "origin": "local-loon-cache",
           "path": "scripts/bilibili/bilibili-request.js",
           "phase": "request",
-          "sha256": "1fab5a928c463007817bb4dc9887725dbb48c0b7b79b388652e66f75e21ba64b",
+          "sha256": "ffd3d30d67997d51c5ac992597fff0d9a7a7518f5e8c34e9c090d66e92a68a65",
           "sourceDate": "2026/9/6 18:56:07",
           "sourceSha256": "1b7e1d51efd960b10a22ea322630e72ecee646f2fdaad8a097c9e530fde1a857",
           "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_request_kokoryh.js"
@@ -1276,12 +1279,12 @@
             "engine": "webview",
             "nativeSurgeBranch": true
           },
-          "guards": 19,
+          "guards": 4,
           "kind": "js",
           "origin": "local-loon-cache",
           "path": "scripts/bilibili/bilibili-response.js",
           "phase": "response",
-          "sha256": "afe1cb8d528155f0ec21bc280e3475d58a0cb47b8e0d12654d01a8aba01dea44",
+          "sha256": "18bdfcf8f5c280ec072f194e86c1b3a4f8ff804110ce799a1f7131ed1328c612",
           "sourceDate": "2026/9/6 18:56:07",
           "sourceSha256": "e4a8426cffbfca85c78286126a10813051a2d1aeed018119bbabe3db5da85728",
           "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_proto_response_kokoryh.js"
@@ -1302,12 +1305,12 @@
             "engine": "webview",
             "nativeSurgeBranch": true
           },
-          "guards": 19,
+          "guards": 1,
           "kind": "js",
           "origin": "local-loon-cache",
           "path": "scripts/bilibili/bilibili-live.js",
           "phase": "response",
-          "sha256": "7d51fc8186b5b4c0aedbc0bd27107efaf3708165c826a26e2d28ea6fa2662516",
+          "sha256": "4cf11fb89090d87381465153545baaaf73a468f8613a6145263321e95e28a221",
           "sourceDate": "2026/7/24 21:02:09",
           "sourceSha256": "521a3974d1a485daf5750bc7b986ee5b64325480ed80da2e7d90265f4ad57090",
           "url": "https://kelee.one/Resource/JavaScript/Bilibili/Bilibili_json_kokoryh.js"
@@ -1316,10 +1319,10 @@
       "description": "过滤哔哩哔哩广告、移除青少年模式弹窗和交互式弹幕、移除无用功能和链接跟踪参数，增加空降助手以便跳过视频中插入的广告。此插件仅建议iOS 15以上设备使用，且必须启用MitM-over-HTTP/2功能。\\n\\n空降助手是第三方提供的功能，依赖于Android版空降助手的服务器数据运作，可能会存在不准确或者失效的问题，此功能与哔哩哔哩官方无关。",
       "file": "modules/bilibili.sgmodule",
       "id": "bilibili",
-      "module_sha256": "c7f3f2796d157f6a744ca96e18f7a4b4f8bd41f344007cbab736ba4272147cd2",
-      "module_version": "1.0.5",
+      "module_sha256": "cfdc1da5cd504b0780955481c3debaa833131697d223b4ae23d79a5c32cd9beb",
+      "module_version": "1.0.6",
       "name": "哔哩哔哩去广告",
-      "revision": 5,
+      "revision": 6,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1333,6 +1336,158 @@
         "variants": [
           "defaults",
           "all-conditional-items"
+        ]
+      }
+    },
+    "coolapk": {
+      "artifacts": {},
+      "conversion_report": {
+        "adapterVersion": "1.3.0",
+        "arguments": {},
+        "convertedInputSha256": "4bbd1df6f6963bb6179cb1d2c11e825b555c76c53db459506eb9f7f4bd69ce0f",
+        "counts": {
+          "bodyRewrite": 6,
+          "bodyRewriteBeforeOptimization": 6,
+          "bodyRewriteRulesSaved": 0,
+          "headerRewrite": 0,
+          "mapLocal": 1,
+          "mitmHostnames": 1,
+          "rewriteLines": 7,
+          "rules": 0,
+          "scripts": 0
+        },
+        "dependencies": [],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 14,
+            "pattern": "^https:\\/\\/api\\.coolapk\\.com\\/v6\\/search\\?.*type=hotSearch",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 16,
+            "pattern": "^https:\\/\\/api\\.coolapk\\.com\\/v6\\/feed\\/detail\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 18,
+            "pattern": "^https:\\/\\/api\\.coolapk\\.com\\/v6\\/feed\\/replyList",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 20,
+            "pattern": "^https:\\/\\/api\\.coolapk\\.com\\/v6\\/main\\/dataList",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 22,
+            "pattern": "^https:\\/\\/api\\.coolapk\\.com\\/v6\\/page\\/dataList",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 24,
+            "pattern": "^https:\\/\\/api\\.coolapk\\.com\\/v6\\/main\\/indexV8",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 26,
+            "pattern": "^https:\\/\\/api\\.coolapk\\.com\\/v6\\/main\\/init",
+            "phase": "response"
+          }
+        ],
+        "metadata": {
+          "author": "RuCu6[https://github.com/RuCu6], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+          "date": "2026-10-02 13:57:49",
+          "desc": "过滤酷安广告",
+          "homepage": "https://hub.kelee.one",
+          "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/CoolApk.png",
+          "loon_version": "3.5.1(998)",
+          "name": "酷安去广告",
+          "openUrl": "https://apps.apple.com/app/id1422581869",
+          "system": "",
+          "system_version": "",
+          "tag": "去广告"
+        },
+        "minimumSurge": {
+          "ios": "5.14",
+          "mac": "5.9"
+        },
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [
+          {
+            "after": ".data |= (if length > 0 then map(select((.entityTemplate != \"sponsorCard\") and (.entityId as $id | [8639,29349,33006,32557] | index($id) | not) and ((.title // \"\" | test(\"值得买|红包\")) | not))) else . end)",
+            "before": ".data |= (if length > 0 then map(select((.entityTemplate != \"sponsorCard\") and ([8639,29349,33006,32557] | index(.entityId) | not) and ((.title // \"\" | test(\"值得买|红包\")) | not))) else . end)",
+            "id": "coolapk-indexv8-item-id",
+            "line": 24,
+            "reason": "Preserve the original item ID before piping into the membership array."
+          },
+          {
+            "after": ".data |= map(select(.entityId? as $id | [944,945,6390] | index($id) | not) | if .entityId == 20131 then .entities |= map(select(.title != \"酷品\")) else . end)",
+            "before": ".data |= map(select(.entityId? | [944,945,6390] | index(.) | not) | if .entityId == 20131 then .entities |= map(select(.title != \"酷品\")) else . end)",
+            "id": "coolapk-init-item-id",
+            "line": 26,
+            "reason": "Preserve the original item ID before piping into the membership array."
+          }
+        ],
+        "rulePredicates": [],
+        "runtimeVerified": false,
+        "sourceRewriteLines": 7,
+        "sourceSha256": "d77533ccb0adfe3039705d560ff9f784310093b522df8d6117cd05d4ad49f36a",
+        "validation": "offline-exact-structure-and-content",
+        "warnings": []
+      },
+      "converter": {
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
+        "adapter_version": "1.3.0",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "reviewed_fixes_sha256": "e024e862def6e4f417b8921684dda888e9a0051cfb97a4d18aa7a0ed3e8eab1e",
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+      },
+      "dependencies": [],
+      "description": "过滤酷安广告",
+      "file": "modules/coolapk.sgmodule",
+      "id": "coolapk",
+      "module_sha256": "7d24f376d6a6a644402a72b3fac6f885b5af5db05b62e1137519fe2f0a1b088b",
+      "module_version": "1.0.1",
+      "name": "酷安去广告",
+      "revision": 1,
+      "source_date": "2026-10-02 13:57:49",
+      "source_min_loon_version": "3.5.1(998)",
+      "source_origin": "local",
+      "source_sha256": "d77533ccb0adfe3039705d560ff9f784310093b522df8d6117cd05d4ad49f36a",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/CoolApk_remove_ads.lpx",
+      "source_version": "",
+      "surge_name": "酷安去广告",
+      "validation": {
+        "scope": "Surge Mac parser; not iOS live traffic",
+        "status": "passed",
+        "variants": [
+          "defaults"
         ]
       }
     },
@@ -1378,6 +1533,7 @@
         },
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"zlink.ugsdk.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"mon.toutiaocloud.net\"},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -1421,22 +1577,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
         "adapter_version": "1.3.0",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
       },
       "dependencies": [],
       "description": "移除番茄小说开屏广告、移除文章底部和章末广告、移除听书页面广告、移除悬浮部件和底栏多余的福利标签。",
       "file": "modules/fanqie.sgmodule",
       "id": "fanqie",
-      "module_sha256": "33b4979886d3a3c742d4e6ad3d5dd58073b76be4169551c38eb6097ada41cb42",
-      "module_version": "1.0.5",
+      "module_sha256": "fec52ba2c855b3abc2b0e6f94a5f5f1a416210c6f1c4973c2dc6889509e4f3e4",
+      "module_version": "1.0.6",
       "name": "番茄小说去广告",
-      "revision": 5,
+      "revision": 6,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1537,6 +1693,7 @@
         },
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"httpdns\"},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"DOMAIN-KEYWORD\",\"value\":\"httpsdns\"},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -1708,22 +1865,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
         "adapter_version": "1.3.0",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
       },
       "dependencies": [],
       "description": "此插件是所有去广告插件的依赖，拦截常见的HTTPDNS服务，以确保这些请求都能够在Loon的DNS框架下工作。",
       "file": "modules/httpdns.sgmodule",
       "id": "httpdns",
-      "module_sha256": "afb993bf9a13ee7797922f8ff5d47064e0802baeb3bc136a6716b545e285d950",
-      "module_version": "1.0.7",
+      "module_sha256": "f69ffc89144e26bc496b6f7d3e7e50d300e0ad1779cd0bca79fc838c90ba3a4e",
+      "module_version": "1.0.8",
       "name": "HTTPDNS拦截器",
-      "revision": 7,
+      "revision": 8,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1741,7 +1898,7 @@
     },
     "jd": {
       "artifacts": {
-        "scripts/jd/jd.js": "cd418a96f9b5acbe577d3686b76749f3b93b2cdd1575c132f864b8fee71c73da"
+        "scripts/jd/jd.js": "51e05d26041fd83e7dce50a45d69eb7a2803685d1002d83fe2c601325a9f6132"
       },
       "conversion_report": {
         "adapterVersion": "1.3.0",
@@ -1769,12 +1926,12 @@
               "engine": "auto",
               "nativeSurgeBranch": true
             },
-            "guards": 2,
+            "guards": 1,
             "kind": "js",
             "origin": "local-loon-cache",
             "path": "scripts/jd/jd.js",
             "phase": "response",
-            "sha256": "cd418a96f9b5acbe577d3686b76749f3b93b2cdd1575c132f864b8fee71c73da",
+            "sha256": "51e05d26041fd83e7dce50a45d69eb7a2803685d1002d83fe2c601325a9f6132",
             "sourceDate": "2024-01-23 09:50",
             "sourceSha256": "c029c4151fe73b3a6f660d0933393d1b6afd1969651f01a88d5a357abfdd7cb4",
             "url": "https://kelee.one/Resource/JavaScript/JD/JD_remove_ads.js"
@@ -1830,6 +1987,7 @@
         },
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/\\\\w{32}\\\\.jddebug\\\\.com\\\\/diagnose\\\\?\"},\"policy\":\"REJECT\",\"noResolve\":false}"
         ],
@@ -1845,15 +2003,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
         "adapter_version": "1.3.0",
-        "artifacts_sha256": "d408db280a00af8baef003c03ca96f28e005d170c44b6cf9994c2411172a51e9",
+        "artifacts_sha256": "077fad30d8f74f4db58cc84413c3a27a1b7645e3f729fdd79d7dbde5cb7ca6a5",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
-        "dependencies_sha256": "958db0eeeeaacad350a5f0519f51acb46469ecbd9a1015f43d9d652dfa7ce27a",
+        "dependencies_sha256": "1b4d89407d7cfb4147b01e92f3d563728ee347b2220c2eb1fb64d9ede022046f",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
       },
       "dependencies": [
         {
@@ -1866,12 +2024,12 @@
             "engine": "auto",
             "nativeSurgeBranch": true
           },
-          "guards": 2,
+          "guards": 1,
           "kind": "js",
           "origin": "local-loon-cache",
           "path": "scripts/jd/jd.js",
           "phase": "response",
-          "sha256": "cd418a96f9b5acbe577d3686b76749f3b93b2cdd1575c132f864b8fee71c73da",
+          "sha256": "51e05d26041fd83e7dce50a45d69eb7a2803685d1002d83fe2c601325a9f6132",
           "sourceDate": "2024-01-23 09:50",
           "sourceSha256": "c029c4151fe73b3a6f660d0933393d1b6afd1969651f01a88d5a357abfdd7cb4",
           "url": "https://kelee.one/Resource/JavaScript/JD/JD_remove_ads.js"
@@ -1880,10 +2038,10 @@
       "description": "移除京东开屏广告，精简我的页面产品推广。",
       "file": "modules/jd.sgmodule",
       "id": "jd",
-      "module_sha256": "e8adcaedb80780e88ba117dcd1a0aff9e74c1addc67bd8a45d1600025e6e9c47",
-      "module_version": "1.0.5",
+      "module_sha256": "cac04b925f1b00a248e74709e022cdc9a4224379e12ff9716df075b395a4fad5",
+      "module_version": "1.0.6",
       "name": "京东去广告",
-      "revision": 5,
+      "revision": 6,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -1891,6 +2049,368 @@
       "source_url": "https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx",
       "source_version": "",
       "surge_name": "京东去广告",
+      "validation": {
+        "scope": "Surge Mac parser; not iOS live traffic",
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
+      }
+    },
+    "pinduoduo": {
+      "artifacts": {
+        "scripts/pinduoduo/pinduoduo-pickup.js": "1213090ff9eff98b52713167b0c34586147091b0dd488166c9c0321cfc3511b1"
+      },
+      "conversion_report": {
+        "adapterVersion": "1.3.0",
+        "arguments": [],
+        "convertedInputSha256": "7c577feeee19b0ac8df8d1fa290c8d2b089a1101747f6e4c4bde8eefebfb0a6a",
+        "counts": {
+          "bodyRewrite": 15,
+          "bodyRewriteBeforeOptimization": 18,
+          "bodyRewriteRulesSaved": 3,
+          "headerRewrite": 0,
+          "mapLocal": 20,
+          "mitmHostnames": 2,
+          "rewriteLines": 28,
+          "rules": 17,
+          "scripts": 1
+        },
+        "dependencies": [
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 0,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/pinduoduo/pinduoduo-pickup.js",
+            "phase": "response",
+            "sha256": "1213090ff9eff98b52713167b0c34586147091b0dd488166c9c0321cfc3511b1",
+            "sourceDate": "2026-07-11 20:05:34",
+            "sourceSha256": "63af2e44da24da11f5c1bc930aefdcef2ce16aa65293be3e80ba8520d46e9c58",
+            "url": "https://kelee.one/Resource/JavaScript/PinDuoDuo/PinDuoDuo_remove_ads.js"
+          }
+        ],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 33,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/aristotle\\/unrated_order_for_unreceived_tab\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 34,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/aristotle\\/query_order_list_tabs_element\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 35,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/aquarius\\/hungary\\/global\\/homepage\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 36,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/caterham\\/v3\\/query\\/order_express_group\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 37,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/search_hotquery\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 38,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/zaire_biz\\/chat\\/resource\\/get_list_data\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 39,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/caterham\\/v3\\/query\\/new_chat_group\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 40,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/alexa\\/goods\\/back_up\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 41,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/caterham\\/v3\\/query\\/personal\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 42,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/brand-olay\\/goods_detail\\/bybt_guide\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 43,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/engels\\/reviews\\/require\\/append\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 44,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/caterham\\/v3\\/query\\/my_order_group\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 45,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/caterham\\/v3\\/query\\/likes\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 46,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/phantom\\/gbdbpdv\\/extra\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 47,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/manufacturer\\/cross\\/shortcut\\/list\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 48,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/dunkirk\\/liveactivity\\/push\\/create\\/url\\/report\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 49,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/growth\\/nagato\\/app\\/index\\/gather\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 50,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/engels\\/wait\\/receive\\/review\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 51,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/buffon\\/nasus\\/recommend\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 53,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/caterham\\/v2\\/query\\/goods_detail_with_tags\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 55,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/alexa\\/homepage\\/hub\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 57,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/alexa\\/homepage\\/hub\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 59,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/search\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 61,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/philo\\/personal\\/hub\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 63,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/oak\\/integration\\/render\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 65,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/caterham\\/v3\\/query\\/order_detail_group\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 67,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/order\\/",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 69,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/aristotle\\/order_list_v4\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 72,
+            "pattern": "^https:\\/\\/m\\.pinduoduo\\.net\\/mdkd\\/package\\?from_app_scan",
+            "phase": "response"
+          }
+        ],
+        "metadata": {
+          "author": "ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+          "date": "2026-10-02 13:57:49",
+          "desc": "移除开屏广告、底栏多多视频、会场入口、聊天页面精选推荐及推广，精简首页和个人中心。",
+          "homepage": "https://hub.kelee.one",
+          "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PinDuoDuo.png",
+          "loon_version": "3.5.1(998)",
+          "name": "拼多多去广告",
+          "openUrl": "https://apps.apple.com/app/id1044283059",
+          "system": "",
+          "system_version": "",
+          "tag": "去广告"
+        },
+        "minimumSurge": {
+          "ios": "5.14",
+          "mac": "5.9"
+        },
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
+        "rulePredicates": [
+          "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\\\/d(\\\\d)?\"},{\"type\":\"USER-AGENT\",\"value\":\"*com.xunmeng.pinduoduo*\"}]},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"URL-REGEX\",\"value\":\"^http:\\\\/\\\\/\\\\[[0-9a-fA-F:]+\\\\]\\\\/d(\\\\d)?\\\\?\"},{\"type\":\"USER-AGENT\",\"value\":\"*com.xunmeng.pinduoduo*\"}]},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"DOMAIN\",\"value\":\"api.pinduoduo.com\"},{\"type\":\"PROTOCOL\",\"value\":\"QUIC\"}]},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"titan.pinduoduo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"xg.pinduoduo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"cdl-1.pddpic.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"titan.pinduoduo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"cdl-p2.pddpic.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"cd-1.pddpic.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"apm.pinduoduo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"th-b.pinduoduo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ta.pinduoduo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"th.pinduoduo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"th-a.pinduoduo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ta-a.pinduoduo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"meta.pinduoduo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"apm-a.pinduoduo.com\"},\"policy\":\"REJECT\",\"noResolve\":false}"
+        ],
+        "runtimeVerified": false,
+        "sourceRewriteLines": 28,
+        "sourceSha256": "4461c71b66c8725dcb659ab013915a92d647481b891b7dadb3181ed6c954feb4",
+        "validation": "offline-exact-structure-and-content",
+        "warnings": [
+          {
+            "code": "EXTERNAL_RUNTIME_RESOURCE",
+            "message": "脚本在应用页面中引用此上游资源；保留原地址，不属于 Surge 自动下载的脚本依赖，需在设备上验证可达性。",
+            "url": "https://kelee.one/Resource/JavaScript/PinDuoDuo/9410-b8806e870a26db7d.js"
+          },
+          {
+            "code": "SCRIPT_RUNTIME_UNVERIFIED",
+            "message": "脚本已审查公共 API 与原生 Surge 分支，未验证真实应用流量；依赖取自本地 Loon 缓存。"
+          }
+        ]
+      },
+      "converter": {
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
+        "adapter_version": "1.3.0",
+        "artifacts_sha256": "f15adfa5e69fafce6d2b81efbb53010cce86d1fe975b340dcc67d12e604896cc",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "dependencies_sha256": "89950362f91b7593b07e969a2c06fb038ae32ffcd9a9e76ebfa5da8033884f8a",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+      },
+      "dependencies": [
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 0,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/pinduoduo/pinduoduo-pickup.js",
+          "phase": "response",
+          "sha256": "1213090ff9eff98b52713167b0c34586147091b0dd488166c9c0321cfc3511b1",
+          "sourceDate": "2026-07-11 20:05:34",
+          "sourceSha256": "63af2e44da24da11f5c1bc930aefdcef2ce16aa65293be3e80ba8520d46e9c58",
+          "url": "https://kelee.one/Resource/JavaScript/PinDuoDuo/PinDuoDuo_remove_ads.js"
+        }
+      ],
+      "description": "移除开屏广告、底栏多多视频、会场入口、聊天页面精选推荐及推广，精简首页和个人中心。",
+      "file": "modules/pinduoduo.sgmodule",
+      "id": "pinduoduo",
+      "module_sha256": "c9eb99d030f743d34e949cd44daf3a70caf509089aaab5867ae721ef700757b1",
+      "module_version": "1.0.1",
+      "name": "拼多多去广告",
+      "revision": 1,
+      "source_date": "2026-10-02 13:57:49",
+      "source_min_loon_version": "3.5.1(998)",
+      "source_origin": "local",
+      "source_sha256": "4461c71b66c8725dcb659ab013915a92d647481b891b7dadb3181ed6c954feb4",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx",
+      "source_version": "",
+      "surge_name": "拼多多去广告",
       "validation": {
         "scope": "Surge Mac parser; not iOS live traffic",
         "status": "passed",
@@ -2065,6 +2585,7 @@
         },
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
         "rulePredicates": [],
         "runtimeVerified": false,
         "sourceRewriteLines": 17,
@@ -2081,22 +2602,22 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
         "adapter_version": "1.3.0",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
       },
       "dependencies": [],
       "description": "移除起点读书开屏广告、每日导读、各类弹窗、文末广告、搜索填充词，精简我的页面。",
       "file": "modules/qidian.sgmodule",
       "id": "qidian",
-      "module_sha256": "a7b902e8e70a2541cbed33c84a9af677d14e87c726600e9bc48514c0254d0099",
-      "module_version": "1.0.7",
+      "module_sha256": "c656319012d2addfab186d12c8f9466c2ba4e367057111f62dee073a2c14ee67",
+      "module_version": "1.0.8",
       "name": "起点读书去广告",
-      "revision": 7,
+      "revision": 8,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2193,6 +2714,7 @@
         },
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
         "rulePredicates": [],
         "runtimeVerified": false,
         "sourceRewriteLines": 3,
@@ -2201,23 +2723,23 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
         "adapter_version": "1.3.0",
         "artifacts_sha256": "7001bd53fc737ec8a9e73438fe3e719000492e0c0c6b73092cdcaf2359bc99eb",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
       },
       "dependencies": [],
       "description": "移除阅读广告、各页面弹窗及横幅，精简我的页面。",
       "file": "modules/quark.sgmodule",
       "id": "quark",
-      "module_sha256": "3c264ec788aafae8cb0ce2372f8371d3acd712085bd4b6dbb6d481c0571780b3",
-      "module_version": "1.0.5",
+      "module_sha256": "f4b89a1373ce8ac571615c4f137a62bc74441ff43e0354e5a9dbd97902a040d2",
+      "module_version": "1.0.6",
       "name": "夸克去广告",
-      "revision": 5,
+      "revision": 6,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2315,6 +2837,7 @@
         },
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
         "rulePredicates": [],
         "runtimeVerified": false,
         "sourceRewriteLines": 5,
@@ -2323,22 +2846,22 @@
         "warnings": []
       },
       "converter": {
-        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
         "adapter_version": "1.3.0",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
       },
       "dependencies": [],
       "description": "移除开屏广告、横幅广告、商品推荐，精简我的页面。",
       "file": "modules/shengqian.sgmodule",
       "id": "shengqian",
-      "module_sha256": "660d0c861db9457c153fc4ca856ca6ee8246c909c26e45490ab7d8c321ef18e6",
-      "module_version": "1.0.5",
+      "module_sha256": "98ff4bd211572d555f834d29ecc242847639eaf4edfba487e5516ac7071705e1",
+      "module_version": "1.0.6",
       "name": "省钱快报去广告",
-      "revision": 5,
+      "revision": 6,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2356,7 +2879,7 @@
     },
     "taobao": {
       "artifacts": {
-        "scripts/taobao/taobao.js": "94bbe80fe7246316527aca43eea2caaa01b2a895cb497f3b0cfc6ff522e325af"
+        "scripts/taobao/taobao.js": "1479f4e2bc6c45103663bdf60e45f22e0514e489d5329313b914c4dbab8bb64c"
       },
       "conversion_report": {
         "adapterVersion": "1.3.0",
@@ -2384,12 +2907,12 @@
               "engine": "auto",
               "nativeSurgeBranch": true
             },
-            "guards": 11,
+            "guards": 0,
             "kind": "js",
             "origin": "local-loon-cache",
             "path": "scripts/taobao/taobao.js",
             "phase": "response",
-            "sha256": "94bbe80fe7246316527aca43eea2caaa01b2a895cb497f3b0cfc6ff522e325af",
+            "sha256": "1479f4e2bc6c45103663bdf60e45f22e0514e489d5329313b914c4dbab8bb64c",
             "sourceDate": "2024-01-12 09:10",
             "sourceSha256": "3ccb2093683d84a0085a24506fb04d3ac87713e8e1bade764711816e8908d903",
             "url": "https://kelee.one/Resource/JavaScript/Taobao/Taobao_remove_ads.js"
@@ -2511,6 +3034,7 @@
         },
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"adashx.m.taobao.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ossgw.alicdn.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -2531,15 +3055,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
         "adapter_version": "1.3.0",
-        "artifacts_sha256": "f9ce19ee2170b8ce7f9d044f7856ae968e1221438233e1ed82797c9618b72071",
+        "artifacts_sha256": "410665a2ad99afa41ee07ee23bc9db6f04528b057e58c3955717e1c8f3dfc33e",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
-        "dependencies_sha256": "ead3e06fae660b928b8189229e08f18bb92b1f0f8fd848713a59530d6bfa2d80",
+        "dependencies_sha256": "eca67d54448cb5e859acb63e084c26106399b42ef9e910970b9d98948f03da3e",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
       },
       "dependencies": [
         {
@@ -2552,12 +3076,12 @@
             "engine": "auto",
             "nativeSurgeBranch": true
           },
-          "guards": 11,
+          "guards": 0,
           "kind": "js",
           "origin": "local-loon-cache",
           "path": "scripts/taobao/taobao.js",
           "phase": "response",
-          "sha256": "94bbe80fe7246316527aca43eea2caaa01b2a895cb497f3b0cfc6ff522e325af",
+          "sha256": "1479f4e2bc6c45103663bdf60e45f22e0514e489d5329313b914c4dbab8bb64c",
           "sourceDate": "2024-01-12 09:10",
           "sourceSha256": "3ccb2093683d84a0085a24506fb04d3ac87713e8e1bade764711816e8908d903",
           "url": "https://kelee.one/Resource/JavaScript/Taobao/Taobao_remove_ads.js"
@@ -2566,10 +3090,10 @@
       "description": "过滤淘宝开屏广告",
       "file": "modules/taobao.sgmodule",
       "id": "taobao",
-      "module_sha256": "893a8c2c5abb06a68b41ea6c0076768c63144b49e6adb5dc9bb859038d470b45",
-      "module_version": "1.0.5",
+      "module_sha256": "5d3feb0949560478356f16cfd41a36696782d0e143496c287b3c7718826e0e93",
+      "module_version": "1.0.6",
       "name": "淘宝去广告",
-      "revision": 5,
+      "revision": 6,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2585,9 +3109,1597 @@
         ]
       }
     },
+    "wechat-mini": {
+      "artifacts": {
+        "scripts/wechat-mini/alittle-tea.js": "4c83244c13c9ad2ff0ba8c16959f3ae75d590e625ac2677f86822097515e4f89",
+        "scripts/wechat-mini/chayanyuese.js": "2f60f969964f0b6c5a1cf15a023c8102465eeb0412ba51c948f677dc90baa9da",
+        "scripts/wechat-mini/coco.js": "7abac2f3ceba614ed99425875420590774308f80180c85c14be95baab556c5e8",
+        "scripts/wechat-mini/ems.js": "1c9c1b4a173e5753206892aaa7a3f14f7b5b184da45f3c0f4403c0e762764f05",
+        "scripts/wechat-mini/familymart.js": "a612d8f74709fc4bf00ea23f9d3df3c5e2ee5bfccb547b509a94537bf4b22e76",
+        "scripts/wechat-mini/kff.js": "6617fdc5fe2879e41dff691249478aeccc842d09eb0a6492c5bc447a3b54b3a3",
+        "scripts/wechat-mini/lawson.js": "a4d9742b812bb8d4704ec26f25d25ebab3b565b0237595b060e0b99a8f245c24",
+        "scripts/wechat-mini/m-stand.js": "ddf617116ae84f46b8648188d5b6ecec5cd08e3ee453e7d7c1f4f87bca0e5f46",
+        "scripts/wechat-mini/ming.js": "4dda78b69f2879fec4dadbf1b3ae52a2cec3a2c99fd72d332b868afdec886dfe",
+        "scripts/wechat-mini/qingju.js": "de11784aa21a053755d4966fffb22a0f01ee83d81e97c043a6c462f0b032aaf3",
+        "scripts/wechat-mini/t3.js": "922e39408d5b4c2deb7884bf42c2d812be17b9b1624bc1a2b016dda59f9aa126",
+        "scripts/wechat-mini/xiaotucc.js": "9dfad76d64fb9c72f274a6d37a6e6bd43ff111eb42facb803e1a0d046d0d22ae"
+      },
+      "conversion_report": {
+        "adapterVersion": "1.3.0",
+        "arguments": [],
+        "convertedInputSha256": "96ed68efd2d7804cd43fd87644be42b60488440777ec8b57332128ad004d8618",
+        "counts": {
+          "bodyRewrite": 11,
+          "bodyRewriteBeforeOptimization": 11,
+          "bodyRewriteRulesSaved": 0,
+          "headerRewrite": 0,
+          "mapLocal": 112,
+          "mitmHostnames": 93,
+          "rewriteLines": 118,
+          "rules": 6,
+          "scripts": 12
+        },
+        "dependencies": [
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 0,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/wechat-mini/kff.js",
+            "phase": "response",
+            "sha256": "6617fdc5fe2879e41dff691249478aeccc842d09eb0a6492c5bc447a3b54b3a3",
+            "sourceDate": null,
+            "sourceSha256": "8453c73e9412fd99396afbfea14e7d26c46936da1650603b6f2433cda18cbf2c",
+            "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/kff/kff.js"
+          },
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 0,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/wechat-mini/ems.js",
+            "phase": "response",
+            "sha256": "1c9c1b4a173e5753206892aaa7a3f14f7b5b184da45f3c0f4403c0e762764f05",
+            "sourceDate": null,
+            "sourceSha256": "2208e4945d8781e5bc9d20a436fc141629a7e4dc9fd516f9fe917196010cf5bc",
+            "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ems/ems.js"
+          },
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$request",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 0,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/wechat-mini/xiaotucc.js",
+            "phase": "response",
+            "sha256": "9dfad76d64fb9c72f274a6d37a6e6bd43ff111eb42facb803e1a0d046d0d22ae",
+            "sourceDate": null,
+            "sourceSha256": "a10131a49267ce2cdd17c7c4d783eb64c8aa943b83ee4dcadb846ccd2c4bbb1b",
+            "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/xiaotucc/xiaotucc.js"
+          },
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 0,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/wechat-mini/familymart.js",
+            "phase": "response",
+            "sha256": "a612d8f74709fc4bf00ea23f9d3df3c5e2ee5bfccb547b509a94537bf4b22e76",
+            "sourceDate": null,
+            "sourceSha256": "e25457f43eacfbf27ca8229445e69f60f7562ece723b5ebaf07969c0ebf75e1c",
+            "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/FamilyMart/FamilyMart.js"
+          },
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 0,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/wechat-mini/lawson.js",
+            "phase": "response",
+            "sha256": "a4d9742b812bb8d4704ec26f25d25ebab3b565b0237595b060e0b99a8f245c24",
+            "sourceDate": null,
+            "sourceSha256": "3d57d6ae9070934eef3513e2a4b640fad9dd5076fbbc6c471994bd3d790068f1",
+            "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/lawson/lawson.js"
+          },
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 0,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/wechat-mini/chayanyuese.js",
+            "phase": "response",
+            "sha256": "2f60f969964f0b6c5a1cf15a023c8102465eeb0412ba51c948f677dc90baa9da",
+            "sourceDate": null,
+            "sourceSha256": "4b7f857caa810648f7be584e916ceffb9c12dd3b2ce7766ed5bd605646e2a4d1",
+            "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js"
+          },
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 0,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/wechat-mini/coco.js",
+            "phase": "response",
+            "sha256": "7abac2f3ceba614ed99425875420590774308f80180c85c14be95baab556c5e8",
+            "sourceDate": null,
+            "sourceSha256": "dc9a1915eed8f6f760a8f3a03f5e2f5a0f346373693ae4ac2e0c5dbd90fd46b3",
+            "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js"
+          },
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 0,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/wechat-mini/qingju.js",
+            "phase": "response",
+            "sha256": "de11784aa21a053755d4966fffb22a0f01ee83d81e97c043a6c462f0b032aaf3",
+            "sourceDate": null,
+            "sourceSha256": "8664e7a22b21aaa8546ec167e3a43fee7ebd2c00552a126212720b09a4819bf8",
+            "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/qingju/qingju.js"
+          },
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 0,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/wechat-mini/alittle-tea.js",
+            "phase": "response",
+            "sha256": "4c83244c13c9ad2ff0ba8c16959f3ae75d590e625ac2677f86822097515e4f89",
+            "sourceDate": null,
+            "sourceSha256": "c765215071712fa0c0c0ef3719263fff81d4a1ce0189f8bc0861aa721657a44c",
+            "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/alittle-tea/alittle-tea.js"
+          },
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 0,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/wechat-mini/m-stand.js",
+            "phase": "response",
+            "sha256": "ddf617116ae84f46b8648188d5b6ecec5cd08e3ee453e7d7c1f4f87bca0e5f46",
+            "sourceDate": null,
+            "sourceSha256": "5d6f163842ce53eb034fa01c244f6482fedd2f5d56b7c206c25d6f11c21e805f",
+            "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/M_Stand/M_Stand.js"
+          },
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 1,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/wechat-mini/t3.js",
+            "phase": "response",
+            "sha256": "922e39408d5b4c2deb7884bf42c2d812be17b9b1624bc1a2b016dda59f9aa126",
+            "sourceDate": null,
+            "sourceSha256": "ab1ca9af4dd9b294f585335856de51d6df2b61c31d9a3d1982a5b091355da25a",
+            "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/T3/T3.js"
+          },
+          {
+            "audit": {
+              "apis": [
+                "$done",
+                "$response"
+              ],
+              "engine": "auto",
+              "nativeSurgeBranch": true
+            },
+            "guards": 0,
+            "kind": "js",
+            "origin": "local-loon-cache",
+            "path": "scripts/wechat-mini/ming.js",
+            "phase": "response",
+            "sha256": "4dda78b69f2879fec4dadbf1b3ae52a2cec3a2c99fd72d332b868afdec886dfe",
+            "sourceDate": null,
+            "sourceSha256": "bd0f4e67ae73fdd083b10c1e802912d8c9ade1b2b14a0dead865d7af0b90d991",
+            "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ming/ming.js"
+          }
+        ],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 25,
+            "pattern": "^https:\\/\\/webapi\\.qmai\\.cn\\/web\\/catering\\/advertising\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 26,
+            "pattern": "^https:\\/\\/webapi\\.qmai\\.cn\\/web\\/cmk-center\\/marketing\\/canvas\\/advert-reach",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 27,
+            "pattern": "^https:\\/\\/images\\.qmai\\.cn\\/s214925\\/2023",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 29,
+            "pattern": "^https:\\/\\/creditcardapp\\.bankcomm\\.com\\/cnsvPmpaMdbcardWeb\\/page\\/getGuidePageAds",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 31,
+            "pattern": "^https:\\/\\/mbmodule-openapi\\.paas\\.cmbchina\\.com\\/graphic\\/v2\\/module\\/graphic",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 33,
+            "pattern": "^https:\\/\\/webchatapp\\.fcbox\\.com\\/fcboxactivityweb\\/api\\/v2\\/clientPage\\/modulesAggregated\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 34,
+            "pattern": "^https:\\/\\/webchatapp\\.fcbox\\.com\\/fcboxactivityweb\\/api\\/v2\\/clientPage\\/getHomeLiveInfo$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 35,
+            "pattern": "^https:\\/\\/dsp\\.fcbox\\.com\\/adSearch\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 36,
+            "pattern": "^https:\\/\\/webchatapp\\.fcbox\\.com\\/post\\/suggestion\\/query$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 37,
+            "pattern": "^https:\\/\\/webchatapp\\.fcbox\\.com\\/fcboxactivityweb\\/marketingEntrance\\/v2\\/infoWithItems$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 38,
+            "pattern": "^https:\\/\\/webchatapp\\.fcbox\\.com\\/fcboxactivityweb\\/marketingEntrance\\/info$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 40,
+            "pattern": "^https:\\/\\/app\\.95504\\.net\\/app\\/json\\/page_ad\\/initPageAd\\?ver=",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 41,
+            "pattern": "^https:\\/\\/minipro\\.95504\\.net\\/app\\/json\\/ad\\/getPopAdData",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 42,
+            "pattern": "^https:\\/\\/minipro\\.95504\\.net\\/app\\/json\\/ad\\/getIndexAdData",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 44,
+            "pattern": "^https:\\/\\/flow\\.dmall\\.com\\/app\\/home\\/pops",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 46,
+            "pattern": "^https:\\/\\/api\\.yonghuivip\\.com\\/api\\/fp\\/homepage\\/pop",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 47,
+            "pattern": "^https:\\/\\/activity\\.yonghuivip\\.com\\/api\\/app\\/fp\\/homepage\\/pop",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 48,
+            "pattern": "^https:\\/\\/activity\\.yonghuivip\\.com\\/api\\/\\/web\\/shensuan\\/ad",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 49,
+            "pattern": "^https:\\/\\/sauron-report\\.yonghuivip\\.com\\/collect",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 51,
+            "pattern": "^https:\\/\\/res\\.pizzahut\\.com\\.cn\\/CRM",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 54,
+            "pattern": "^https:\\/\\/api\\.mcd\\.cn\\/bff\\/portal\\/home\\/hotActivity",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 56,
+            "pattern": "^https:\\/\\/3pp\\.starbucks\\.com\\.cn\\/wxmem\\/popup",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 57,
+            "pattern": "^https:\\/\\/3pp\\.starbucks\\.com\\.cn\\/wxmem\\/index\\/banner",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 58,
+            "pattern": "^https:\\/\\/3pp\\.starbucks\\.com\\.cn\\/wxmem\\/index\\/global",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 60,
+            "pattern": "^https:\\/\\/wechat-api\\.i-xiaoma\\.com\\.cn\\/app\\/v1\\/bus\\/wechat\\/content",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 62,
+            "pattern": "^https:\\/\\/apiproxy\\.zuche\\.com\\/resource\\/carrctapi\\/home\\/marketing",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 63,
+            "pattern": "^https:\\/\\/apiproxy\\.zuche\\.com\\/resource\\/carrctapi\\/home\\/page\\/advertising",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 65,
+            "pattern": "^https:\\/\\/miniprogram\\.ishansong\\.com\\/cms\\/faq\\/query",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 66,
+            "pattern": "^https:\\/\\/ads\\.ishansong\\.com\\/advert",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 69,
+            "pattern": "^https:\\/\\/ump\\.ems\\.com\\.cn\\/mailAd$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 71,
+            "pattern": "^https:\\/\\/minicap\\.caocaokeji\\.cn\\/advert-bss\\/pullAdvert",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 73,
+            "pattern": "^https:\\/\\/r2\\.gzyct\\.com\\/qrcode\\/advert",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 75,
+            "pattern": "^https:\\/\\/applets\\.jtexpress\\.com\\.cn",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 77,
+            "pattern": "^https:\\/\\/api\\.hellobike\\.com\\/api\\?adx",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 79,
+            "pattern": "^https:\\/\\/api\\.kuaidihelp\\.com\\/g_order_core\\/v2\\/mina\\/User\\/getBannerList",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 81,
+            "pattern": "^https:\\/\\/wxproj\\.seeyouyima\\.com\\/data\\/today_tips",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 83,
+            "pattern": "^https:\\/\\/suyun-guest\\.daojia\\.com\\/api\\/kuaigou\\/banjia\\/review",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 85,
+            "pattern": "^https:\\/\\/ne\\.gdsz\\.sinopec\\.com\\/gateway\\/api\\/omp\\/mt\\/appAdvertising",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 87,
+            "pattern": "^https:\\/\\/qapi\\.huolala\\.cn\\/ads",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 88,
+            "pattern": "^https:\\/\\/qapi\\.huolala\\.cn\\/home_new_user",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 89,
+            "pattern": "^https:\\/\\/qapi\\.huolala\\.cn\\/get_service_list",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 90,
+            "pattern": "^https:\\/\\/appuser-static\\.huolala\\.cn\\/imgs",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 92,
+            "pattern": "^https:\\/\\/apis\\.alenable\\.com\\/mall\\/v1\\/api\\/mall\\/skin\\/user\\/get",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 93,
+            "pattern": "^https:\\/\\/apis\\.alenable\\.com\\/ycx\\/v1\\/api\\/adPut",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 95,
+            "pattern": "^https:\\/\\/dock\\.tenchii\\.com\\/DockCard\\/api\\/mini\\/card\\/list",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 97,
+            "pattern": "^https:\\/\\/customer-app\\.sto\\.cn\\/api\\/app\\/banner\\/banner",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 98,
+            "pattern": "^https:\\/\\/sto-customer-app\\.oss-cn-shanghai\\.aliyuncs\\.com\\/images",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 100,
+            "pattern": "^https:\\/\\/supplier-api\\.imdada\\.cn\\/fe\\/public\\/ad\\/spot\\?forwardServiceName=growth-activity",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 102,
+            "pattern": "^https:\\/\\/hdgateway\\.zto\\.com\\/getApolloConfig",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 103,
+            "pattern": "^https:\\/\\/hdgateway\\.zto\\.com\\/track",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 104,
+            "pattern": "^https:\\/\\/hdgateway\\.zto\\.com\\/getAdInfo",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 105,
+            "pattern": "^https:\\/\\/hdgateway\\.zto\\.com\\/listJumperShow",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 106,
+            "pattern": "^https:\\/\\/fscdn\\.zto\\.com\\/fs1",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 108,
+            "pattern": "^https:\\/\\/mobile-api\\.imlaidian\\.com\\/api\\/args",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 110,
+            "pattern": "^https:\\/\\/wxs-weixin\\.sd\\.zhumanggroup\\.com\\/api\\/v2\\/ad",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 112,
+            "pattern": "^https:\\/\\/s\\.jiediankeji\\.com\\/adv",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 114,
+            "pattern": "^https:\\/\\/smarket\\.dian\\.so",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 115,
+            "pattern": "^https:\\/\\/file\\.dian\\.so\\/c\\/leto",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 117,
+            "pattern": "^https:\\/\\/aag\\.enmonster\\.com\\/apa\\/index\\/advert\\/skin",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 119,
+            "pattern": "^https:\\/\\/ad\\.xiaotucc\\.com\\/advert",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 121,
+            "pattern": "^https:\\/\\/api-marketing\\.zhinengxiyifang\\.cn\\/api\\/v2\\/cloudcode\\/wechat\\/bid",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 123,
+            "pattern": "^https:\\/\\/api\\.songguo7\\.com\\/(\\w{3})?mp\\/v2\\/misc\\/(toast|user_operate_info|unlock_without_order|unlock_operate_info)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 126,
+            "pattern": "^https:\\/\\/ccmsupport-sz\\.tenpay\\.com\\/cgi-bin\\/common\\/ccm_page_element.cgi",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 128,
+            "pattern": "^https:\\/\\/tm-api\\.pin-dao\\.cn\\/home\\/api\\/index\\/activeConfig\\/v2",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 129,
+            "pattern": "^https:\\/\\/tm-api\\.pin-dao\\.cn\\/home\\/api\\/resource\\/config\\/homeBannerNodes",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 131,
+            "pattern": "^https:\\/\\/api-fouth-mem\\.huazhu\\.com\\/api\\/rights\\/bannerList",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 133,
+            "pattern": "^https:\\/\\/wxapp\\.bestwehotel\\.com\\/gw3\\/app-mini\\/trip-hotel-banner\\/activity\\/getActivityInfo",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 135,
+            "pattern": "^https:\\/\\/wx\\.bthhotels\\.com\\/miniapp\\/weixin\\/v1\\/home\\/index_banner",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 136,
+            "pattern": "^https:\\/\\/app\\.homeinns\\.com\\/api\\/v6\\/indexs",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 137,
+            "pattern": "^https:\\/\\/app\\.homeinns\\.com\\/api\\/v5\\/local",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 138,
+            "pattern": "^https:\\/\\/app\\.homeinns\\.com\\/api\\/v5\\/index",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 140,
+            "pattern": "^https:\\/\\/mxsa\\.mxbc\\.net\\/api\\/v1\\/adinfo\\/adplace\\/query",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 142,
+            "pattern": "^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=cms\\.htw\\.delivery",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 143,
+            "pattern": "^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=hm\\.fa\\.combineHomepageInfo",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 144,
+            "pattern": "^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=hm\\.fa\\.mallRecommend",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 146,
+            "pattern": "^https:\\/\\/lawsonapi\\.yorentown\\.com\\/area\\/sh-lawson\\/app\\/v1\\/mina\\/systemSetting",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 147,
+            "pattern": "^https:\\/\\/plt\\.yorentown\\.com\\/pltapp\\/v1\\/banner",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 149,
+            "pattern": "^https:\\/\\/member\\.lxjchina\\.com\\.cn\\/mini-server\\/home\\/page\\/banner",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 151,
+            "pattern": "^https:\\/\\/cbd-gateway-service-applets\\.hualala\\.com\\/arch\\/api\\/banner\\/QueryBannerImgList",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 153,
+            "pattern": "^https:\\/\\/alittle-tea\\.oss-cn-shanghai\\.aliyuncs\\.com\\/images\\/platform\\/alittle",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 156,
+            "pattern": "^https:\\/\\/api\\.prod\\.dj\\.mstand\\.cn\\/scrm\\/app\\/mdm\\/index\\/listAdv\\?types",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 158,
+            "pattern": "^https:\\/\\/gw-passenger-wap\\.01zhuanche\\.com\\/gw-passenger-wap\\/zhuanche-passenger-token\\/commonSkipToken\\/common\\/getAdList",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 160,
+            "pattern": "^https:\\/\\/www\\.deppon\\.com\\/gwapi\\/memberService\\/eco\\/member\\/grade\\/commonInterface",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 162,
+            "pattern": "^https:\\/\\/passengerapi\\.saicmobility\\.com\\/(ad\\/requestAd|pay\\/v1\\/queryOpenedCouponPackages)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 164,
+            "pattern": "^https:\\/\\/passenger\\.t3go\\.cn\\/passenger-activity-api\\/notoken\\/api\\/v1\\/resource\\/getSource",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 166,
+            "pattern": "^https:\\/\\/m\\.ctrip\\.com\\/restapi\\/soa2\\/13916\\/tripAds",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 167,
+            "pattern": "^https:\\/\\/m\\.ctrip\\.com\\/restapi\\/soa2\\/12673\\/queryWeChatHotEvent",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 169,
+            "pattern": "^https:\\/\\/ad\\.maoyan\\.com\\/api\\/position\\/detail",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 170,
+            "pattern": "^https:\\/\\/wx\\.maoyan\\.com\\/maoyansh\\/api\\/mobile\\/(hotMatchList|eSportsIps)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 171,
+            "pattern": "^https:\\/\\/vod-movie\\.maoyan\\.com\\/vod\\/video\\/onlineMovies\\.json",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 172,
+            "pattern": "^https:\\/\\/wx\\.maoyan\\.com\\/maoyansh\\/myshow\\/ajax\\/movie\\/wonderShow",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 173,
+            "pattern": "^https:\\/\\/wx\\.maoyan\\.com\\/maoyansh\\/myshow\\/ajax\\/performances\\/calendar\\/0",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 174,
+            "pattern": "^https:\\/\\/wx\\.maoyan\\.com\\/maoyansh\\/myshow\\/ajax\\/performances\\/rob\\/main",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 175,
+            "pattern": "^https:\\/\\/wx\\.maoyan\\.com\\/maoyansh\\/myshow\\/ajax\\/celebrityBasicList\\/query",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 176,
+            "pattern": "^https:\\/\\/wx\\.maoyan\\.com\\/maoyansh\\/myshow\\/ajax\\/recommend\\/performances",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 177,
+            "pattern": "^https:\\/\\/api\\.maoyan\\.com\\/sns\\/common\\/feed\\/channel\\/v2\\/list\\.json",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 178,
+            "pattern": "^https:\\/\\/wx\\.maoyan\\.com\\/maoyansh\\/myshow\\/ajax\\/ad\\/detail",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 180,
+            "pattern": "^https:\\/\\/mkt-gateway\\.tuhu\\.cn\\/mkt-scene-marketing-service\\/api\\/scene\\/queryScheme",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 182,
+            "pattern": "^https:\\/\\/api\\.hengdianfilm\\.com\\/\\/cinema\\/queryAvailableBannerInfo\\/2\\?cid=",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 183,
+            "pattern": "^https:\\/\\/api\\.hengdianfilm\\.com\\/\\/cinema\\/queryAvailableBannerInfo\\/4\\?cid=",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 185,
+            "pattern": "^https:\\/\\/tbgapplet\\.carlsberg\\.asia\\/tuborg\\/banner\\/(loading|index)",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 187,
+            "pattern": "^https:\\/\\/api\\.pinduoduo\\.com\\/api\\/ktt_gateway\\/activity\\/feeds\\/personal_home_page\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 189,
+            "pattern": "^https:\\/\\/ucmp\\.sf-express\\.com\\/proxy\\/operation-platform\\/info-flow-adver\\/query",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 190,
+            "pattern": "^https:\\/\\/ucmp\\.sf-express\\.com\\/proxy\\/esgcempcore\\/memberGoods\\/pointMallService\\/goodsList",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 192,
+            "pattern": "^https:\\/\\/as\\.xiaojukeji\\.com\\/ep\\/as\\/conf\\?ns=daijia-front&name=",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 193,
+            "pattern": "^https:\\/\\/daijia\\.kuaidadi\\.com\\/gateway\\?api=prado\\.cms\\.delivery\\.batch&apiVe",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 195,
+            "pattern": "^https:\\/\\/mcsp\\.cloudpnr\\.com\\/api\\/miniapp\\/popular\\/T_MINIAPP$",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 196,
+            "pattern": "^https:\\/\\/saas-ad\\.cloudpnr\\.com\\/huifuad-base-api\\/api\\/tactics\\/ad$",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 198,
+            "pattern": "^https:\\/\\/api\\.szbgcx\\.cn\\/account\\/adv\\/",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 200,
+            "pattern": "^https:\\/\\/mobile\\.12306\\.cn\\/wxxcx\\/openplatform-inner\\/miniprogram\\/wifiapps\\/appFrontEnd\\/v2\\/lounge\\/open-smooth-common\\/qrCode\\/getAdvInfo$",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 201,
+            "pattern": "^https:\\/\\/mobile\\.12306\\.cn\\/wxxcx\\/openplatform-inner\\/miniprogram\\/wifiapps\\/tourism\\/tourismBase\\/api\\/scenic\\/getThemeProduct?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 202,
+            "pattern": "^https:\\/\\/mobile\\.12306\\.cn\\/wxxcx\\/openplatform-inner\\/miniprogram\\/wifiapps\\/appFrontEnd\\/v2\\/lounge\\/open-smooth-common\\/carService\\/getCivilzedSlogan",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 204,
+            "pattern": "^https:\\/\\/rms\\.meituan\\.com\\/api\\/v1\\/rmsmina\\/c\\/queryShopPortalInfo\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 206,
+            "pattern": "^https:\\/\\/chong\\.qq\\.com\\/tws\\/wxmobile\\/GetProduct4App\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 207,
+            "pattern": "^https:\\/\\/chong\\.qq\\.com\\/tws\\/wxmobile4app\\/GetSecondProduct\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "body",
+            "line": 208,
+            "pattern": "^https:\\/\\/chong\\.qq\\.com\\/tws\\/usernumberinfo\\/GetUserInfo\\?",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 209,
+            "pattern": "^https:\\/\\/wx\\.online-cmcc\\.cn\\/contactpoint\\/customer\\/api\\/list\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 210,
+            "pattern": "^https:\\/\\/wx\\.10086\\.cn\\/qwhdhub\\/activity\\/info",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 213,
+            "pattern": "^https:\\/\\/webapi\\.qmai\\.cn\\/web\\/catering\\/design\\/homePage-Config",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 215,
+            "pattern": "^https:\\/\\/ump\\.ems\\.com\\.cn\\/new-generation-extend\\/redis\\/pageInfoByChannel",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 217,
+            "pattern": "^https:\\/\\/mapi\\.xiaotucc\\.com\\/(mall\\/main|main_page\\/index\\/getActivity)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 219,
+            "pattern": "^https:\\/\\/minifm\\.maxxipoint\\.com\\/banner\\/list",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 221,
+            "pattern": "^https:\\/\\/lawsonapi\\.yorentown\\.com\\/area\\/sh-lawson\\/app\\/v1\\/home",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 223,
+            "pattern": "^https:\\/\\/miniapp\\.sexytea2013\\.com\\/cms\\/slot\\/queryByCodes\\?codes=INDEX_TOP_BANNER",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 225,
+            "pattern": "^https:\\/\\/coco-com\\.e\\.verystar\\.net\\/v1\\/home\\/info",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 227,
+            "pattern": "^https:\\/\\/htwkop\\.xiaojukeji\\.com\\/gateway\\?api=hm\\.fa\\.homeConfig",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 229,
+            "pattern": "^https:\\/\\/cappapi\\.alittle-tea\\.com\\/open\\?method=catering\\.set\\.ad",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 231,
+            "pattern": "^https:\\/\\/api\\.prod\\.dj\\.mstand\\.cn\\/scrm\\/mini\\/app\\/index\\/info",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 233,
+            "pattern": "^https:\\/\\/passenger\\.t3go\\.cn\\/(solution\\-|common\\-)?(passenger\\-)?(activity\\-|app\\-)?api\\/notoken\\/(trip\\/)?api\\/(home\\/|common\\/)?(v[1-3]\\/)?(ad\\/getNegativescreen|solution\\/passenger\\/open\\/getHomeMenu|leftmenu|getHomeInfoGlobal)",
+            "phase": "response"
+          },
+          {
+            "flags": "i",
+            "kind": "script",
+            "line": 235,
+            "pattern": "^https:\\/\\/newton\\.gumingnc\\.com\\/newton-buyer\\/newton\\/buyer\\/(ump|touch|external\\/front)",
+            "phase": "response"
+          }
+        ],
+        "metadata": {
+          "author": "可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]",
+          "date": "2026-10-02 13:57:49",
+          "desc": "收录常用小程序的去广告，作者署名在插件内。",
+          "homepage": "https://hub.kelee.one",
+          "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/WeixinMiniPrograms.png",
+          "loon_version": "3.5.1(998)",
+          "name": "微信小程序去广告",
+          "openUrl": "https://apps.apple.com/app/id414478124",
+          "system": "",
+          "system_version": "",
+          "tag": "去广告"
+        },
+        "minimumSurge": {
+          "ios": "5.14",
+          "mac": "5.9"
+        },
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
+        "rulePredicates": [
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"wxsnsdy.wxs.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"wxsmsdy.video.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"wxsnsdythumb.wxs.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ads-shopping.shouqianba.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"ad.maoyan.com\"},\"policy\":\"REJECT\",\"noResolve\":false}",
+          "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"e.jparking.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}"
+        ],
+        "runtimeVerified": false,
+        "sourceRewriteLines": 118,
+        "sourceSha256": "a3e17aa9fa533f226fab0d178a3f1a7061f9833348af757dc14c03ef17469f20",
+        "validation": "offline-exact-structure-and-content",
+        "warnings": [
+          {
+            "code": "EXTERNAL_RUNTIME_RESOURCE",
+            "message": "脚本在应用页面中引用此上游资源；保留原地址，不属于 Surge 自动下载的脚本依赖，需在设备上验证可达性。",
+            "url": "https://kelee.one/Resource/Script/WexinMiniPrograms/chayanyuese/cyys1.jpg"
+          },
+          {
+            "code": "SCRIPT_RUNTIME_UNVERIFIED",
+            "message": "脚本已审查公共 API 与原生 Surge 分支，未验证真实应用流量；依赖取自本地 Loon 缓存。"
+          }
+        ]
+      },
+      "converter": {
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
+        "adapter_version": "1.3.0",
+        "artifacts_sha256": "c73364a4fdc78e6496befebd93773d07c289bdae76430ad26c5eb567a6957739",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "dependencies_sha256": "4adefe31d280eea5570dcbbd2836e9b08ff99b5e799005c5f99c84b8329e8b28",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+      },
+      "dependencies": [
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 0,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/wechat-mini/kff.js",
+          "phase": "response",
+          "sha256": "6617fdc5fe2879e41dff691249478aeccc842d09eb0a6492c5bc447a3b54b3a3",
+          "sourceDate": null,
+          "sourceSha256": "8453c73e9412fd99396afbfea14e7d26c46936da1650603b6f2433cda18cbf2c",
+          "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/kff/kff.js"
+        },
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 0,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/wechat-mini/ems.js",
+          "phase": "response",
+          "sha256": "1c9c1b4a173e5753206892aaa7a3f14f7b5b184da45f3c0f4403c0e762764f05",
+          "sourceDate": null,
+          "sourceSha256": "2208e4945d8781e5bc9d20a436fc141629a7e4dc9fd516f9fe917196010cf5bc",
+          "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ems/ems.js"
+        },
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$request",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 0,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/wechat-mini/xiaotucc.js",
+          "phase": "response",
+          "sha256": "9dfad76d64fb9c72f274a6d37a6e6bd43ff111eb42facb803e1a0d046d0d22ae",
+          "sourceDate": null,
+          "sourceSha256": "a10131a49267ce2cdd17c7c4d783eb64c8aa943b83ee4dcadb846ccd2c4bbb1b",
+          "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/xiaotucc/xiaotucc.js"
+        },
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 0,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/wechat-mini/familymart.js",
+          "phase": "response",
+          "sha256": "a612d8f74709fc4bf00ea23f9d3df3c5e2ee5bfccb547b509a94537bf4b22e76",
+          "sourceDate": null,
+          "sourceSha256": "e25457f43eacfbf27ca8229445e69f60f7562ece723b5ebaf07969c0ebf75e1c",
+          "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/FamilyMart/FamilyMart.js"
+        },
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 0,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/wechat-mini/lawson.js",
+          "phase": "response",
+          "sha256": "a4d9742b812bb8d4704ec26f25d25ebab3b565b0237595b060e0b99a8f245c24",
+          "sourceDate": null,
+          "sourceSha256": "3d57d6ae9070934eef3513e2a4b640fad9dd5076fbbc6c471994bd3d790068f1",
+          "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/lawson/lawson.js"
+        },
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 0,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/wechat-mini/chayanyuese.js",
+          "phase": "response",
+          "sha256": "2f60f969964f0b6c5a1cf15a023c8102465eeb0412ba51c948f677dc90baa9da",
+          "sourceDate": null,
+          "sourceSha256": "4b7f857caa810648f7be584e916ceffb9c12dd3b2ce7766ed5bd605646e2a4d1",
+          "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/chayanyuese/chayanyuese_remove_ads.js"
+        },
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 0,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/wechat-mini/coco.js",
+          "phase": "response",
+          "sha256": "7abac2f3ceba614ed99425875420590774308f80180c85c14be95baab556c5e8",
+          "sourceDate": null,
+          "sourceSha256": "dc9a1915eed8f6f760a8f3a03f5e2f5a0f346373693ae4ac2e0c5dbd90fd46b3",
+          "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/coco/coco.js"
+        },
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 0,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/wechat-mini/qingju.js",
+          "phase": "response",
+          "sha256": "de11784aa21a053755d4966fffb22a0f01ee83d81e97c043a6c462f0b032aaf3",
+          "sourceDate": null,
+          "sourceSha256": "8664e7a22b21aaa8546ec167e3a43fee7ebd2c00552a126212720b09a4819bf8",
+          "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/qingju/qingju.js"
+        },
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 0,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/wechat-mini/alittle-tea.js",
+          "phase": "response",
+          "sha256": "4c83244c13c9ad2ff0ba8c16959f3ae75d590e625ac2677f86822097515e4f89",
+          "sourceDate": null,
+          "sourceSha256": "c765215071712fa0c0c0ef3719263fff81d4a1ce0189f8bc0861aa721657a44c",
+          "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/alittle-tea/alittle-tea.js"
+        },
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 0,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/wechat-mini/m-stand.js",
+          "phase": "response",
+          "sha256": "ddf617116ae84f46b8648188d5b6ecec5cd08e3ee453e7d7c1f4f87bca0e5f46",
+          "sourceDate": null,
+          "sourceSha256": "5d6f163842ce53eb034fa01c244f6482fedd2f5d56b7c206c25d6f11c21e805f",
+          "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/M_Stand/M_Stand.js"
+        },
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 1,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/wechat-mini/t3.js",
+          "phase": "response",
+          "sha256": "922e39408d5b4c2deb7884bf42c2d812be17b9b1624bc1a2b016dda59f9aa126",
+          "sourceDate": null,
+          "sourceSha256": "ab1ca9af4dd9b294f585335856de51d6df2b61c31d9a3d1982a5b091355da25a",
+          "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/T3/T3.js"
+        },
+        {
+          "audit": {
+            "apis": [
+              "$done",
+              "$response"
+            ],
+            "engine": "auto",
+            "nativeSurgeBranch": true
+          },
+          "guards": 0,
+          "kind": "js",
+          "origin": "local-loon-cache",
+          "path": "scripts/wechat-mini/ming.js",
+          "phase": "response",
+          "sha256": "4dda78b69f2879fec4dadbf1b3ae52a2cec3a2c99fd72d332b868afdec886dfe",
+          "sourceDate": null,
+          "sourceSha256": "bd0f4e67ae73fdd083b10c1e802912d8c9ade1b2b14a0dead865d7af0b90d991",
+          "url": "https://kelee.one/Resource/JavaScript/WexinMiniPrograms/ming/ming.js"
+        }
+      ],
+      "description": "收录常用小程序的去广告，作者署名在插件内。",
+      "file": "modules/wechat-mini.sgmodule",
+      "id": "wechat-mini",
+      "module_sha256": "385bb89a38e2a2e14e8286022b52b11afa6d1ffc405d4efd98603526a8c63c80",
+      "module_version": "1.0.1",
+      "name": "微信小程序去广告",
+      "revision": 1,
+      "source_date": "2026-10-02 13:57:49",
+      "source_min_loon_version": "3.5.1(998)",
+      "source_origin": "local",
+      "source_sha256": "a3e17aa9fa533f226fab0d178a3f1a7061f9833348af757dc14c03ef17469f20",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx",
+      "source_version": "",
+      "surge_name": "微信小程序去广告",
+      "validation": {
+        "scope": "Surge Mac parser; not iOS live traffic",
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
+      }
+    },
+    "wechat-official": {
+      "artifacts": {},
+      "conversion_report": {
+        "adapterVersion": "1.3.0",
+        "arguments": {},
+        "convertedInputSha256": "5fbb442e6178e8647c4a8c5a0c9601a463b4c75f403978e23bc4711f0be3af1b",
+        "counts": {
+          "bodyRewrite": 0,
+          "bodyRewriteBeforeOptimization": 0,
+          "bodyRewriteRulesSaved": 0,
+          "headerRewrite": 0,
+          "mapLocal": 2,
+          "mitmHostnames": 1,
+          "rewriteLines": 2,
+          "rules": 1,
+          "scripts": 0
+        },
+        "dependencies": [],
+        "executionPolicy": {
+          "bodyRewrite": "sequential; suppress same-phase Loon scripts",
+          "mitm": "append original hosts only",
+          "optimization": "sibling object deletions only; no array-index batching",
+          "ruleOrder": "preserved",
+          "scriptOrder": "first-match-preserved",
+          "unsupported": "reject publication"
+        },
+        "matchers": [
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 17,
+            "pattern": "^https:\\/\\/mp\\.weixin\\.qq\\.com\\/mp\\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\\?",
+            "phase": "request"
+          },
+          {
+            "flags": "i",
+            "kind": "terminal",
+            "line": 19,
+            "pattern": "^https:\\/\\/mp\\.weixin\\.qq\\.com\\/mp\\/relatedsearchword",
+            "phase": "request"
+          }
+        ],
+        "metadata": {
+          "author": "RuCu6[https://github.com/RuCu6]",
+          "date": "2026-10-02 13:57:49",
+          "desc": "过滤微信公众号广告",
+          "homepage": "https://hub.kelee.one",
+          "icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weixin.png",
+          "loon_version": "3.5.1(998)",
+          "name": "微信公众号去广告",
+          "openUrl": "https://apps.apple.com/app/id414478124",
+          "system": "",
+          "system_version": "",
+          "tag": "去广告"
+        },
+        "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
+        "rulePredicates": [
+          "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"wxs.qq.com\"},\"policy\":\"REJECT\",\"noResolve\":false}"
+        ],
+        "runtimeVerified": false,
+        "sourceRewriteLines": 2,
+        "sourceSha256": "5fbb442e6178e8647c4a8c5a0c9601a463b4c75f403978e23bc4711f0be3af1b",
+        "validation": "offline-exact-structure-and-content",
+        "warnings": []
+      },
+      "converter": {
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
+        "adapter_version": "1.3.0",
+        "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
+        "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
+        "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "publisher_version": "1.3.0",
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
+      },
+      "dependencies": [],
+      "description": "过滤微信公众号广告",
+      "file": "modules/wechat-official.sgmodule",
+      "id": "wechat-official",
+      "module_sha256": "071fea168c9433a80c72aaea3b0c435aada53dc8417a3883b856c43c509a1d88",
+      "module_version": "1.0.1",
+      "name": "微信公众号去广告",
+      "revision": 1,
+      "source_date": "2026-10-02 13:57:49",
+      "source_min_loon_version": "3.5.1(998)",
+      "source_origin": "local",
+      "source_sha256": "5fbb442e6178e8647c4a8c5a0c9601a463b4c75f403978e23bc4711f0be3af1b",
+      "source_url": "https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx",
+      "source_version": "",
+      "surge_name": "微信公众号去广告",
+      "validation": {
+        "scope": "Surge Mac parser; not iOS live traffic",
+        "status": "passed",
+        "variants": [
+          "defaults"
+        ]
+      }
+    },
     "weibo": {
       "artifacts": {
-        "scripts/weibo/weibo.js": "94dd7771bbfff4844cb2f0394d7fd315ef8b4504ca28bbbe60ceb0f23ac2c4e7"
+        "scripts/weibo/weibo.js": "711ad863485df94322222d0b3eed6a9aeb2c90be2336ac1ff46a99507f0a86ae"
       },
       "conversion_report": {
         "adapterVersion": "1.3.0",
@@ -2615,12 +4727,12 @@
               "engine": "auto",
               "nativeSurgeBranch": true
             },
-            "guards": 18,
+            "guards": 1,
             "kind": "js",
             "origin": "local-loon-cache",
             "path": "scripts/weibo/weibo.js",
             "phase": "response",
-            "sha256": "94dd7771bbfff4844cb2f0394d7fd315ef8b4504ca28bbbe60ceb0f23ac2c4e7",
+            "sha256": "711ad863485df94322222d0b3eed6a9aeb2c90be2336ac1ff46a99507f0a86ae",
             "sourceDate": "2026-04-23 18:00",
             "sourceSha256": "026ccd766a53f744c2bf2aad93c4deb6f207defe4daf973178bb3e4193c997fb",
             "url": "https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js"
@@ -2917,6 +5029,7 @@
         },
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"uve.weibo.com\"},\"policy\":\"DIRECT\",\"noResolve\":false}",
           "{\"predicate\":{\"type\":\"DOMAIN\",\"value\":\"huodong.weibo.cn\"},\"policy\":\"REJECT\",\"noResolve\":false}",
@@ -2934,15 +5047,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
         "adapter_version": "1.3.0",
-        "artifacts_sha256": "b404eb4a347713a383be6de50a0d8487f9bf0ab5ec4c84719ba597dcc63ab7cd",
+        "artifacts_sha256": "8099481a5888cd2ee988dad800f0f28da031f6cb5ca3e0572d90868f486594ab",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
-        "dependencies_sha256": "e642268a82d392c1f41449e2e8044e548e69cf940450aa57b76655270cf760cc",
+        "dependencies_sha256": "00bb9feb53b39d18a367d77657ee2bcf009247fc60bd753ed6a2d4b38eecfb8d",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
       },
       "dependencies": [
         {
@@ -2955,12 +5068,12 @@
             "engine": "auto",
             "nativeSurgeBranch": true
           },
-          "guards": 18,
+          "guards": 1,
           "kind": "js",
           "origin": "local-loon-cache",
           "path": "scripts/weibo/weibo.js",
           "phase": "response",
-          "sha256": "94dd7771bbfff4844cb2f0394d7fd315ef8b4504ca28bbbe60ceb0f23ac2c4e7",
+          "sha256": "711ad863485df94322222d0b3eed6a9aeb2c90be2336ac1ff46a99507f0a86ae",
           "sourceDate": "2026-04-23 18:00",
           "sourceSha256": "026ccd766a53f744c2bf2aad93c4deb6f207defe4daf973178bb3e4193c997fb",
           "url": "https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js"
@@ -2969,10 +5082,10 @@
       "description": "过滤微博广告及去除各部分推广模块",
       "file": "modules/weibo.sgmodule",
       "id": "weibo",
-      "module_sha256": "fe72a2d794e1eb798523cf1f77e3705d0b2cc931513d0fdc2c81fc887ed13728",
-      "module_version": "1.0.5",
+      "module_sha256": "5524e3d7b8af0017cad36a54e95e69459ce9f09b3be5f7232f555161cb9ff89e",
+      "module_version": "1.0.6",
       "name": "微博去广告",
-      "revision": 5,
+      "revision": 6,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",
@@ -2990,7 +5103,7 @@
     },
     "xiaohongshu": {
       "artifacts": {
-        "scripts/xiaohongshu/xiaohongshu.js": "48026720103ae889ef4bdd64c19b4aa23a7fd1251c68aa5c4bf5b10a5a94d655"
+        "scripts/xiaohongshu/xiaohongshu.js": "04ab29fd63773c2595adf8efb9ecca9eefc2f06a8a42a54a166897f5f99c2f03"
       },
       "conversion_report": {
         "adapterVersion": "1.3.0",
@@ -3019,12 +5132,12 @@
               "engine": "auto",
               "nativeSurgeBranch": true
             },
-            "guards": 9,
+            "guards": 1,
             "kind": "js",
             "origin": "local-loon-cache",
             "path": "scripts/xiaohongshu/xiaohongshu.js",
             "phase": "response",
-            "sha256": "48026720103ae889ef4bdd64c19b4aa23a7fd1251c68aa5c4bf5b10a5a94d655",
+            "sha256": "04ab29fd63773c2595adf8efb9ecca9eefc2f06a8a42a54a166897f5f99c2f03",
             "sourceDate": "2026-02-14 15:00",
             "sourceSha256": "f7b637c9c738b18f72dd61824e25b06dad7d55553de204daad0dddd675a74f0c",
             "url": "https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js"
@@ -3206,6 +5319,7 @@
         },
         "parserCommit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parserSha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
+        "reviewedFixes": [],
         "rulePredicates": [
           "{\"predicate\":{\"type\":\"AND\",\"children\":[{\"type\":\"PROTOCOL\",\"value\":\"QUIC\"},{\"type\":\"DOMAIN-SUFFIX\",\"value\":\"xiaohongshu.com\"}]},\"policy\":\"REJECT\",\"noResolve\":false}"
         ],
@@ -3256,15 +5370,15 @@
         ]
       },
       "converter": {
-        "adapter_sha256": "03383aa907b771a4c10c30428717060210db703cfe7a6f985f5c52b3464e4e67",
+        "adapter_sha256": "15611294bf36fd5424af116803ff382fcb1d872fa468540b45a95ea2ad413334",
         "adapter_version": "1.3.0",
-        "artifacts_sha256": "738c68925553913ee65273fe88922dc7e7c9f4f879fb2008aef32f944a9a8bd8",
+        "artifacts_sha256": "ee945a4d5e29c57508b9da6709c71fe91b082ef98bfb92987498a1f58415cc5c",
         "conversion_policy_sha256": "247715bdf6923787011f743942daf3eefbe71e97fa917a8e33ca7b54a53db7aa",
-        "dependencies_sha256": "67089af352d55adc365f1809d49ba68090f0c0cd316f39313bab41e45f98e5d9",
+        "dependencies_sha256": "7f0ec490bce0f5aa33db2245059f8972e500aefc941db2f02ec00d8cf6f08c88",
         "parser_commit": "1ab8fd775a9028b70ede9009d0540818edd5882c",
         "parser_sha256": "2373438b02588d0a3534cd4739b35f68e4bfb12adf55d753c270ab68cdf12bc2",
         "publisher_version": "1.3.0",
-        "script_adapter_sha256": "349ef2afdeda014a820c53f6c5e9d2914662571b2554de2dce9a5c95ce109256"
+        "script_adapter_sha256": "0bfd3c3baa331912c4ecf2982b4a3256a5b622131c5216b626eba6f7c7b40d6a"
       },
       "dependencies": [
         {
@@ -3278,12 +5392,12 @@
             "engine": "auto",
             "nativeSurgeBranch": true
           },
-          "guards": 9,
+          "guards": 1,
           "kind": "js",
           "origin": "local-loon-cache",
           "path": "scripts/xiaohongshu/xiaohongshu.js",
           "phase": "response",
-          "sha256": "48026720103ae889ef4bdd64c19b4aa23a7fd1251c68aa5c4bf5b10a5a94d655",
+          "sha256": "04ab29fd63773c2595adf8efb9ecca9eefc2f06a8a42a54a166897f5f99c2f03",
           "sourceDate": "2026-02-14 15:00",
           "sourceSha256": "f7b637c9c738b18f72dd61824e25b06dad7d55553de204daad0dddd675a74f0c",
           "url": "https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js"
@@ -3292,10 +5406,10 @@
       "description": "过滤信息流推广，移除图片及视频水印，如有异常，请先清除缓存再尝试。",
       "file": "modules/xiaohongshu.sgmodule",
       "id": "xiaohongshu",
-      "module_sha256": "da56b74be7c55c132603f980fedfc5ca22792934a91b07044d95376236b6cfcd",
-      "module_version": "1.0.5",
+      "module_sha256": "b50914ced03c1a831de81dab794fad265ba1d15b6a1972e3dd9dd5fab662c205",
+      "module_version": "1.0.6",
       "name": "小红书去广告",
-      "revision": 5,
+      "revision": 6,
       "source_date": "2026-10-02 13:57:49",
       "source_min_loon_version": "3.5.1(998)",
       "source_origin": "local",

@@ -18,6 +18,10 @@ Surge 远程模块集合，提供 HTTPDNS 拦截、广告平台拦截和应用�
 | 京东去广告 | [jd.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/jd.sgmodule) |
 | 淘宝去广告 | [taobao.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/taobao.sgmodule) |
 | 夸克去广告 | [quark.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/quark.sgmodule) |
+| 微信小程序去广告 | [wechat-mini.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/wechat-mini.sgmodule) |
+| 微信公众号去广告 | [wechat-official.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/wechat-official.sgmodule) |
+| 酷安去广告 | [coolapk.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/coolapk.sgmodule) |
+| 拼多多去广告 | [pinduoduo.sgmodule](https://raw.githubusercontent.com/nifgg/surge/main/modules/pinduoduo.sgmodule) |
 
 模块版本、上游插件日期与版本、内容哈希见 [manifest.json](manifest.json)。
 
@@ -27,7 +31,7 @@ Surge 远程模块集合，提供 HTTPDNS 拦截、广告平台拦截和应用�
 
 建议使用 Surge iOS 5.14+ 或 Mac 5.9+，以支持模块中的 JQ Body Rewrite。包含 `[MITM]` 的模块需要开启 MITM 并信任证书；哔哩哔哩的 gRPC 处理还需开启 HTTP/2 解密。模块通过 `%APPEND%` 添加上游指定域名。
 
-脚本按模块和功能命名，例如 `amap.js`、`bilibili-request.js`、`bilibili-response.js`。路径中的版本目录供 Surge 区分缓存，更新模块后会自动引用对应版本。JQ 程序已内联到模块，`.jq` 文件用于记录依赖来源。
+脚本按模块和功能命名，例如 `amap.js`、`bilibili-request.js`、`bilibili-response.js`。脚本使用稳定的模块目录与文件名，Surge 按脚本更新间隔刷新缓存；需要立即生效时请同时更新模块与脚本。JQ 程序已内联到模块，`.jq` 文件用于记录依赖来源。
 
 | 参数 | 适用模块 | 默认值 | 用途 |
 | --- | --- | --- | --- |

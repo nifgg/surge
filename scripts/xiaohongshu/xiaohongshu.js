@@ -9,7 +9,7 @@
   try {
   let __args = {}; try { if (typeof $argument === 'string') __args = JSON.parse($argument); } catch { return $done({}); }
   if (__args.__enabled === false) return $done({});
-  if ([["^https:\\/\\/ci\\.xiaohongshu\\.com\\/system_config\\/watermark","i"],["^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/surprisebox\\/(?:get_style|open|submit_action)","i"],["^https:\\/\\/www\\.xiaohongshu\\.com\\/api\\/marketing\\/box\\/trigger\\?","i"],["^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v2\\/guide\\/user_banner|v3\\/note\\/guide)","i"],["^https:\\/\\/www\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v1\\/ads\\/resource|v2\\/hey\\/\\w+\\/hey_gallery)","i"],["^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/search\\/banner_list$","i"],["^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v1\\/search\\/hot_list$","i"],["^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v4\\/search\\/hint","i"],["^https:\\/\\/edith\\.xiaohongshu\\.com\\/api\\/sns\\/v4\\/search\\/trending\\?","i"]].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
+  if ([["^https:\\/\\/www\\.xiaohongshu\\.com\\/api\\/sns\\/(?:v1\\/ads\\/resource|v2\\/hey\\/\\w+\\/hey_gallery)","i"]].some(([pattern, flags]) => new RegExp(pattern, flags).test($request.url))) return $done({});
 
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
