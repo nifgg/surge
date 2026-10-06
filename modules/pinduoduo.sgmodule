@@ -1,6 +1,6 @@
 #!name=拼多多去广告
 #!desc=移除开屏广告、底栏多多视频、会场入口、聊天页面精选推荐及推广，精简首页和个人中心。
-#!version=1.0.3
+#!version=1.0.4
 #!author=ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/PinDuoDuo.png
 #!category=去广告
@@ -9,7 +9,7 @@
 
 # Surge adaptation; upstream authorship retained above.
 # source-date=2026-10-02 13:57:49
-# adapter-version=1.4.0
+# adapter-version=1.5.0
 
 [Rule]
 AND,((URL-REGEX,"^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/d(\d)?"),(USER-AGENT,"*com.xunmeng.pinduoduo*")),REJECT
@@ -89,7 +89,7 @@ http-response-jq (?i)^https:\/\/api\.pinduoduo\.com\/order\/ 'delpaths([["shippi
 http-response-jq (?i)^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/order_list_v4\? '.orders |= map(.order_buttons |= map(del(.order_growth_tip)))'
 
 [Script]
-拼多多·扫码取件 = type=http-response, pattern=(?i)^https:\/\/m\.pinduoduo\.net\/mdkd\/package\?from_app_scan, script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/pinduoduo/pinduoduo-pickup.js, requires-body=true, timeout=20, engine=webview
+拼多多·扫码取件 = type=http-response, pattern=(?i)^https:\/\/m\.pinduoduo\.net\/mdkd\/package\?from_app_scan, script-path=https://raw.githubusercontent.com/nifgg/surge/refs/heads/main/scripts/pinduoduo/pinduoduo-pickup.js, requires-body=true, max-size=-1, timeout=20, engine=webview
 
 [MITM]
 hostname = %APPEND% api.pinduoduo.com, m.pinduoduo.net

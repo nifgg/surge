@@ -1,6 +1,6 @@
 #!name=起点读书去广告
 #!desc=移除起点读书开屏广告、每日导读、各类弹窗、文末广告、搜索填充词，精简我的页面。
-#!version=1.0.10
+#!version=1.0.11
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/QiDian.png
 #!category=去广告
@@ -9,7 +9,7 @@
 
 # Surge adaptation; upstream authorship retained above.
 # source-date=2026-10-02 13:57:49
-# adapter-version=1.4.0
+# adapter-version=1.5.0
 
 [Map Local]
 (?i)^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v4\/client\/getsplashscreen\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"

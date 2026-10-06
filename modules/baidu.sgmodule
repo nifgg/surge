@@ -1,6 +1,6 @@
 #!name=百度网盘去广告
 #!desc=移除开屏广告、首页卡片广告、传输页面广告、各类弹窗，精简侧拉抽屉和我的页面。
-#!version=1.0.1
+#!version=1.0.2
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/BaiduNetDisk.png
 #!category=去广告
@@ -9,7 +9,7 @@
 
 # Surge adaptation; upstream authorship retained above.
 # source-date=2026-10-02 13:57:49
-# adapter-version=1.4.0
+# adapter-version=1.5.0
 
 [Map Local]
 (?i)^https:\/\/pan\.baidu\.com\/api\/getconfig\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"

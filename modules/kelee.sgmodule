@@ -1,6 +1,6 @@
 #!name=可莉广告过滤器
 #!desc=可莉自用的广告过滤器
-#!version=1.0.1
+#!version=1.0.2
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/KeLee.png
 #!category=去广告
@@ -9,7 +9,7 @@
 
 # Surge adaptation; upstream authorship retained above.
 # source-date=2026-10-02 13:57:49
-# adapter-version=1.4.0
+# adapter-version=1.5.0
 
 [Rule]
 DOMAIN,acdn.adnxs.com,REJECT
@@ -195,14 +195,15 @@ DOMAIN,open-pixon.ads-pixiv.net,REJECT
 
 (?i)^https:\/\/d\.socdm\.com\/adsv\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
-(?i)^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm data-type=text data="{\"imgIndex\":\"0\",\"adv\":{\"startup_adv\":{\"advCntList\":[],\"buttonList\":[]}},\"respCode\":\"0000\"}" status-code=200 header="Content-Type:application/json"
+# 响应正文：{"imgIndex":"0","adv":{"startup_adv":{"advCntList":[],"buttonList":[]}},"respCode":"0000"}
+(?i)^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm data-type=base64 data="eyJpbWdJbmRleCI6IjAiLCJhZHYiOnsic3RhcnR1cF9hZHYiOnsiYWR2Q250TGlzdCI6W10sImJ1dHRvbkxpc3QiOltdfX0sInJlc3BDb2RlIjoiMDAwMCJ9" status-code=200 header="Content-Type:application/json"
 
 ^http:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 ^http:\/\/p\.kuaidi100\.com\/advertisement\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Body Rewrite]
-http-response (?i)^https?:\/\/cmds\.omesoft\.com\/HypnotistWS\.asmx "<GetADResult>\\.\\*\\?<\\/GetADResult>" "<GetADResult>{\"ret\":0,\"msg\":\"正常\",\"err_code\":0,\"data\":{\"ad\":[]}}</GetADResult>"
+#!REQUIREMENT CORE_VERSION>=6008000 http-response (?i)^https?:\/\/cmds\.omesoft\.com\/HypnotistWS\.asmx "<GetADResult>\\.\\*\\?<\\/GetADResult>" "<GetADResult>{\"ret\":0,\"msg\":\"正常\",\"err_code\":0,\"data\":{\"ad\":[]}}</GetADResult>"
 http-response-jq (?i)^https?:\/\/api\.fenxianglife\.com\/njia\/index\/popup\/v2 '.data.list=[]'
 
 [MITM]
