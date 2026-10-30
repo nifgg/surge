@@ -1,0 +1,12 @@
+#!name=节点 IP 类型与质量
+#!desc=手动检测指定节点或策略组出口 IP，按 FlClash 规则显示优/普通/风险。先设置 policy，再点击面板刷新。无需 MITM。
+#!version=1.0.0
+#!homepage=https://github.com/nifgg/surge/blob/main/docs/node-ip-quality.md
+#!arguments=policy:请填写节点或策略组名称
+#!arguments-desc=policy 填写已有节点或策略组的完整名称。若为订阅节点，请填写其所属策略组，并在该组中选中待测节点。
+
+[Script]
+node-ip-quality = type=generic,script-path=https://raw.githubusercontent.com/nifgg/surge/main/scripts/node-ip-quality/node-ip-quality.js,timeout=25,argument="{{{policy}}}"
+
+[Panel]
+node-ip-quality = script-name=node-ip-quality,title="节点 IP 类型与质量",content="先设置模块参数 policy，再点击刷新检测",icon=network
