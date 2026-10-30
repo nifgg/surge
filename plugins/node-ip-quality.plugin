@@ -1,0 +1,7 @@
+#!name=节点 IP 类型与质量
+#!desc=在所有节点列表长按节点，选择“IP 类型与质量”。弹窗显示出口 IP、住宅/商业/机房类型、优/普通/风险及数据源。无需 MITM。
+
+#!homepage=https://github.com/nifgg/surge/blob/main/docs/node-ip-quality.md
+
+[Script]
+generic script-path=https://raw.githubusercontent.com/nifgg/surge/main/scripts/node-ip-quality/node-ip-quality.js,tag=IP 类型与质量,timeout=25,img-url=network.system
