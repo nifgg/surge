@@ -3589,6 +3589,40 @@
         ]
       }
     },
+    "node-ip-quality": {
+      "behavior_reference": {
+        "commit": "7fd417fb9a9a277c6a9339a8ac87f907df7c25f7",
+        "repository": "https://github.com/chen08209/FlClash"
+      },
+      "dependencies": [
+        {
+          "kind": "js",
+          "path": "scripts/node-ip-quality/node-ip-quality.js",
+          "sha256": "28fcb74ba0cf9a4486c56a8a5caee071254e91ea19dc3944c7faac6ea3bd4f51",
+          "url": "https://raw.githubusercontent.com/nifgg/surge/main/scripts/node-ip-quality/node-ip-quality.js"
+        }
+      ],
+      "description": "指定节点出口 IP 的类型与质量查询，同时提供 Loon generic 插件。",
+      "file": "modules/node-ip-quality.sgmodule",
+      "id": "node-ip-quality",
+      "loon_plugin": {
+        "file": "plugins/node-ip-quality.plugin",
+        "sha256": "7df06fca812c6cb7c151170e630c5117796f6cbed18dcab6b804c8a990fd289d",
+        "url": "https://raw.githubusercontent.com/nifgg/surge/main/plugins/node-ip-quality.plugin"
+      },
+      "module_sha256": "5679adf662efd46d0dd1a6b96dd9844c9e823c802015bcc7531b74b477e6a860",
+      "module_version": "1.0.0",
+      "name": "节点 IP 类型与质量",
+      "revision": 1,
+      "source_origin": "independent-implementation",
+      "surge_name": "节点 IP 类型与质量",
+      "validation": {
+        "runtimeVerified": false,
+        "scope": "Node.js mocked Surge/Loon runtimes and publication files; not native app validation",
+        "status": "passed",
+        "test_count": 23
+      }
+    },
     "pinduoduo": {
       "artifacts": {
         "scripts/pinduoduo/pinduoduo-pickup.js": "9fa3909db5918e3879a532c1969d53ed88378d0ee0affd235c8b086d8a21e4d3"
