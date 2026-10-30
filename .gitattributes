@@ -1,0 +1,4 @@
+# Keep the IP quality artifact hashes identical across Windows and Unix.
+modules/node-ip-quality.sgmodule text eol=lf
+plugins/node-ip-quality.plugin text eol=lf
+scripts/node-ip-quality/node-ip-quality.js text eol=lf
